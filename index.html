@@ -1,49 +1,1753 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Raja Meliala Production | Brand Strategy & Creative Production</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0c0b0b;--surface:#141212;--surface2:#1e1c1c;--light:#f5efe3;--white:#faf8f5;--gold:#c4a355;--gold2:#d4b870;--red:#9a1c1f;--dark:#141212;--mutedL:rgba(245,239,227,.58);--mutedD:rgba(20,18,18,.58);--lineL:rgba(245,239,227,.08);--lineD:rgba(20,18,18,.12);--display:'Cormorant Garamond',Georgia,serif;--heading:'Syne',Arial,sans-serif;--body:'DM Sans',Arial,sans-serif;--container:1180px;--gutter:clamp(1rem,4vw,4rem);--section:clamp(4.5rem,8vw,7.5rem);--h1:clamp(3rem,7vw,7.4rem);--h2:clamp(2.25rem,4.5vw,4.8rem);--bodySize:clamp(.94rem,.89rem + .25vw,1.08rem)}
-*,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}html{scroll-behavior:smooth}body{min-width:320px;overflow-x:hidden;background:var(--bg);color:var(--light);font-family:var(--body);font-size:var(--bodySize);line-height:1.65}body.nav-open{overflow:hidden}a{color:inherit;text-decoration:none}img,svg{display:block;max-width:100%}.container{width:min(100% - var(--gutter)*2,var(--container));margin:auto}.section{padding-block:var(--section)}
-.eyebrow,.label,.cta-eyebrow{display:inline-flex;align-items:center;gap:.9rem;color:var(--gold);font-family:var(--heading);font-size:clamp(.56rem,.52rem + .18vw,.68rem);font-weight:700;letter-spacing:.26em;text-transform:uppercase;line-height:1.35}.eyebrow::before,.label::before,.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:clamp(1.3rem,4vw,2.5rem);height:1px;background:currentColor;flex:0 0 auto}.title{margin-top:1rem;color:var(--light);font-family:var(--display);font-size:var(--h2);font-weight:300;line-height:1.03}.title em{color:var(--gold);font-style:italic}.light{background:var(--light);color:var(--dark)}.light .label{color:var(--red)}.light .title{color:var(--dark)}.light .title em{color:var(--red)}
-.btn{display:inline-flex;min-height:2.95rem;align-items:center;justify-content:center;border:1px solid transparent;padding:.85rem clamp(1.1rem,3vw,2.2rem);font-family:var(--heading);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-align:center;text-transform:uppercase;transition:.25s}.btn-primary{background:var(--gold);border-color:var(--gold);color:var(--bg)}.btn-primary:hover{background:var(--gold2);border-color:var(--gold2);transform:translateY(-1px)}.btn-ghost{border-color:rgba(245,239,227,.24);color:rgba(245,239,227,.78)}.btn-ghost:hover{border-color:var(--light);color:var(--light)}
-.cursor,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%)}.cursor{width:8px;height:8px;background:var(--gold);mix-blend-mode:difference}.cursor-ring{width:36px;height:36px;border:1px solid rgba(196,163,85,.42);transition:transform .35s}body::before{content:'';position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
-nav{position:fixed;inset:0 0 auto;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:clamp(.9rem,2vw,1.6rem) var(--gutter);transition:.35s}nav.scrolled,nav.opened{background:rgba(12,11,11,.94);border-bottom:1px solid rgba(196,163,85,.14);backdrop-filter:blur(14px)}.logo{z-index:102;max-width:min(25rem,68vw);font-family:var(--heading);font-size:clamp(.62rem,.56rem + .22vw,.76rem);font-weight:800;letter-spacing:.22em;line-height:1.45;text-transform:uppercase}.logo span{display:block;color:var(--gold);font-size:.58em;letter-spacing:.34em}.nav-links{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2.5rem)}.nav-links a{color:rgba(245,239,227,.62);font-family:var(--heading);font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase}.nav-links a:hover{color:var(--gold)}.nav-cta{border:1px solid rgba(196,163,85,.48);padding:.58rem 1rem;color:var(--gold)!important}.nav-cta:hover{background:var(--gold);color:var(--bg)!important}.nav-toggle{z-index:102;display:none;width:2.8rem;height:2.8rem;place-items:center;border:1px solid rgba(196,163,85,.36);background:transparent;color:var(--gold)}.nav-toggle span,.nav-toggle::before,.nav-toggle::after{content:'';width:1.2rem;height:1px;background:currentColor;transition:.25s}.nav-toggle::before{transform:translateY(-.36rem)}.nav-toggle::after{transform:translateY(.36rem)}.nav-toggle[aria-expanded=true] span{opacity:0}.nav-toggle[aria-expanded=true]::before{transform:translateY(1px) rotate(45deg)}.nav-toggle[aria-expanded=true]::after{transform:translateY(-1px) rotate(-45deg)}
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:clamp(7rem,13vh,10rem) var(--gutter) clamp(3.5rem,9vh,5rem);display:grid;align-items:end}.hero::before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 80% 70% at 75% 25%,rgba(154,28,31,.16),transparent 60%),radial-gradient(ellipse 50% 60% at 18% 80%,rgba(196,163,85,.08),transparent 55%),var(--bg)}.hero::after,.cta::after{content:'';position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(245,239,227,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,239,227,.03) 1px,transparent 1px);background-size:clamp(42px,8vw,80px) clamp(42px,8vw,80px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(18rem,.74fr);gap:clamp(2rem,6vw,5rem);align-items:end}.hero-copy{max-width:48rem}.hero h1{margin-top:1.4rem;font-family:var(--display);font-size:var(--h1);font-weight:300;line-height:.98}.hero h1 em{color:var(--gold);font-style:italic}.hero h1 strong{display:block;color:var(--white);font-weight:600}.hero p{max-width:44rem;margin-top:clamp(1.25rem,3vw,2rem);color:var(--mutedL);font-weight:300}.actions{display:flex;flex-wrap:wrap;gap:.9rem 1.25rem;margin-top:clamp(1.8rem,4vw,3rem)}.hero-media{position:relative;min-height:clamp(24rem,68vh,44rem);border:1px solid rgba(196,163,85,.18);box-shadow:0 1.5rem 4rem rgba(0,0,0,.28)}.hero-media::before{content:'';position:absolute;top:-1px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}.hero-media-inner{position:absolute;inset:clamp(1rem,3vw,2rem);overflow:hidden;background:linear-gradient(180deg,transparent 25%,rgba(12,11,11,.86)),linear-gradient(135deg,#1e1a18,#2a2420 45%,#1a1616)}.pattern::before,.work-img::before,.about-img::before,.transform-img::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(196,163,85,.035) 30px,rgba(196,163,85,.035) 31px)}.media-label{position:absolute;left:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:1;color:rgba(245,239,227,.48);font-family:var(--heading);font-size:.58rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase}.media-label span{color:var(--gold)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:clamp(2rem,5vw,4rem);border:1px solid var(--lineL);background:var(--lineL)}.stat{min-width:0;background:rgba(20,18,18,.58);padding:clamp(1rem,2vw,1.4rem)}.stat-num{font-family:var(--display);font-size:clamp(1.75rem,4vw,2.6rem);line-height:1}.stat-num span{color:var(--gold);font-size:.6em}.stat-label{margin-top:.35rem;color:rgba(245,239,227,.4);font-family:var(--heading);font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;line-height:1.4}
-.ticker{overflow:hidden;border-block:1px solid rgba(255,255,255,.08);background:var(--red);padding-block:.85rem}.ticker-track{display:flex;width:max-content;white-space:nowrap;animation:ticker 30s linear infinite}.ticker-item{display:inline-flex;align-items:center;gap:1.5rem;padding-inline:clamp(1.2rem,3vw,2rem);color:rgba(255,255,255,.9);font-family:var(--heading);font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.55)}@keyframes ticker{to{transform:translateX(-50%)}}
-.work,.transform,footer{background:var(--surface)}.process,.cta{background:var(--bg)}.clients{background:var(--surface2);padding-block:clamp(3rem,6vw,4rem)}.work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:clamp(2.2rem,6vw,4rem)}.count{color:rgba(245,239,227,.08);font-family:var(--display);font-size:clamp(3rem,8vw,5rem);line-height:1}.text-link{display:inline-block;margin-top:.3rem;border-bottom:1px solid rgba(196,163,85,.35);color:var(--gold);font-family:var(--heading);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.5rem)}.work-item{position:relative;min-height:20rem;overflow:hidden;background:var(--surface2)}.work-item.large{grid-row:span 2}.work-item:not(.large){aspect-ratio:16/10}.work-img{position:absolute;inset:0;overflow:hidden;background:var(--project);transition:transform .7s}.work-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(12,11,11,.82),transparent 62%)}.work-item:hover .work-img{transform:scale(1.04)}.img1{--project:linear-gradient(135deg,#1a1614,#2d2420 42%,#1e1915)}.img2{--project:linear-gradient(135deg,#141820,#1e2530 42%,#10151e)}.img3{--project:linear-gradient(135deg,#1a1a14,#28280e 42%,#1c1c12)}.tag{position:absolute;top:1.2rem;left:1.2rem;z-index:1;background:var(--red);color:#fff;padding:.35rem .75rem;font-family:var(--heading);font-size:.52rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase}.work-info{position:absolute;inset:auto clamp(1.1rem,3vw,1.8rem) clamp(1.1rem,3vw,1.8rem);z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}.work-num{position:absolute;top:-1.4rem;color:rgba(245,239,227,.14);font-family:var(--display);font-size:clamp(2.6rem,6vw,3.6rem);line-height:1}.work-title{position:relative;font-family:var(--display);font-size:clamp(1.25rem,2vw,1.55rem);font-weight:400;line-height:1.15}.work-sub{margin-top:.35rem;color:rgba(245,239,227,.5);font-family:var(--heading);font-size:.56rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.arrow{display:grid;width:2.5rem;height:2.5rem;place-items:center;border:1px solid rgba(196,163,85,.32);color:var(--gold);flex:0 0 auto}
-.services-inner,.about-inner{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2.5rem,7vw,6rem);align-items:start}.desc,.about-text{color:var(--mutedD);font-weight:300}.desc+.desc{margin-top:1rem}.desc strong{color:var(--dark);font-weight:400}.service{display:grid;grid-template-columns:3.4rem minmax(0,1fr) auto;gap:.8rem 1rem;align-items:start;border-top:1px solid var(--lineD);padding-block:1.5rem}.service:last-child{border-bottom:1px solid var(--lineD)}.num{color:var(--red);font-family:var(--heading);font-size:.58rem;font-weight:800;letter-spacing:.18em}.service h3{font-family:var(--display);font-size:clamp(1.15rem,2vw,1.4rem);font-weight:400;line-height:1.2}.service p{margin-top:.25rem;color:rgba(20,18,18,.46);font-size:.86rem;font-weight:300}.service .arrow{border:0;color:rgba(20,18,18,.3)}
-.process-head{max-width:44rem;margin:auto;text-align:center}.process-grid,.transform-grid{display:grid;gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(2.5rem,6vw,4rem)}.process-grid{grid-template-columns:repeat(4,1fr)}.card{position:relative;border:1px solid var(--lineL);padding:clamp(1.5rem,3vw,2.5rem) clamp(1.2rem,2.4vw,2rem)}.card:hover{border-color:rgba(196,163,85,.34);background:var(--surface2)}.step{color:rgba(245,239,227,.07);font-family:var(--display);font-size:clamp(3rem,6vw,4.5rem);line-height:1}.icon{position:relative;width:2.5rem;height:2.5rem;margin:1.4rem 0}.icon::before{content:'';position:absolute;bottom:0;width:100%;height:1px;background:var(--gold)}.icon::after{content:'';position:absolute;right:0;bottom:-2.5px;width:6px;height:6px;border-radius:50%;background:var(--gold)}.card h3{font-family:var(--heading);font-size:.95rem}.card p{margin-top:.75rem;color:rgba(245,239,227,.45);font-size:.88rem;font-weight:300}.transform-grid{grid-template-columns:repeat(3,1fr)}.transform-card{overflow:hidden;border:1px solid rgba(245,239,227,.07);background:var(--surface2)}.transform-img{position:relative;min-height:clamp(12rem,25vw,15rem);background:var(--transform)}.transform-img::after{content:'AFTER';position:absolute;top:1rem;right:1rem;z-index:1;background:var(--gold);color:var(--bg);padding:.3rem .7rem;font-family:var(--heading);font-size:.5rem;font-weight:800;letter-spacing:.26em}.t1{--transform:linear-gradient(135deg,#1e1a14,#2e2618)}.t2{--transform:linear-gradient(135deg,#141e1e,#182828)}.t3{--transform:linear-gradient(135deg,#1e1418,#2e1820)}.transform-body{padding:clamp(1.35rem,3vw,1.8rem)}.transform-client{color:var(--gold);font-family:var(--heading);font-size:.57rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.transform-name{margin-top:.55rem;font-family:var(--display);font-size:clamp(1.2rem,2vw,1.42rem);font-weight:400;line-height:1.2}.transform-result{margin-top:.55rem;color:rgba(245,239,227,.48);font-size:.88rem}.metric{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(245,239,227,.08)}.metric-num{color:var(--gold);font-family:var(--display);font-size:1.55rem;line-height:1}.metric-label{color:rgba(245,239,227,.34);font-family:var(--heading);font-size:.5rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.clients-title{margin-bottom:2.2rem;color:rgba(245,239,227,.28);font-family:var(--heading);font-size:.6rem;font-weight:700;letter-spacing:.34em;text-align:center;text-transform:uppercase}.clients-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem clamp(1.8rem,5vw,3rem)}.client{color:rgba(245,239,227,.24);font-family:var(--heading);font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.about{position:relative;overflow:hidden}.about-bg{position:absolute;top:50%;right:-3rem;color:rgba(20,18,18,.04);font-family:var(--display);font-size:clamp(8rem,24vw,18rem);font-weight:600;line-height:1;transform:translateY(-50%)}.about-img-wrap{position:relative;max-width:36rem}.about-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(135deg,#1e1814,#2a2218 50%,#1a1610)}.about-label{position:absolute;top:1.5rem;left:1.5rem;z-index:2;color:rgba(255,255,255,.46);font-family:var(--heading);font-size:.55rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;writing-mode:vertical-lr;transform:rotate(180deg)}.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2.4rem}.pillar{border-left:2px solid var(--red);padding-left:1rem}.pillar h3{font-family:var(--heading);font-size:.76rem}.pillar p{color:rgba(20,18,18,.48);font-size:.83rem}
-.cta{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(5rem,10vw,9rem);text-align:center}.cta::before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 65% 70% at 50% 50%,rgba(154,28,31,.12),transparent 68%)}.rm{position:absolute;right:var(--gutter);bottom:2.5rem;z-index:-1;color:rgba(196,163,85,.06);font-family:var(--display);font-size:clamp(5rem,14vw,8rem);font-style:italic;font-weight:600;line-height:1}.cta-title{margin-top:1.5rem;font-family:var(--display);font-size:clamp(2.55rem,7vw,6.5rem);font-weight:300;line-height:1}.cta-title em{color:var(--gold);font-style:italic}.cta p{max-width:38rem;margin:1.4rem auto 0;color:rgba(245,239,227,.5)}.cta .actions{justify-content:center}footer{border-top:1px solid var(--lineL);padding-block:clamp(3rem,6vw,4rem) 2.5rem}.footer-grid{display:grid;grid-template-columns:minmax(16rem,1.5fr) repeat(3,minmax(8rem,1fr));gap:clamp(2rem,5vw,3.5rem)}.footer-logo{font-family:var(--heading);font-size:.78rem;font-weight:800;letter-spacing:.22em;line-height:1.45;text-transform:uppercase}.footer-logo span{display:block;color:var(--gold);font-size:.6rem;letter-spacing:.34em}.tagline{max-width:19rem;margin-top:1rem;color:rgba(245,239,227,.34);font-size:.88rem}.footer-col h4{margin-bottom:1rem;color:var(--gold);font-family:var(--heading);font-size:.58rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase}.footer-col a{display:block;margin-bottom:.55rem;color:rgba(245,239,227,.4);font-size:.88rem}.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--lineL)}.copy,.social a{color:rgba(245,239,227,.28);font-family:var(--heading);font-size:.57rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.copy span{color:var(--gold)}.social{display:flex;flex-wrap:wrap;gap:1rem 1.5rem}
-.reveal,.reveal-stagger>*{opacity:0;transform:translateY(1.7rem);transition:.7s}.reveal.visible,.reveal-stagger.visible>*{opacity:1;transform:translateY(0)}.reveal-stagger.visible>*:nth-child(2){transition-delay:.08s}.reveal-stagger.visible>*:nth-child(3){transition-delay:.16s}.delay{transition-delay:.12s}
-@media(max-width:1120px){.hero-grid{grid-template-columns:1fr}.hero-media{order:-1;min-height:clamp(18rem,48vw,30rem)}.process-grid,.transform-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:820px){.nav-toggle{display:grid}.nav-links{position:fixed;inset:0;z-index:101;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.3rem;padding:6rem var(--gutter) 3rem;background:rgba(12,11,11,.97);transform:translateX(100%);transition:.32s}.nav-links.open{transform:translateX(0)}.nav-links a{font-size:clamp(1.4rem,7vw,2.35rem);letter-spacing:.08em}.hero{min-height:auto;padding-top:7rem}.hero-media{min-height:18rem}.stats{grid-template-columns:1fr}.work-head{align-items:flex-start;flex-direction:column}.work-grid,.services-inner,.about-inner,.process-grid,.transform-grid,.footer-grid{grid-template-columns:1fr}.work-item,.work-item:not(.large){min-height:24rem;aspect-ratio:auto}.work-item.large{grid-row:auto}.service{grid-template-columns:2.9rem 1fr}.service .arrow{display:none}.pillars{grid-template-columns:1fr}.actions{flex-direction:column;align-items:stretch}.footer-bottom{align-items:flex-start;flex-direction:column}}@media(max-width:520px){:root{--gutter:1rem}.eyebrow,.label,.cta-eyebrow{letter-spacing:.2em}.cta-eyebrow::before,.cta-eyebrow::after{width:1.15rem}.hero h1{font-size:clamp(2.65rem,15vw,4rem)}.hero-media{min-height:15rem}.work-item,.work-item:not(.large){min-height:21rem}.work-info{align-items:flex-start;flex-direction:column}.client{text-align:center;font-size:.66rem}.copy,.social a{line-height:1.6}}@media(hover:none),(pointer:coarse){.cursor,.cursor-ring{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
-</style>
-</head>
-<body>
-<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursor-ring"></div>
-<nav id="nav"><a class="logo" href="#home">Raja Meliala Production<span>Brand Strategy & Creative Production</span></a><button class="nav-toggle" id="toggle" type="button" aria-label="Open menu" aria-controls="links" aria-expanded="false"><span></span></button><div class="nav-links" id="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">Studio</a><a href="#contact" class="nav-cta">Start a Project</a></div></nav>
-<main>
-<section class="hero" id="home"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">Jakarta &middot; Medan &middot; Indonesia</div><h1>We Build<br><em>Brands That</em><br><strong>Command Attention</strong></h1><p>Raja Meliala Production adalah studio kreatif dan brand strategy untuk bisnis yang ingin tampil berbeda &mdash; membangun identitas visual yang kuat, narasi yang otentik, dan konten yang bekerja.</p><div class="actions"><a href="#work" class="btn btn-primary">View Our Work</a><a href="#contact" class="btn btn-ghost">Start a Project &rarr;</a></div><div class="stats"><div class="stat"><div class="stat-num">120<span>+</span></div><div class="stat-label">Brands Transformed</div></div><div class="stat"><div class="stat-num">7<span>+</span></div><div class="stat-label">Years of Production</div></div><div class="stat"><div class="stat-num">48<span>+</span></div><div class="stat-label">Active Clients</div></div></div></div><div class="hero-media"><div class="hero-media-inner pattern"><div class="media-label"><span>///</span> Featured &mdash; Q2 2025</div></div></div></div></section>
-<div class="ticker"><div class="ticker-track"><span class="ticker-item">Brand Strategy<span class="dot"></span></span><span class="ticker-item">Visual Identity<span class="dot"></span></span><span class="ticker-item">Social Media Branding<span class="dot"></span></span><span class="ticker-item">Campaign Production<span class="dot"></span></span><span class="ticker-item">Content Creation<span class="dot"></span></span><span class="ticker-item">Creative Direction<span class="dot"></span></span><span class="ticker-item">Photography &amp; Film<span class="dot"></span></span><span class="ticker-item">Brand Strategy<span class="dot"></span></span><span class="ticker-item">Visual Identity<span class="dot"></span></span><span class="ticker-item">Social Media Branding<span class="dot"></span></span><span class="ticker-item">Campaign Production<span class="dot"></span></span><span class="ticker-item">Content Creation<span class="dot"></span></span><span class="ticker-item">Creative Direction<span class="dot"></span></span><span class="ticker-item">Photography &amp; Film<span class="dot"></span></span></div></div>
-<section class="section work" id="work"><div class="container"><div class="work-head reveal"><div><div class="label">Selected Work</div><h2 class="title">Projects That<br><em>Define Brands</em></h2></div><div><div class="count">04</div><a href="#contact" class="text-link">View All Projects &rarr;</a></div></div><div class="work-grid reveal-stagger"><article class="work-item large"><div class="work-img img1"></div><span class="tag">Brand Identity</span><div class="work-info"><div><div class="work-num">01</div><h3 class="work-title">Nusantara<br>Heritage Co.</h3><div class="work-sub">Full Brand Identity &middot; 2024</div></div><div class="arrow">&rarr;</div></div></article><article class="work-item"><div class="work-img img2"></div><span class="tag">Campaign</span><div class="work-info"><div><div class="work-num">02</div><h3 class="work-title">Archipelago Spirits<br>Launch Campaign</h3><div class="work-sub">Campaign Production &middot; 2024</div></div><div class="arrow">&rarr;</div></div></article><article class="work-item"><div class="work-img img3"></div><span class="tag">Social Media</span><div class="work-info"><div><div class="work-num">03</div><h3 class="work-title">Batik Modernist<br>Social Strategy</h3><div class="work-sub">Social Media Branding &middot; 2025</div></div><div class="arrow">&rarr;</div></div></article></div></div></section>
-<section class="section light" id="services"><div class="container services-inner"><div class="reveal"><div class="label">What We Do</div><h2 class="title">Strategic<br><em>Creative</em><br>Expertise</h2><p class="desc">Kami bukan sekadar vendor visual. Kami adalah partner strategis yang memahami bahwa brand yang kuat bukan tentang tampilan &mdash; tapi tentang <strong>persepsi yang konsisten dan berulang</strong>.</p><p class="desc">Setiap proyek dimulai dari riset mendalam, dieksekusi dengan presisi, dan diukur dengan hasil nyata.</p></div><div class="reveal delay"><article class="service"><div class="num">01 /</div><div><h3>Brand Strategy &amp; Positioning</h3><p>Riset kompetitor, brand voice, &amp; market positioning</p></div><div class="arrow">&rarr;</div></article><article class="service"><div class="num">02 /</div><div><h3>Visual Identity Design</h3><p>Logo, color system, tipografi, &amp; brand guidelines</p></div><div class="arrow">&rarr;</div></article><article class="service"><div class="num">03 /</div><div><h3>Social Media Branding</h3><p>Template, content pillars, &amp; visual language untuk platform</p></div><div class="arrow">&rarr;</div></article><article class="service"><div class="num">04 /</div><div><h3>Campaign Production</h3><p>Konsep, shooting, &amp; produksi konten kampanye</p></div><div class="arrow">&rarr;</div></article><article class="service"><div class="num">05 /</div><div><h3>Content Creation</h3><p>Foto produk, video sinematik, &amp; copywriting</p></div><div class="arrow">&rarr;</div></article></div></div></section>
-<section class="section process" id="process"><div class="container"><div class="process-head reveal"><div class="label">Our Process</div><h2 class="title">From <em>Insight</em><br>to Impact</h2></div><div class="process-grid reveal-stagger"><article class="card"><div class="step">01</div><div class="icon"></div><h3>Discovery &amp; Audit</h3><p>Kami pelajari bisnis Anda secara mendalam &mdash; kompetitor, audiens, dan posisi pasar saat ini.</p></article><article class="card"><div class="step">02</div><div class="icon"></div><h3>Brand Architecture</h3><p>Bangun fondasi brand yang kuat: personality, messaging, dan positioning yang membedakan Anda.</p></article><article class="card"><div class="step">03</div><div class="icon"></div><h3>Creative Execution</h3><p>Desain dan produksi semua aset visual &mdash; dari identitas hingga konten yang siap dipublikasikan.</p></article><article class="card"><div class="step">04</div><div class="icon"></div><h3>Activation &amp; Review</h3><p>Peluncuran brand dengan strategi yang terukur dan sesi review berkala untuk refinement.</p></article></div></div></section>
-<section class="section transform"><div class="container"><div class="reveal"><div class="label">Client Transformations</div><h2 class="title">Results That<br><em>Speak</em></h2></div><div class="transform-grid reveal-stagger"><article class="transform-card"><div class="transform-img t1"></div><div class="transform-body"><div class="transform-client">F&amp;B Industry &middot; 2024</div><h3 class="transform-name">Kopi Merak &mdash; Brand Relaunch</h3><p class="transform-result">Dari warung kopi lokal menjadi premium lifestyle brand dengan kehadiran digital yang konsisten dan kuat.</p><div class="metric"><div><div class="metric-num">340%</div><div class="metric-label">Instagram Growth</div></div><div><div class="metric-num">2.4x</div><div class="metric-label">Revenue Increase</div></div></div></div></article><article class="transform-card"><div class="transform-img t2"></div><div class="transform-body"><div class="transform-client">Property &middot; 2024</div><h3 class="transform-name">Properti Alam &mdash; Visual Identity</h3><p class="transform-result">Identitas visual baru yang mencerminkan nilai premium dan kepercayaan untuk developer properti skala menengah.</p><div class="metric"><div><div class="metric-num">+180%</div><div class="metric-label">Lead Generation</div></div><div><div class="metric-num">92%</div><div class="metric-label">Client Satisfaction</div></div></div></div></article><article class="transform-card"><div class="transform-img t3"></div><div class="transform-body"><div class="transform-client">Fashion &middot; 2025</div><h3 class="transform-name">Sulam Nusa &mdash; Launch Campaign</h3><p class="transform-result">Campaign produksi penuh untuk brand fashion lokal &mdash; storytelling autentik yang menghubungkan warisan budaya dengan audiens modern.</p><div class="metric"><div><div class="metric-num">1.2M</div><div class="metric-label">Campaign Reach</div></div><div><div class="metric-num">18%</div><div class="metric-label">Conversion Rate</div></div></div></div></article></div></div></section>
-<section class="clients"><div class="container"><div class="clients-title">Trusted by Forward-Thinking Brands</div><div class="clients-row"><div class="client">Nusantara Co.</div><div class="client">Archipelago Spirits</div><div class="client">Batik Modernist</div><div class="client">Kopi Merak</div><div class="client">Sulam Nusa</div><div class="client">Properti Alam</div><div class="client">Garudha Media</div><div class="client">Rempah Studio</div></div></div></section>
-<section class="section light about" id="about"><div class="about-bg">RMP</div><div class="container about-inner"><div class="about-img-wrap reveal"><div class="about-img"><div class="about-label">Raja Meliala Production / Est. 2017</div></div></div><div class="reveal delay"><div class="label">About the Studio</div><h2 class="title">We Are<br>Brand <em>Architects</em></h2><div class="about-text"><p>Raja Meliala Production lahir dari keyakinan bahwa brand yang baik bukan soal tampilan &mdash; tapi soal strategi yang dieksekusi dengan standar sinematik. Kami adalah tim kreatif berbasis di Indonesia yang menggabungkan riset mendalam dengan produksi berkualitas tinggi.</p><p>Lebih dari 120 brand telah mempercayakan identitas mereka kepada kami, dari UMKM lokal hingga korporasi nasional. Setiap proyek diperlakukan dengan tingkat dedikasi yang sama: total.</p></div><div class="pillars"><div class="pillar"><h3>Strategic First</h3><p>Setiap keputusan visual didorong oleh data dan riset pasar</p></div><div class="pillar"><h3>Cinematic Standard</h3><p>Produksi dengan standar film untuk setiap konten brand</p></div><div class="pillar"><h3>Indonesian Soul</h3><p>Memahami pasar dan budaya lokal secara organik</p></div><div class="pillar"><h3>Results Driven</h3><p>Brand yang indah tapi tidak menghasilkan bukan brand yang baik</p></div></div></div></div></section>
-<section class="cta" id="contact"><div class="container"><div class="rm">RM</div><div class="cta-eyebrow">Let's Build Something</div><h2 class="cta-title">Your Brand<br><em>Deserves Better</em><br>Than Average</h2><p>Jadikan brand Anda sesuatu yang diingat, dipercaya, dan dipilih. Mulai dengan percakapan &mdash; gratis, tanpa obligasi.</p><div class="actions"><a href="https://wa.me/628xxxx" class="btn btn-primary">WhatsApp Kami</a><a href="mailto:halo@rajameliala.id" class="btn btn-ghost">halo@rajameliala.id</a></div></div></section>
-</main>
-<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Raja Meliala Production<span>Brand Strategy & Creative Production</span></div><p class="tagline">Studio kreatif &amp; brand strategy untuk bisnis Indonesia yang ingin tampil berbeda dan tumbuh lebih cepat.</p></div><div class="footer-col"><h4>Services</h4><a href="#services">Brand Strategy</a><a href="#services">Visual Identity</a><a href="#services">Social Media</a><a href="#services">Campaign Production</a></div><div class="footer-col"><h4>Studio</h4><a href="#about">About Us</a><a href="#work">Selected Work</a><a href="#process">Process</a></div><div class="footer-col"><h4>Contact</h4><a href="#contact">Jakarta, Indonesia</a><a href="mailto:halo@rajameliala.id">halo@rajameliala.id</a><a href="https://wa.me/628xxxx">WhatsApp</a></div></div><div class="footer-bottom"><div class="copy">&copy; 2025 <span>Raja Meliala Production</span> &mdash; All rights reserved</div><div class="social"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Behance</a></div></div></div></footer>
-<script>
-const nav=document.getElementById('nav'),toggle=document.getElementById('toggle'),links=document.getElementById('links');function menu(open){document.body.classList.toggle('nav-open',open);nav.classList.toggle('opened',open);links.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')}toggle.addEventListener('click',()=>menu(toggle.getAttribute('aria-expanded')!=='true'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu(false)));addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');if(cursor&&ring&&matchMedia('(hover:hover) and (pointer:fine)').matches){let mx=0,my=0,rx=0,ry=0;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});(function anim(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim)})();document.querySelectorAll('a,button,.work-item,.service').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.4)'});el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)'})})}
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal,.reveal-stagger').forEach(el=>obs.observe(el));
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>
+      Karya Raja | Brand Strategy & Creative Production
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0b0b;
+        --surface: #141212;
+        --surface2: #1e1c1c;
+        --light: #f5efe3;
+        --white: #faf8f5;
+        --gold: #c4a355;
+        --gold2: #d4b870;
+        --red: #9a1c1f;
+        --dark: #141212;
+        --mutedL: rgba(245, 239, 227, 0.58);
+        --mutedD: rgba(20, 18, 18, 0.58);
+        --lineL: rgba(245, 239, 227, 0.08);
+        --lineD: rgba(20, 18, 18, 0.12);
+        --display: "Cormorant Garamond", Georgia, serif;
+        --heading: "Syne", Arial, sans-serif;
+        --body: "DM Sans", Arial, sans-serif;
+        --container: 1180px;
+        --gutter: clamp(1rem, 4vw, 4rem);
+        --section: clamp(4.5rem, 8vw, 7.5rem);
+        --h1: clamp(3rem, 7vw, 7.4rem);
+        --h2: clamp(2.25rem, 4.5vw, 4.8rem);
+        --bodySize: clamp(0.94rem, 0.89rem + 0.25vw, 1.08rem);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-width: 320px;
+        overflow-x: hidden;
+        background: var(--bg);
+        color: var(--light);
+        font-family: var(--body);
+        font-size: var(--bodySize);
+        line-height: 1.65;
+      }
+      body.nav-open {
+        overflow: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      .container {
+        width: min(100% - var(--gutter) * 2, var(--container));
+        margin: auto;
+      }
+      .section {
+        padding-block: var(--section);
+      }
+      .eyebrow,
+      .label,
+      .cta-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9rem;
+        color: var(--gold);
+        font-family: var(--heading);
+        font-size: clamp(0.56rem, 0.52rem + 0.18vw, 0.68rem);
+        font-weight: 700;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        line-height: 1.35;
+      }
+      .eyebrow::before,
+      .label::before,
+      .cta-eyebrow::before,
+      .cta-eyebrow::after {
+        content: "";
+        width: clamp(1.3rem, 4vw, 2.5rem);
+        height: 1px;
+        background: currentColor;
+        flex: 0 0 auto;
+      }
+      .title {
+        margin-top: 1rem;
+        color: var(--light);
+        font-family: var(--display);
+        font-size: var(--h2);
+        font-weight: 300;
+        line-height: 1.03;
+      }
+      .title em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .light {
+        background: var(--light);
+        color: var(--dark);
+      }
+      .light .label {
+        color: var(--red);
+      }
+      .light .title {
+        color: var(--dark);
+      }
+      .light .title em {
+        color: var(--red);
+      }
+      .btn {
+        display: inline-flex;
+        min-height: 2.95rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        padding: 0.85rem clamp(1.1rem, 3vw, 2.2rem);
+        font-family: var(--heading);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.25s;
+      }
+      .btn-primary {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--bg);
+      }
+      .btn-primary:hover {
+        background: var(--gold2);
+        border-color: var(--gold2);
+        transform: translateY(-1px);
+      }
+      .btn-ghost {
+        border-color: rgba(245, 239, 227, 0.24);
+        color: rgba(245, 239, 227, 0.78);
+      }
+      .btn-ghost:hover {
+        border-color: var(--light);
+        color: var(--light);
+      }
+      .cursor,
+      .cursor-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+      }
+      .cursor {
+        width: 8px;
+        height: 8px;
+        background: var(--gold);
+        mix-blend-mode: difference;
+      }
+      .cursor-ring {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(196, 163, 85, 0.42);
+        transition: transform 0.35s;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        pointer-events: none;
+        opacity: 0.025;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px;
+      }
+      nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: clamp(0.9rem, 2vw, 1.6rem) var(--gutter);
+        transition: 0.35s;
+      }
+      nav.scrolled,
+      nav.opened {
+        background: rgba(12, 11, 11, 0.94);
+        border-bottom: 1px solid rgba(196, 163, 85, 0.14);
+        backdrop-filter: blur(14px);
+      }
+      .logo {
+        z-index: 102;
+        max-width: min(25rem, 68vw);
+        font-family: var(--heading);
+        font-size: clamp(0.62rem, 0.56rem + 0.22vw, 0.76rem);
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        line-height: 1.45;
+        text-transform: uppercase;
+      }
+      .logo span {
+        display: block;
+        color: var(--gold);
+        font-size: 0.58em;
+        letter-spacing: 0.34em;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 2.5vw, 2.5rem);
+      }
+      .nav-links a {
+        color: rgba(245, 239, 227, 0.62);
+        font-family: var(--heading);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+      .nav-cta {
+        border: 1px solid rgba(196, 163, 85, 0.48);
+        padding: 0.58rem 1rem;
+        color: var(--gold) !important;
+      }
+      .nav-cta:hover {
+        background: var(--gold);
+        color: var(--bg) !important;
+      }
+      .nav-toggle {
+        z-index: 102;
+        display: none;
+        position: relative;
+        width: 2.8rem;
+        height: 2.8rem;
+        place-items: center;
+        border: 1px solid rgba(196, 163, 85, 0.36);
+        background: transparent;
+        color: var(--gold);
+        cursor: pointer;
+      }
+      .nav-toggle span,
+      .nav-toggle::before,
+      .nav-toggle::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 1.15rem;
+        height: 1px;
+        background: currentColor;
+        transform: translateX(-50%);
+        transition: transform 0.25s ease, opacity 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+      }
+      .nav-toggle::before {
+        top: 0.9rem;
+      }
+      .nav-toggle span {
+        top: 50%;
+      }
+      .nav-toggle::after {
+        bottom: 0.9rem;
+      }
+      .nav-toggle[aria-expanded="true"]::before {
+        top: 50%;
+        transform: translateX(-50%) rotate(45deg);
+      }
+      .nav-toggle[aria-expanded="true"] span {
+        opacity: 0;
+      }
+      .nav-toggle[aria-expanded="true"]::after {
+        bottom: auto;
+        top: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+      .hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 100svh;
+        padding: clamp(7rem, 13vh, 10rem) var(--gutter) clamp(3.5rem, 9vh, 5rem);
+        display: grid;
+        align-items: end;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          radial-gradient(
+            ellipse 80% 70% at 75% 25%,
+            rgba(154, 28, 31, 0.16),
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 18% 80%,
+            rgba(196, 163, 85, 0.08),
+            transparent 55%
+          ),
+          var(--bg);
+      }
+      .hero::after,
+      .cta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(rgba(245, 239, 227, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(245, 239, 227, 0.03) 1px, transparent 1px);
+        background-size: clamp(42px, 8vw, 80px) clamp(42px, 8vw, 80px);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.06fr) minmax(18rem, 0.74fr);
+        gap: clamp(2rem, 6vw, 5rem);
+        align-items: end;
+      }
+      .hero-copy {
+        max-width: 48rem;
+      }
+      .hero h1 {
+        margin-top: 1.4rem;
+        font-family: var(--display);
+        font-size: var(--h1);
+        font-weight: 300;
+        line-height: 0.98;
+      }
+      .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .hero h1 strong {
+        display: block;
+        color: var(--white);
+        font-weight: 600;
+      }
+      .hero p {
+        max-width: 44rem;
+        margin-top: clamp(1.25rem, 3vw, 2rem);
+        color: var(--mutedL);
+        font-weight: 300;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem 1.25rem;
+        margin-top: clamp(1.8rem, 4vw, 3rem);
+      }
+      .hero-media {
+        position: relative;
+        min-height: clamp(24rem, 68vh, 44rem);
+        border: 1px solid rgba(196, 163, 85, 0.18);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.28);
+      }
+      .hero-media::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+      .hero-media-inner {
+        position: absolute;
+        inset: clamp(1rem, 3vw, 2rem);
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, transparent 25%, rgba(12, 11, 11, 0.86)),
+          linear-gradient(135deg, #1e1a18, #2a2420 45%, #1a1616);
+      }
+      .pattern::before,
+      .work-img::before,
+      .about-img::before,
+      .transform-img::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 30px,
+          rgba(196, 163, 85, 0.035) 30px,
+          rgba(196, 163, 85, 0.035) 31px
+        );
+      }
+      .media-label {
+        position: absolute;
+        left: clamp(1rem, 3vw, 2rem);
+        bottom: clamp(1rem, 3vw, 2rem);
+        z-index: 1;
+        color: rgba(245, 239, 227, 0.48);
+        font-family: var(--heading);
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+      .media-label span {
+        color: var(--gold);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: clamp(2rem, 5vw, 4rem);
+        border: 1px solid var(--lineL);
+        background: var(--lineL);
+      }
+      .stat {
+        min-width: 0;
+        background: rgba(20, 18, 18, 0.58);
+        padding: clamp(1rem, 2vw, 1.4rem);
+      }
+      .stat-num {
+        font-family: var(--display);
+        font-size: clamp(1.75rem, 4vw, 2.6rem);
+        line-height: 1;
+      }
+      .stat-num span {
+        color: var(--gold);
+        font-size: 0.6em;
+      }
+      .stat-label {
+        margin-top: 0.35rem;
+        color: rgba(245, 239, 227, 0.4);
+        font-family: var(--heading);
+        font-size: 0.54rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        line-height: 1.4;
+      }
+      .ticker {
+        overflow: hidden;
+        border-block: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--red);
+        padding-block: 0.85rem;
+      }
+      .ticker-track {
+        display: flex;
+        width: max-content;
+        white-space: nowrap;
+        animation: ticker 30s linear infinite;
+      }
+      .ticker-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding-inline: clamp(1.2rem, 3vw, 2rem);
+        color: rgba(255, 255, 255, 0.9);
+        font-family: var(--heading);
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.55);
+      }
+      @keyframes ticker {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .work,
+      .transform,
+      footer {
+        background: var(--surface);
+      }
+      .process,
+      .cta {
+        background: var(--bg);
+      }
+      .clients {
+        background: var(--surface2);
+        padding-block: clamp(3rem, 6vw, 4rem);
+      }
+      .work-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: clamp(2.2rem, 6vw, 4rem);
+      }
+      .count {
+        color: rgba(245, 239, 227, 0.08);
+        font-family: var(--display);
+        font-size: clamp(3rem, 8vw, 5rem);
+        line-height: 1;
+      }
+      .text-link {
+        display: inline-block;
+        margin-top: 0.3rem;
+        border-bottom: 1px solid rgba(196, 163, 85, 0.35);
+        color: var(--gold);
+        font-family: var(--heading);
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .work-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1rem, 2vw, 1.5rem);
+      }
+      .work-item {
+        position: relative;
+        min-height: 20rem;
+        overflow: hidden;
+        background: var(--surface2);
+      }
+      .work-item.large {
+        grid-row: span 2;
+      }
+      .work-item:not(.large) {
+        aspect-ratio: 16/10;
+      }
+      .work-img {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: var(--project);
+        transition: transform 0.7s;
+      }
+      .work-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(12, 11, 11, 0.82),
+          transparent 62%
+        );
+      }
+      .work-item:hover .work-img {
+        transform: scale(1.04);
+      }
+      .img1 {
+        --project: linear-gradient(135deg, #1a1614, #2d2420 42%, #1e1915);
+      }
+      .img2 {
+        --project: linear-gradient(135deg, #141820, #1e2530 42%, #10151e);
+      }
+      .img3 {
+        --project: linear-gradient(135deg, #1a1a14, #28280e 42%, #1c1c12);
+      }
+      .tag {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+        z-index: 1;
+        background: var(--red);
+        color: #fff;
+        padding: 0.35rem 0.75rem;
+        font-family: var(--heading);
+        font-size: 0.52rem;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+      .work-info {
+        position: absolute;
+        inset: auto clamp(1.1rem, 3vw, 1.8rem) clamp(1.1rem, 3vw, 1.8rem);
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .work-num {
+        position: absolute;
+        top: -1.4rem;
+        color: rgba(245, 239, 227, 0.14);
+        font-family: var(--display);
+        font-size: clamp(2.6rem, 6vw, 3.6rem);
+        line-height: 1;
+      }
+      .work-title {
+        position: relative;
+        font-family: var(--display);
+        font-size: clamp(1.25rem, 2vw, 1.55rem);
+        font-weight: 400;
+        line-height: 1.15;
+      }
+      .work-sub {
+        margin-top: 0.35rem;
+        color: rgba(245, 239, 227, 0.5);
+        font-family: var(--heading);
+        font-size: 0.56rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .arrow {
+        display: grid;
+        width: 2.5rem;
+        height: 2.5rem;
+        place-items: center;
+        border: 1px solid rgba(196, 163, 85, 0.32);
+        color: var(--gold);
+        flex: 0 0 auto;
+      }
+      .services-inner,
+      .about-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        gap: clamp(2.5rem, 7vw, 6rem);
+        align-items: start;
+      }
+      .desc,
+      .about-text {
+        color: var(--mutedD);
+        font-weight: 300;
+      }
+      .desc + .desc {
+        margin-top: 1rem;
+      }
+      .desc strong {
+        color: var(--dark);
+        font-weight: 400;
+      }
+      .service {
+        display: grid;
+        grid-template-columns: 3.4rem minmax(0, 1fr) auto;
+        gap: 0.8rem 1rem;
+        align-items: start;
+        border-top: 1px solid var(--lineD);
+        padding-block: 1.5rem;
+      }
+      .service:last-child {
+        border-bottom: 1px solid var(--lineD);
+      }
+      .num {
+        color: var(--red);
+        font-family: var(--heading);
+        font-size: 0.58rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+      }
+      .service h3 {
+        font-family: var(--display);
+        font-size: clamp(1.15rem, 2vw, 1.4rem);
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      .service p {
+        margin-top: 0.25rem;
+        color: rgba(20, 18, 18, 0.46);
+        font-size: 0.86rem;
+        font-weight: 300;
+      }
+      .service .arrow {
+        border: 0;
+        color: rgba(20, 18, 18, 0.3);
+      }
+      .process-head {
+        max-width: 44rem;
+        margin: auto;
+        text-align: center;
+      }
+      .process-grid,
+      .transform-grid {
+        display: grid;
+        gap: clamp(1rem, 2vw, 1.5rem);
+        margin-top: clamp(2.5rem, 6vw, 4rem);
+      }
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        position: relative;
+        border: 1px solid var(--lineL);
+        padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.4vw, 2rem);
+      }
+      .card:hover {
+        border-color: rgba(196, 163, 85, 0.34);
+        background: var(--surface2);
+      }
+      .step {
+        color: rgba(245, 239, 227, 0.07);
+        font-family: var(--display);
+        font-size: clamp(3rem, 6vw, 4.5rem);
+        line-height: 1;
+      }
+      .icon {
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 1.4rem 0;
+      }
+      .icon::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--gold);
+      }
+      .icon::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -2.5px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      .card h3 {
+        font-family: var(--heading);
+        font-size: 0.95rem;
+      }
+      .card p {
+        margin-top: 0.75rem;
+        color: rgba(245, 239, 227, 0.45);
+        font-size: 0.88rem;
+        font-weight: 300;
+      }
+      .transform-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .transform-card {
+        overflow: hidden;
+        border: 1px solid rgba(245, 239, 227, 0.07);
+        background: var(--surface2);
+      }
+      .transform-img {
+        position: relative;
+        min-height: clamp(12rem, 25vw, 15rem);
+        background: var(--transform);
+      }
+      .transform-img::after {
+        content: "AFTER";
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1;
+        background: var(--gold);
+        color: var(--bg);
+        padding: 0.3rem 0.7rem;
+        font-family: var(--heading);
+        font-size: 0.5rem;
+        font-weight: 800;
+        letter-spacing: 0.26em;
+      }
+      .t1 {
+        --transform: linear-gradient(135deg, #1e1a14, #2e2618);
+      }
+      .t2 {
+        --transform: linear-gradient(135deg, #141e1e, #182828);
+      }
+      .t3 {
+        --transform: linear-gradient(135deg, #1e1418, #2e1820);
+      }
+      .transform-body {
+        padding: clamp(1.35rem, 3vw, 1.8rem);
+      }
+      .transform-client {
+        color: var(--gold);
+        font-family: var(--heading);
+        font-size: 0.57rem;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .transform-name {
+        margin-top: 0.55rem;
+        font-family: var(--display);
+        font-size: clamp(1.2rem, 2vw, 1.42rem);
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      .transform-result {
+        margin-top: 0.55rem;
+        color: rgba(245, 239, 227, 0.48);
+        font-size: 0.88rem;
+      }
+      .metric {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(245, 239, 227, 0.08);
+      }
+      .metric-num {
+        color: var(--gold);
+        font-family: var(--display);
+        font-size: 1.55rem;
+        line-height: 1;
+      }
+      .metric-label {
+        color: rgba(245, 239, 227, 0.34);
+        font-family: var(--heading);
+        font-size: 0.5rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .clients-title {
+        margin-bottom: 2.2rem;
+        color: rgba(245, 239, 227, 0.28);
+        font-family: var(--heading);
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.34em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .clients-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem clamp(1.8rem, 5vw, 3rem);
+      }
+      .client {
+        color: rgba(245, 239, 227, 0.24);
+        font-family: var(--heading);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .about {
+        position: relative;
+        overflow: hidden;
+      }
+      .about-bg {
+        position: absolute;
+        top: 50%;
+        right: -3rem;
+        color: rgba(20, 18, 18, 0.04);
+        font-family: var(--display);
+        font-size: clamp(8rem, 24vw, 18rem);
+        font-weight: 600;
+        line-height: 1;
+        transform: translateY(-50%);
+      }
+      .about-img-wrap {
+        position: relative;
+        max-width: 36rem;
+      }
+      .about-img {
+        position: relative;
+        aspect-ratio: 4/5;
+        overflow: hidden;
+        background: linear-gradient(135deg, #1e1814, #2a2218 50%, #1a1610);
+      }
+      .about-label {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 2;
+        color: rgba(255, 255, 255, 0.46);
+        font-family: var(--heading);
+        font-size: 0.55rem;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+      }
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.4rem;
+        margin-top: 2.4rem;
+      }
+      .pillar {
+        border-left: 2px solid var(--red);
+        padding-left: 1rem;
+      }
+      .pillar h3 {
+        font-family: var(--heading);
+        font-size: 0.76rem;
+      }
+      .pillar p {
+        color: rgba(20, 18, 18, 0.48);
+        font-size: 0.83rem;
+      }
+      .cta {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        padding-block: clamp(5rem, 10vw, 9rem);
+        text-align: center;
+      }
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: radial-gradient(
+          ellipse 65% 70% at 50% 50%,
+          rgba(154, 28, 31, 0.12),
+          transparent 68%
+        );
+      }
+      .rm {
+        position: absolute;
+        right: var(--gutter);
+        bottom: 2.5rem;
+        z-index: -1;
+        color: rgba(196, 163, 85, 0.06);
+        font-family: var(--display);
+        font-size: clamp(5rem, 14vw, 8rem);
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .cta-title {
+        margin-top: 1.5rem;
+        font-family: var(--display);
+        font-size: clamp(2.55rem, 7vw, 6.5rem);
+        font-weight: 300;
+        line-height: 1;
+      }
+      .cta-title em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .cta p {
+        max-width: 38rem;
+        margin: 1.4rem auto 0;
+        color: rgba(245, 239, 227, 0.5);
+      }
+      .cta .actions {
+        justify-content: center;
+      }
+      footer {
+        border-top: 1px solid var(--lineL);
+        padding-block: clamp(3rem, 6vw, 4rem) 2.5rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1.5fr) repeat(3, minmax(8rem, 1fr));
+        gap: clamp(2rem, 5vw, 3.5rem);
+      }
+      .footer-logo {
+        font-family: var(--heading);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        line-height: 1.45;
+        text-transform: uppercase;
+      }
+      .footer-logo span {
+        display: block;
+        color: var(--gold);
+        font-size: 0.6rem;
+        letter-spacing: 0.34em;
+      }
+      .tagline {
+        max-width: 19rem;
+        margin-top: 1rem;
+        color: rgba(245, 239, 227, 0.34);
+        font-size: 0.88rem;
+      }
+      .footer-col h4 {
+        margin-bottom: 1rem;
+        color: var(--gold);
+        font-family: var(--heading);
+        font-size: 0.58rem;
+        font-weight: 800;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+      .footer-col a {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: rgba(245, 239, 227, 0.4);
+        font-size: 0.88rem;
+      }
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--lineL);
+      }
+      .copy,
+      .social a {
+        color: rgba(245, 239, 227, 0.28);
+        font-family: var(--heading);
+        font-size: 0.57rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .copy span {
+        color: var(--gold);
+      }
+      .social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+      }
+      .reveal,
+      .reveal-stagger > * {
+        opacity: 0;
+        transform: translateY(1.7rem);
+        transition: 0.7s;
+      }
+      .reveal.visible,
+      .reveal-stagger.visible > * {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-stagger.visible > *:nth-child(2) {
+        transition-delay: 0.08s;
+      }
+      .reveal-stagger.visible > *:nth-child(3) {
+        transition-delay: 0.16s;
+      }
+      .delay {
+        transition-delay: 0.12s;
+      }
+      @media (max-width: 1120px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-media {
+          order: -1;
+          min-height: clamp(18rem, 48vw, 30rem);
+        }
+        .process-grid,
+        .transform-grid,
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 820px) {
+        .nav-toggle {
+          display: grid;
+        }
+        .nav-links {
+          position: fixed;
+          inset: 0;
+          z-index: 101;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 1.3rem;
+          padding: 6rem var(--gutter) 3rem;
+          background: rgba(12, 11, 11, 0.97);
+          transform: translateX(100%);
+          transition: 0.32s;
+        }
+        .nav-links.open {
+          transform: translateX(0);
+        }
+        .nav-links a {
+          font-size: clamp(1.4rem, 7vw, 2.35rem);
+          letter-spacing: 0.08em;
+        }
+        .hero {
+          min-height: auto;
+          padding-top: 7rem;
+        }
+        .hero-media {
+          min-height: 18rem;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .work-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .work-grid,
+        .services-inner,
+        .about-inner,
+        .process-grid,
+        .transform-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .work-item,
+        .work-item:not(.large) {
+          min-height: 24rem;
+          aspect-ratio: auto;
+        }
+        .work-item.large {
+          grid-row: auto;
+        }
+        .service {
+          grid-template-columns: 2.9rem 1fr;
+        }
+        .service .arrow {
+          display: none;
+        }
+        .pillars {
+          grid-template-columns: 1fr;
+        }
+        .actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 520px) {
+        :root {
+          --gutter: 1rem;
+        }
+        .eyebrow,
+        .label,
+        .cta-eyebrow {
+          letter-spacing: 0.2em;
+        }
+        .cta-eyebrow::before,
+        .cta-eyebrow::after {
+          width: 1.15rem;
+        }
+        .hero h1 {
+          font-size: clamp(2.65rem, 15vw, 4rem);
+        }
+        .hero-media {
+          min-height: 15rem;
+        }
+        .work-item,
+        .work-item:not(.large) {
+          min-height: 21rem;
+        }
+        .work-info {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .client {
+          text-align: center;
+          font-size: 0.66rem;
+        }
+        .copy,
+        .social a {
+          line-height: 1.6;
+        }
+      }
+      @media (hover: none), (pointer: coarse) {
+        .cursor,
+        .cursor-ring {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <nav id="nav">
+      <a class="logo" href="#home"
+        >Karya Raja<span
+          >Brand Strategy & Creative Production</span
+        ></a
+      ><button
+        class="nav-toggle"
+        id="toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="links"
+        aria-expanded="false"
+      >
+        <span></span>
+      </button>
+      <div class="nav-links" id="links">
+        <a href="#work">Work</a><a href="#services">Services</a
+        ><a href="#process">Process</a><a href="#about">Studio</a
+        ><a href="#contact" class="nav-cta">Start a Project</a>
+      </div>
+    </nav>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Jakarta &middot; Medan &middot; Indonesia</div>
+            <h1>
+              We Build<br /><em>Brands That</em><br /><strong
+                >Command Attention</strong
+              >
+            </h1>
+            <p>
+              Karya Raja adalah studio kreatif dan brand strategy
+              untuk bisnis yang ingin tampil berbeda &mdash; membangun identitas
+              visual yang kuat, narasi yang otentik, dan konten yang bekerja.
+            </p>
+            <div class="actions">
+              <a href="#work" class="btn btn-primary">View Our Work</a
+              ><a href="#contact" class="btn btn-ghost"
+                >Start a Project &rarr;</a
+              >
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">120<span>+</span></div>
+                <div class="stat-label">Brands Transformed</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">7<span>+</span></div>
+                <div class="stat-label">Years of Production</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">48<span>+</span></div>
+                <div class="stat-label">Active Clients</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-media-inner pattern">
+              <div class="media-label">
+                <span>///</span> Featured &mdash; Q2 2025
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span class="ticker-item"
+            >Brand Strategy<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Visual Identity<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Social Media Branding<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Campaign Production<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Content Creation<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Creative Direction<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Photography &amp; Film<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Brand Strategy<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Visual Identity<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Social Media Branding<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Campaign Production<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Content Creation<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Creative Direction<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Photography &amp; Film<span class="dot"></span
+          ></span>
+        </div>
+      </div>
+      <section class="section work" id="work">
+        <div class="container">
+          <div class="work-head reveal">
+            <div>
+              <div class="label">Selected Work</div>
+              <h2 class="title">Projects That<br /><em>Define Brands</em></h2>
+            </div>
+            <div>
+              <div class="count">04</div>
+              <a href="#contact" class="text-link">View All Projects &rarr;</a>
+            </div>
+          </div>
+          <div class="work-grid reveal-stagger">
+            <article class="work-item large">
+              <div class="work-img img1"></div>
+              <span class="tag">Brand Identity</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">01</div>
+                  <h3 class="work-title">Nusantara<br />Heritage Co.</h3>
+                  <div class="work-sub">Full Brand Identity &middot; 2024</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+            <article class="work-item">
+              <div class="work-img img2"></div>
+              <span class="tag">Campaign</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">02</div>
+                  <h3 class="work-title">
+                    Archipelago Spirits<br />Launch Campaign
+                  </h3>
+                  <div class="work-sub">Campaign Production &middot; 2024</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+            <article class="work-item">
+              <div class="work-img img3"></div>
+              <span class="tag">Social Media</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">03</div>
+                  <h3 class="work-title">
+                    Batik Modernist<br />Social Strategy
+                  </h3>
+                  <div class="work-sub">
+                    Social Media Branding &middot; 2025
+                  </div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section light" id="services">
+        <div class="container services-inner">
+          <div class="reveal">
+            <div class="label">What We Do</div>
+            <h2 class="title">
+              Strategic<br /><em>Creative</em><br />Expertise
+            </h2>
+            <p class="desc">
+              Kami bukan sekadar vendor visual. Kami adalah partner strategis
+              yang memahami bahwa brand yang kuat bukan tentang tampilan &mdash;
+              tapi tentang
+              <strong>persepsi yang konsisten dan berulang</strong>.
+            </p>
+            <p class="desc">
+              Setiap proyek dimulai dari riset mendalam, dieksekusi dengan
+              presisi, dan diukur dengan hasil nyata.
+            </p>
+          </div>
+          <div class="reveal delay">
+            <article class="service">
+              <div class="num">01 /</div>
+              <div>
+                <h3>Brand Strategy &amp; Positioning</h3>
+                <p>Riset kompetitor, brand voice, &amp; market positioning</p>
+              </div>
+              <div class="arrow">&rarr;</div>
+            </article>
+            <article class="service">
+              <div class="num">02 /</div>
+              <div>
+                <h3>Visual Identity Design</h3>
+                <p>Logo, color system, tipografi, &amp; brand guidelines</p>
+              </div>
+              <div class="arrow">&rarr;</div>
+            </article>
+            <article class="service">
+              <div class="num">03 /</div>
+              <div>
+                <h3>Social Media Branding</h3>
+                <p>
+                  Template, content pillars, &amp; visual language untuk
+                  platform
+                </p>
+              </div>
+              <div class="arrow">&rarr;</div>
+            </article>
+            <article class="service">
+              <div class="num">04 /</div>
+              <div>
+                <h3>Campaign Production</h3>
+                <p>Konsep, shooting, &amp; produksi konten kampanye</p>
+              </div>
+              <div class="arrow">&rarr;</div>
+            </article>
+            <article class="service">
+              <div class="num">05 /</div>
+              <div>
+                <h3>Content Creation</h3>
+                <p>Foto produk, video sinematik, &amp; copywriting</p>
+              </div>
+              <div class="arrow">&rarr;</div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="process-head reveal">
+            <div class="label">Our Process</div>
+            <h2 class="title">From <em>Insight</em><br />to Impact</h2>
+          </div>
+          <div class="process-grid reveal-stagger">
+            <article class="card">
+              <div class="step">01</div>
+              <div class="icon"></div>
+              <h3>Discovery &amp; Audit</h3>
+              <p>
+                Kami pelajari bisnis Anda secara mendalam &mdash; kompetitor,
+                audiens, dan posisi pasar saat ini.
+              </p>
+            </article>
+            <article class="card">
+              <div class="step">02</div>
+              <div class="icon"></div>
+              <h3>Brand Architecture</h3>
+              <p>
+                Bangun fondasi brand yang kuat: personality, messaging, dan
+                positioning yang membedakan Anda.
+              </p>
+            </article>
+            <article class="card">
+              <div class="step">03</div>
+              <div class="icon"></div>
+              <h3>Creative Execution</h3>
+              <p>
+                Desain dan produksi semua aset visual &mdash; dari identitas
+                hingga konten yang siap dipublikasikan.
+              </p>
+            </article>
+            <article class="card">
+              <div class="step">04</div>
+              <div class="icon"></div>
+              <h3>Activation &amp; Review</h3>
+              <p>
+                Peluncuran brand dengan strategi yang terukur dan sesi review
+                berkala untuk refinement.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section transform">
+        <div class="container">
+          <div class="reveal">
+            <div class="label">Client Transformations</div>
+            <h2 class="title">Results That<br /><em>Speak</em></h2>
+          </div>
+          <div class="transform-grid reveal-stagger">
+            <article class="transform-card">
+              <div class="transform-img t1"></div>
+              <div class="transform-body">
+                <div class="transform-client">
+                  F&amp;B Industry &middot; 2024
+                </div>
+                <h3 class="transform-name">
+                  Kopi Merak &mdash; Brand Relaunch
+                </h3>
+                <p class="transform-result">
+                  Dari warung kopi lokal menjadi premium lifestyle brand dengan
+                  kehadiran digital yang konsisten dan kuat.
+                </p>
+                <div class="metric">
+                  <div>
+                    <div class="metric-num">340%</div>
+                    <div class="metric-label">Instagram Growth</div>
+                  </div>
+                  <div>
+                    <div class="metric-num">2.4x</div>
+                    <div class="metric-label">Revenue Increase</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="transform-card">
+              <div class="transform-img t2"></div>
+              <div class="transform-body">
+                <div class="transform-client">Property &middot; 2024</div>
+                <h3 class="transform-name">
+                  Properti Alam &mdash; Visual Identity
+                </h3>
+                <p class="transform-result">
+                  Identitas visual baru yang mencerminkan nilai premium dan
+                  kepercayaan untuk developer properti skala menengah.
+                </p>
+                <div class="metric">
+                  <div>
+                    <div class="metric-num">+180%</div>
+                    <div class="metric-label">Lead Generation</div>
+                  </div>
+                  <div>
+                    <div class="metric-num">92%</div>
+                    <div class="metric-label">Client Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="transform-card">
+              <div class="transform-img t3"></div>
+              <div class="transform-body">
+                <div class="transform-client">Fashion &middot; 2025</div>
+                <h3 class="transform-name">
+                  Sulam Nusa &mdash; Launch Campaign
+                </h3>
+                <p class="transform-result">
+                  Campaign produksi penuh untuk brand fashion lokal &mdash;
+                  storytelling autentik yang menghubungkan warisan budaya dengan
+                  audiens modern.
+                </p>
+                <div class="metric">
+                  <div>
+                    <div class="metric-num">1.2M</div>
+                    <div class="metric-label">Campaign Reach</div>
+                  </div>
+                  <div>
+                    <div class="metric-num">18%</div>
+                    <div class="metric-label">Conversion Rate</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="container">
+          <div class="clients-title">Trusted by Forward-Thinking Brands</div>
+          <div class="clients-row">
+            <div class="client">Nusantara Co.</div>
+            <div class="client">Archipelago Spirits</div>
+            <div class="client">Batik Modernist</div>
+            <div class="client">Kopi Merak</div>
+            <div class="client">Sulam Nusa</div>
+            <div class="client">Properti Alam</div>
+            <div class="client">Garudha Media</div>
+            <div class="client">Rempah Studio</div>
+          </div>
+        </div>
+      </section>
+      <section class="section light about" id="about">
+        <div class="about-bg">RMP</div>
+        <div class="container about-inner">
+          <div class="about-img-wrap reveal">
+            <div class="about-img">
+              <div class="about-label">Karya Raja / Est. 2017</div>
+            </div>
+          </div>
+          <div class="reveal delay">
+            <div class="label">About the Studio</div>
+            <h2 class="title">We Are<br />Brand <em>Architects</em></h2>
+            <div class="about-text">
+              <p>
+                Karya Raja lahir dari keyakinan bahwa brand yang
+                baik bukan soal tampilan &mdash; tapi soal strategi yang
+                dieksekusi dengan standar sinematik. Kami adalah tim kreatif
+                berbasis di Indonesia yang menggabungkan riset mendalam dengan
+                produksi berkualitas tinggi.
+              </p>
+              <p>
+                Lebih dari 120 brand telah mempercayakan identitas mereka kepada
+                kami, dari UMKM lokal hingga korporasi nasional. Setiap proyek
+                diperlakukan dengan tingkat dedikasi yang sama: total.
+              </p>
+            </div>
+            <div class="pillars">
+              <div class="pillar">
+                <h3>Strategic First</h3>
+                <p>
+                  Setiap keputusan visual didorong oleh data dan riset pasar
+                </p>
+              </div>
+              <div class="pillar">
+                <h3>Cinematic Standard</h3>
+                <p>Produksi dengan standar film untuk setiap konten brand</p>
+              </div>
+              <div class="pillar">
+                <h3>Indonesian Soul</h3>
+                <p>Memahami pasar dan budaya lokal secara organik</p>
+              </div>
+              <div class="pillar">
+                <h3>Results Driven</h3>
+                <p>
+                  Brand yang indah tapi tidak menghasilkan bukan brand yang baik
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="rm">RM</div>
+          <div class="cta-eyebrow">Let's Build Something</div>
+          <h2 class="cta-title">
+            Your Brand<br /><em>Deserves Better</em><br />Than Average
+          </h2>
+          <p>
+            Jadikan brand Anda sesuatu yang diingat, dipercaya, dan dipilih.
+            Mulai dengan percakapan &mdash; gratis, tanpa obligasi.
+          </p>
+          <div class="actions">
+            <a href="https://wa.me/628xxxx" class="btn btn-primary"
+              >WhatsApp Kami</a
+            ><a href="mailto:halo@rajameliala.id" class="btn btn-ghost"
+              >halo@rajameliala.id</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              Karya Raja<span
+                >Brand Strategy & Creative Production</span
+              >
+            </div>
+            <p class="tagline">
+              Studio kreatif &amp; brand strategy untuk bisnis Indonesia yang
+              ingin tampil berbeda dan tumbuh lebih cepat.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#services">Brand Strategy</a
+            ><a href="#services">Visual Identity</a
+            ><a href="#services">Social Media</a
+            ><a href="#services">Campaign Production</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <a href="#about">About Us</a><a href="#work">Selected Work</a
+            ><a href="#process">Process</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="#contact">Jakarta, Indonesia</a
+            ><a href="mailto:halo@rajameliala.id">halo@rajameliala.id</a
+            ><a href="https://wa.me/628xxxx">WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copy">
+            &copy; 2026 <span>Karya Raja</span> &mdash; All rights
+            reserved
+          </div>
+          <div class="social">
+            <a href="#">Instagram</a><a href="#">LinkedIn</a
+            ><a href="#">Behance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const nav = document.getElementById("nav"),
+        toggle = document.getElementById("toggle"),
+        links = document.getElementById("links");
+      function menu(open) {
+        document.body.classList.toggle("nav-open", open);
+        nav.classList.toggle("opened", open);
+        links.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+      toggle.addEventListener("click", () =>
+        menu(toggle.getAttribute("aria-expanded") !== "true"),
+      );
+      links
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", () => menu(false)));
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape") menu(false);
+      });
+      addEventListener(
+        "scroll",
+        () => nav.classList.toggle("scrolled", scrollY > 60),
+        { passive: true },
+      );
+      const cursor = document.getElementById("cursor"),
+        ring = document.getElementById("cursor-ring");
+      if (
+        cursor &&
+        ring &&
+        matchMedia("(hover:hover) and (pointer:fine)").matches
+      ) {
+        let mx = 0,
+          my = 0,
+          rx = 0,
+          ry = 0;
+        addEventListener("mousemove", (e) => {
+          mx = e.clientX;
+          my = e.clientY;
+          cursor.style.left = mx + "px";
+          cursor.style.top = my + "px";
+        });
+        (function anim() {
+          rx += (mx - rx) * 0.12;
+          ry += (my - ry) * 0.12;
+          ring.style.left = rx + "px";
+          ring.style.top = ry + "px";
+          requestAnimationFrame(anim);
+        })();
+        document
+          .querySelectorAll("a,button,.work-item,.service")
+          .forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+              cursor.style.transform = "translate(-50%,-50%) scale(2.5)";
+              ring.style.transform = "translate(-50%,-50%) scale(1.4)";
+            });
+            el.addEventListener("mouseleave", () => {
+              cursor.style.transform = "translate(-50%,-50%) scale(1)";
+              ring.style.transform = "translate(-50%,-50%) scale(1)";
+            });
+          });
+      }
+      const obs = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          }),
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal,.reveal-stagger")
+        .forEach((el) => obs.observe(el));
+    </script>
+  </body>
 </html>
