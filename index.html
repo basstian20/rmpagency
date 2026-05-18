@@ -938,6 +938,18 @@
         color: rgba(20, 18, 18, 0.48);
         font-size: 0.83rem;
       }
+      .about-video-section {
+        width: 100%;
+        background: var(--light);
+        padding: 0;
+      }
+      .about-video-wrap {
+        position: relative;
+        width: 100%;
+        height: clamp(24rem, 75vh, 46rem);
+        overflow: hidden;
+        background: var(--dark);
+      }
       .cta {
         position: relative;
         isolation: isolate;
@@ -1271,6 +1283,9 @@
         .logo {
           grid-column: 1;
           justify-self: start;
+        }
+        .about-video-wrap {
+          height: clamp(20rem, 65vh, 34rem);
         }
       }
       @media (max-width: 520px) {
@@ -1746,7 +1761,7 @@
         </div>
       </section>
       <section class="about-video-section">
-        <div class="about-video-wrap-reveal">
+        <div class="about-video-wrap reveal">
           <video 
             src="assets/about_video.mp4"
             autoplay
