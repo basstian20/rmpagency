@@ -321,19 +321,23 @@
         overflow: hidden;
         min-height: 100svh;
         padding: clamp(7rem, 13vh, 10rem) var(--gutter) clamp(3.5rem, 9vh, 5rem);
-        display: block;
-        align-items: end;
+        display: flex;
+        align-items: center;
       }
       .hero-inner {
        position: relative;
        z-index: 1;
+       width: min(100%, var(--gutter) * 2, var(--container));
+       margin: 0 auto;     
       }
       .hero-visual {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
         width: 100%;
-        aspect-ratio: 16 / 9;
-        margin-top: clamp(2rem, 5vh, 4rem);
+        height: 100%;
+        margin-top: 0;
         overflow:hidden;
-        border-radius: 1.25rem;
         background: var(--surface);
       }
       .hero-visual video {
@@ -347,11 +351,8 @@
         content: "";
         position: absolute;
         inset: 0;
-        z-index: -2;
-        background:
-          radial-gradient(ellipse 55% 55% at 82% 22%, rgba(200, 247, 234, 0.72), transparent 62%),
-          radial-gradient(ellipse 46% 52% at 16% 78%, rgba(254, 217, 83, 0.38), transparent 58%),
-          var(--bg);
+        z-index: -1;
+        background:rgba(254, 254, 250, 0.35);
       }
       .hero::after,
       .cta::after {
@@ -364,14 +365,8 @@
           linear-gradient(90deg, rgba(43, 35, 30, 0.035) 1px, transparent 1px);
         background-size: clamp(42px, 8vw, 80px) clamp(42px, 8vw, 80px);
       }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.06fr) minmax(18rem, 0.74fr);
-        gap: clamp(2rem, 6vw, 5rem);
-        align-items: end;
-      }
       .hero-copy {
-        max-width: 64rem;
+        max-width: 58rem;
       }
       .hero h1 {
         margin-top: 1.4rem;
@@ -403,12 +398,6 @@
         gap: 0.9rem 1.25rem;
         margin-top: clamp(1.8rem, 4vw, 3rem);
       }
-      .hero-media {
-        position: relative;
-        min-height: clamp(24rem, 68vh, 44rem);
-        border: 1px solid rgba(196, 163, 85, 0.18);
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.28);
-      }
       .hero-media::before {
         content: "";
         position: absolute;
@@ -422,16 +411,6 @@
           var(--gold),
           transparent
         );
-      }
-      .hero-media-inner {
-        position: absolute;
-        inset: clamp(1rem, 3vw, 2rem);
-        overflow: hidden;
-        border-radius: 1.5rem;
-        background:
-          radial-gradient(circle at 82% 22%, rgba(254, 217, 83, 0.78), transparent 34%),
-          radial-gradient(circle at 20% 82%, rgba(200, 247, 234, 0.8), transparent 38%),
-          linear-gradient(135deg, #ebf0ee, #fefefa 52%, #dfdfe3);
       }
       .pattern::before,
       .work-img::before,
@@ -447,18 +426,6 @@
           rgba(43, 35, 30, 0.055) 30px,
           rgba(43, 35, 30, 0.055) 31px
         );
-      }
-      .media-label {
-        position: absolute;
-        left: clamp(1rem, 3vw, 2rem);
-        bottom: clamp(1rem, 3vw, 2rem);
-        z-index: 1;
-        color: rgba(43, 35, 30, 0.58);
-        font-family: var(--heading);
-        font-size: 0.58rem;
-        font-weight: 700;
-        letter-spacing: 0.26em;
-        text-transform: uppercase;
       }
       .media-label span {
         color: var(--dark);
@@ -1387,6 +1354,11 @@
     </nav>
     <main>
       <section class="hero" id="home">
+        <div class="hero-visual">
+          <video autoplay muted loop playsinline>
+            <source src="assets/hero_video.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="container hero-inner">
           <div class="hero-copy">
             <div class="eyebrow"> Medan &middot; Indonesia</div>
@@ -1395,11 +1367,6 @@
               <em>Dimana Aja</em><br />
               <strong>Kapan Aja</strong>
             </h1>
-          </div>
-          <div class="hero-visual">
-            <video autoplay muted loop playsinline>
-              <source src="assets/hero_video.mp4" type="video/mp4" />
-            </video>
           </div>
             <div class="actions">
               <a href="#work" class="btn btn-primary">View Our Work</a
