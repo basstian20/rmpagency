@@ -869,10 +869,15 @@
       }
       .about .title {
         font-family: "TBJNaron", Arial, sans-serif;
-        font-weight: 200;
+        font-size: clamp(2.3rem, 4.2vw, 4.4rem);
+        font-weight: 400;
         letter-spacing: -0.02em;
         line-height: 1.05;
         margin-bottom: 1.2rem;
+      }
+      .about .title em {
+        color: var(--gold);
+        font-style: normal;
       }
       .about-bg {
         position: absolute;
@@ -1722,7 +1727,10 @@
           </div>
           <div class="reveal delay">
             <div class="label">About Karya Raja</div>
-            <h2 class="title">We Make You<br />Relevant, Professional <em>and Trusted</em></h2>
+            <h2 class="title">
+              We Make You<br />
+              <em>Relevant, Professional and Trusted</em>
+            </h2>
             <div class="about-text">
               <p>
                 Karya Raja helps professionals, business owners,
