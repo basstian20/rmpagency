@@ -321,18 +321,19 @@
         overflow: hidden;
         min-height: 100svh;
         padding: clamp(7rem, 13vh, 10rem) var(--gutter) clamp(3.5rem, 9vh, 5rem);
-        display: grid;
+        display: block;
         align-items: end;
       }
       .hero-inner {
-       width: min(100% - var(--gutter));
-       margin: 0 auto;
+       position: relative;
+       z-index: 1;
       }
       .hero-visual {
         width: 100%;
         aspect-ratio: 16 / 9;
         margin-top: clamp(2rem, 5vh, 4rem);
         overflow:hidden;
+        border-radius: 1.25rem;
         background: var(--surface);
       }
       .hero-visual video {
@@ -370,17 +371,18 @@
         align-items: end;
       }
       .hero-copy {
-        max-width: 48rem;
+        max-width: 64rem;
       }
       .hero h1 {
         margin-top: 1.4rem;
         font-family: "TBJNaron", Arial, sans-serif;
-        font-size: var(--h1);
+        font-size: clamp(3.8rem, 9vw, 8.5rem);
         font-weight: 400;
         line-height: 1.05;
         letter-spacing: -0.02em;
       }
       .hero h1 em {
+        display: inline-block;
         color: var(--gold);
         font-style: italic;
       }
@@ -1220,6 +1222,13 @@
           min-height: auto;
           padding-top: 7rem;
         }
+        .hero-visual {
+          aspect-ratio: 4 / 5;
+          margin-top: 2rem;
+        }
+        .hero h1 {
+          font-size: clamp(3rem, 16vw, 5rem);
+        }
         .hero-media {
           min-height: 18rem;
         }
@@ -1312,6 +1321,7 @@
         }
         .hero h1 {
           font-size: clamp(2.65rem, 15vw, 4rem);
+          line-height: 0.95;
         }
         .hero-media {
           min-height: 15rem;
@@ -1385,6 +1395,12 @@
               <em>Dimana Aja</em><br />
               <strong>Kapan Aja</strong>
             </h1>
+          </div>
+          <div class="hero-visual">
+            <video autoplay muted loop playsinline>
+              <source src="assets/hero_video.mp4" type="video/mp4" />
+            </video>
+          </div>
             <div class="actions">
               <a href="#work" class="btn btn-primary">View Our Work</a
               ><a href="#contact" class="btn btn-ghost"
@@ -1405,11 +1421,6 @@
                 <div class="stat-label">Active Clients</div>
               </div>
             </div>
-          </div>
-          <div class="hero-visual">
-            <video autoplay muted loop playsinline>
-              <source src="assets/hero_video.mp4" type="video/mp4" />
-            </video>
           </div>
         </div>
       </section>
