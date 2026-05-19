@@ -433,36 +433,41 @@
       .media-label span {
         color: var(--dark);
       }
+      .stats-section {
+        background: var(--bg);
+        padding-block: clamp(2.2rem, 5vw, 4rem);
+        border-bottom: 1px solid rgba(43, 35, 30, 0.1);
+      }
       .stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        margin-top: clamp(2rem, 5vw, 4rem);
-        border: 1px solid var(--lineL);
-        border-radius: 1.25rem;
-        background: rgba(254, 254, 250, 0.72);
-        background: var(--lineL);
+        gap: clamp(1.5rem, 5vw, 4rem);
+        margin-top: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
       }
       .stat {
         min-width: 0;
-        background: rgba(20, 18, 18, 0.58);
-        padding: clamp(1rem, 2vw, 1.4rem);
+        background: transparent;
+        padding: 0;
       }
       .stat-num {
+        color: var(--dark);
         font-family: var(--display);
-        font-size: clamp(1.75rem, 4vw, 2.6rem);
-        line-height: 1;
+        font-size: clamp(3rem, 8vw, 7rem);
+        line-height: 0.9;
       }
       .stat-num span {
-        color: var(--dark);
-        font-size: 0.6em;
+        color: var(--gold);
+        font-size: 0.55em;
       }
       .stat-label {
-        margin-top: 0.35rem;
-        color: rgba(43, 35, 30, 0.56);
+        margin-top: 0.8rem;
+        color: rgba(43, 35, 30, 0.62);
         font-family: var(--heading);
-        font-size: 0.54rem;
-        font-weight: 700;
+        font-size: clamp(0.56rem, 0.58rem, 1vw, 0.75rem);
+        font-weight: 800;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         line-height: 1.4;
@@ -1293,6 +1298,7 @@
         }
         .stats {
           grid-template-columns: 1fr;
+          gap: 2rem;
         }
         .work-head {
           align-items: flex-start;
@@ -1467,20 +1473,6 @@
               <em>Dimana Aja</em><br />
               <strong>Kapan Aja</strong>
             </h1>
-            <div class="stats">
-              <div class="stat">
-                <div class="stat-num">120<span>+</span></div>
-                <div class="stat-label">Brands Transformed</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num">7<span>+</span></div>
-                <div class="stat-label">Years of Production</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num">48<span>+</span></div>
-                <div class="stat-label">Active Clients</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1517,6 +1509,24 @@
           ></span>
         </div>
       </div>
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">120<span>+</span></div>
+              <div class="stat-label">Brands Transformed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">7<span>+</span></div>
+              <div class="stat-label">Years of Production</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">48<span>+</span></div>
+              <div class="stat-label">Active Clients</div>
+            </div>
+        </div>
+        </div>
+      </section>
       <section class="section work" id="work">
         <div class="container">
           <div class="work-head reveal">
