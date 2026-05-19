@@ -320,16 +320,16 @@
         isolation: isolate;
         overflow: hidden;
         min-height: 100svh;
-        padding: clamp(7rem, 13vh, 10rem) var(--gutter) clamp(3.5rem, 9vh, 5rem);
-        padding-inline: 0;
-        display: grid;
-        align-items: end;
+        padding-block: clamp(8rem, 16vh, 11rem) clamp(3rem, 8vh, 5rem);
+        padding-inline: var(--gutter);
+        display: flex;
+        align-items: center;
       }
       .hero-inner {
        position: relative;
        z-index: 1;
-       width: min(100% - var(--gutter) * 2, var(--container));
-       margin: 0 auto;     
+       width: min(100%, var(--container));
+       margin: 0;     
       }
       .hero-visual {
         position: absolute;
@@ -370,6 +370,7 @@
         max-width: 58rem;
         text-align: left;
         margin-left: 0;
+        transform: translateY(1.5rem);
       }
       .hero h1 {
         margin-top: 1.4rem;
