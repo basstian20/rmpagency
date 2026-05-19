@@ -900,11 +900,16 @@
         position: relative;
         aspect-ratio: 4/5;
         overflow: hidden;
-        background: radial-gradient(circle at 75% 25%, rgba(254,217,83,.75), transparent 30%), radial-gradient(circle at 25% 75%, rgba(200,247,234,.8), transparent 34%), linear-gradient(135deg, #ebf0ee, #fefefa 50%, #dfdfe3);
+        background: radial-gradient(circle at 75% 25%, rgba(254,217,83,.75), transparent 30%), 
+        radial-gradient(circle at 25% 75%, rgba(200,247,234,.8), transparent 34%), 
+        linear-gradient(135deg, #ebf0ee, #fefefa 50%, #dfdfe3);
         --x: 50%;
         --y: 50%;
         isolation: isolate;
         cursor: none;
+        box-shadow: 
+        0 1rem 2rem rgba(43, 35, 30, 0.1), 
+        0 0.25rem 0.75rem rgba(43, 35, 30, 0.08);
         transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), 
           box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1), 
           border-color 0.55s cubic-bezier(0.22, 1, 0.36, 1);
@@ -934,7 +939,9 @@
       }
       .about-img:hover {
         transform: translate3d(0, -12px, 0) scale(1.015);
-        box-shadow: 0 1.25rem 2.5rem rgba(43, 35, 30, 0.12), 0 2.5rem 5rem rgba(43, 35, 30, 0.10);
+        box-shadow: 
+        0 1.5rem 3rem rgba(43, 35, 30, 0.16), 
+        0 3rem 6rem rgba(43, 35, 30, 0.12);
         border-color: rgba(254, 217, 83, 0.42);
       }
       .about-img:hover::after {
