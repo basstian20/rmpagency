@@ -225,7 +225,6 @@
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
-        gap: 1.5rem;
         padding: 0.35rem var(--gutter);
         transition: 0.35s ease;
       }
@@ -238,18 +237,30 @@
       }
 
       .logo {
+        grid-column: 2;
+        justify-self: start;
         z-index: 102;
         display: inline-flex;
         align-items: center;
+        gap: 0.6rem;
+        max-width: min(25rem, 68vw);
+        font-family: var(--heading);
+        font-size: clamp(0.62rem, 0.56rem + 0.22vw, 0.76rem);
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        line-height: 1.45;
+        text-transform: uppercase;
       }
 
       .logo img {
-        width: clamp(8.5rem, 14vw, 12rem);
+        width: clamp(9rem, 14vw, 12rem);
         height: auto;
         object-fit: contain;
+        flex: 0 0 auto;
       }
 
       .nav-links {
+        grid-column: 3;
         justify-self: end;
         display: flex;
         align-items: center;
@@ -260,7 +271,7 @@
         color: rgba(43, 35, 30, 0.62);
         font-family: var(--heading);
         font-size: 0.68rem;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         transition: color 0.2s ease, background 0.2s ease;
@@ -868,35 +879,12 @@
       .footer-logo {
         display: inline-flex;
         align-items: center;
-        gap: 0.75rem;
-        font-family: var(--heading);
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0.22em;
-        line-height: 1.45;
-        text-transform: uppercase;
       }
 
       .footer-logo img {
-        width: 3rem;
-        height: 3rem;
+        width: clamp(9rem, 14vw, 12rem);
+        height: auto;
         object-fit: contain;
-        flex: 0 0 auto;
-      }
-
-      .footer-logo span {
-        display: block;
-        color: var(--dark);
-        font-size: 0.6rem;
-        letter-spacing: 0.34em;
-      }
-
-      .footer-logo .logo-text > span {
-        margin-top: 0.12rem;
-        color: rgba(43, 35, 30, 0.62);
-        font-size: 0.5rem;
-        font-weight: 700;
-        letter-spacing: 0.2em;
       }
 
       .tagline {
@@ -1123,6 +1111,11 @@
         .logo img {
           width: 8rem;
         }
+
+        .logo {
+          grid-column: 1;
+          justify-self: start;
+        }
       }
 
       @media (max-width: 520px) {
@@ -1132,6 +1125,13 @@
 
         .logo img {
           width: 7.25rem;
+        }
+
+        .logo {
+          gap: 0.45rem;
+          max-width: 65vw;
+          grid-column: 1;
+          justify-self: start;
         }
 
         .nav-toggle {
@@ -1804,9 +1804,6 @@
           <div>
             <a href="index.html" class="footer-logo" aria-label="Karya Raja">
               <img src="assets/logo_karya_raja.png" alt="Karya Raja logo" />
-              <span class="logo-text"
-                >Karya Raja<span>Brand Agency &amp; Creative Production</span></span
-              >
             </a>
             <p class="tagline">
               Brand agency and creative production studio from Medan, helping
