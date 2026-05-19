@@ -361,6 +361,14 @@
           var(--bg);
       }
 
+      .about-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(254, 254, 250, 0.22);
+      }
+
       .about-hero::after,
       .closing-cta::after {
         content: "";
@@ -377,9 +385,9 @@
         width: min(100%, var(--container));
         margin-inline: auto;
         display: grid;
-        grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+        grid-template-columns: minmax(0, 1.16fr) minmax(18rem, 0.84fr);
         gap: clamp(2.4rem, 6vw, 6rem);
-        align-items: end;
+        align-items: center;
       }
 
       .hero-copy h1 {
@@ -390,6 +398,7 @@
         font-weight: 400;
         line-height: 1.05;
         letter-spacing: -0.02em;
+        text-wrap: balance;
       }
 
       .hero-copy h1 em {
@@ -409,13 +418,15 @@
 
       .hero-visual {
         position: relative;
+        justify-self: end;
+        width: min(100%, 31rem);
       }
 
       .hero-image {
         position: relative;
         overflow: hidden;
-        border-radius: 1.5rem;
-        aspect-ratio: 4 / 5;
+        border-radius: 1.35rem;
+        aspect-ratio: 4 / 4.75;
         background:
           linear-gradient(rgba(43, 35, 30, 0.08), rgba(43, 35, 30, 0.08)),
           linear-gradient(135deg, var(--surface), var(--bg) 52%, var(--silver));
@@ -568,7 +579,7 @@
 
       .timeline-card {
         position: relative;
-        min-height: 18rem;
+        min-height: clamp(16.5rem, 24vw, 18.5rem);
         border: 1px solid var(--line);
         border-radius: 1.5rem;
         background: rgba(254, 254, 250, 0.76);
@@ -631,6 +642,16 @@
         border-radius: 1.5rem;
         background: rgba(254, 254, 250, 0.7);
         padding: clamp(1.35rem, 2.6vw, 2rem);
+        transition: background 0.25s ease, border-color 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .belief-card:hover,
+      .framework-card:hover,
+      .capability-card:hover {
+        background: var(--white);
+        border-color: rgba(254, 217, 83, 0.5);
+        transform: translateY(-4px);
       }
 
       .belief-card .number,
@@ -848,19 +869,41 @@
         display: inline-flex;
         align-items: center;
         gap: 0.75rem;
+        font-family: var(--heading);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        line-height: 1.45;
+        text-transform: uppercase;
       }
 
       .footer-logo img {
-        width: 8.5rem;
-        height: auto;
+        width: 3rem;
+        height: 3rem;
         object-fit: contain;
+        flex: 0 0 auto;
+      }
+
+      .footer-logo span {
+        display: block;
+        color: var(--dark);
+        font-size: 0.6rem;
+        letter-spacing: 0.34em;
+      }
+
+      .footer-logo .logo-text > span {
+        margin-top: 0.12rem;
+        color: rgba(43, 35, 30, 0.62);
+        font-size: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
       }
 
       .tagline {
-        max-width: 21rem;
+        max-width: 19rem;
         margin-top: 1rem;
         color: var(--muted);
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         font-weight: 300;
       }
 
@@ -1273,7 +1316,7 @@
         }
 
         .hero-image {
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 16 / 10;
           border-radius: 1.1rem;
         }
       }
@@ -1441,7 +1484,7 @@
           </div>
 
           <div class="quote-card reveal">
-            <div class="quote-mark">“</div>
+            <div class="quote-mark">&ldquo;</div>
             <blockquote>
               Your brand is not only what people see. It is what they understand
               after seeing you again and again.
@@ -1760,6 +1803,9 @@
           <div>
             <a href="index.html" class="footer-logo" aria-label="Karya Raja">
               <img src="assets/logo_karya_raja.png" alt="Karya Raja logo" />
+              <span class="logo-text"
+                >Karya Raja<span>Brand Agency &amp; Creative Production</span></span
+              >
             </a>
             <p class="tagline">
               Brand agency and creative production studio from Medan, helping
