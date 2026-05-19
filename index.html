@@ -899,12 +899,44 @@
         aspect-ratio: 4/5;
         overflow: hidden;
         background: radial-gradient(circle at 75% 25%, rgba(254,217,83,.75), transparent 30%), radial-gradient(circle at 25% 75%, rgba(200,247,234,.8), transparent 34%), linear-gradient(135deg, #ebf0ee, #fefefa 50%, #dfdfe3);
+        --x: 50%;
+        --y: 50%;
+        isolation: isolate;
+        cursor: none;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
       }
       .about-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
+        transition: transform 0.55s ease, filter 0.55s ease;
+      }
+      .about-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: radial-gradient(
+          circle at var(--x) var(--y),
+        rgba(255, 255, 255, 0.6),
+        rgba(200, 247, 234, 0.18) 18% 
+        transparent 42%);
+        opacity: 0;
+        mix-blend-mode: soft-light;
+        transition: opacity 0.3s ease;
+      }
+      .about-img:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 1.5rem rgba(43, 35, 30, 0.16);
+      }
+      .about-img:hover::after {
+        opacity: 1;
+      }
+      .about-img:hover img {
+        transform: scale(1.06);
+        filter: contrast(1.05) saturate(1.05);
       }
       .about-label {
         position: absolute;
@@ -1914,6 +1946,20 @@
               ring.style.transform = "translate(-50%,-50%) scale(1)";
             });
           });
+      }
+      const aboutImg = document.querySelector(".about-img");
+      if (aboutImg && matchMedia("(hover:hover) and (pointer:fine)").matches) {
+        aboutImg.addEventListener("mousemove", (e) => {
+          const rect = aboutImg.getBoundingClientRect();
+          const  x = ((e.clientX - rect.left) / rect.width) * 100;
+          const  y = ((e.clientY - rect.top) / rect.height) * 100;
+          aboutImg.style.setProperty("--x", '${x}%');
+          aboutImg.style.setProperty("--y", '${y}% ');
+        });
+        aboutImg.addEventListener("mouseleave", () => {
+          aboutImg.style.setProperty("--x", "50%");
+          aboutImg.style.setProperty("--y", "50%");
+        });
       }
       const obs = new IntersectionObserver(
         (es) =>
