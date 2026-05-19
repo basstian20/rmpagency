@@ -415,7 +415,9 @@
       }
       .pattern::before,
       .work-img::before,
-      .about-img::before,
+      .about-img::before {
+        transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      }
       .transform-img::before {
         content: "";
         position: absolute;
@@ -903,7 +905,10 @@
         --y: 50%;
         isolation: isolate;
         cursor: none;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), 
+          box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1), 
+          border-color 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
       }
       .about-img img {
         width: 100%;
@@ -921,15 +926,16 @@
         background: radial-gradient(
           circle at var(--x) var(--y),
         rgba(255, 255, 255, 0.6),
-        rgba(200, 247, 234, 0.18) 18% 
+        rgba(200, 247, 234, 0.18) 18%, 
         transparent 42%);
         opacity: 0;
         mix-blend-mode: soft-light;
         transition: opacity 0.3s ease;
       }
       .about-img:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 1.5rem rgba(43, 35, 30, 0.16);
+        transform: translate3d(0, -12px, 0) scale(1.015);
+        box-shadow: 0 1.25rem 2.5rem rgba(43, 35, 30, 0.12), 0 2.5rem 5rem rgba(43, 35, 30, 0.10);
+        border-color: rgba(254, 217, 83, 0.42);
       }
       .about-img:hover::after {
         opacity: 1;
@@ -1953,8 +1959,8 @@
           const rect = aboutImg.getBoundingClientRect();
           const  x = ((e.clientX - rect.left) / rect.width) * 100;
           const  y = ((e.clientY - rect.top) / rect.height) * 100;
-          aboutImg.style.setProperty("--x", '${x}%');
-          aboutImg.style.setProperty("--y", '${y}% ');
+          aboutImg.style.setProperty("--x", `${x}%`);
+          aboutImg.style.setProperty("--y", `${y}%`);
         });
         aboutImg.addEventListener("mouseleave", () => {
           aboutImg.style.setProperty("--x", "50%");
