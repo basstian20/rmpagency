@@ -1,11 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Karya Raja | Brand Agency & Creative Production
     </title>
+    <meta
+      name="description"
+      content="Karya Raja adalah brand agency dan creative production studio di Medan untuk brand strategy, social media branding, campaign production, dan content creation."
+    />
+    <meta name="theme-color" content="#fefefa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Karya Raja | Brand Agency & Creative Production" />
+    <meta
+      property="og:description"
+      content="Brand agency dan creative production studio dari Medan yang membantu brand tampil relevan, profesional, dan dipercaya."
+    />
+    <meta property="og:image" content="assets/logo_karya_raja.png" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/logo_karya_raja.png" type="image/png" />
+    <link
+      rel="preload"
+      href="assets/fonts/TBJNaron-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +37,8 @@
     <style>
       @font-face {
         font-family: "TBJNaron";
-        src: url("/fonts/TBJNaron-Regular.woff2") format("woff2"),
-          url("/fonts/TBJNaron-Regular.woff") format("woff");
+        src: url("assets/fonts/TBJNaron-Regular.woff2") format("woff2"),
+          url("assets/fonts/TBJNaron-Regular.woff") format("woff");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
@@ -68,6 +90,26 @@
       }
       body.nav-open {
         overflow: hidden;
+      }
+      .skip-link {
+        position: fixed;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 10000;
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        background: var(--dark);
+        color: var(--white);
+        font-family: var(--heading);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transform: translateY(-150%);
+        transition: transform 0.2s ease;
+      }
+      .skip-link:focus {
+        transform: translateY(0);
       }
       a {
         color: inherit;
@@ -1452,11 +1494,19 @@
     </style>
   </head>
   <body>
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
     <nav id="nav">
       <a class="logo" href="/" aria-label="Karya Raja home">
-        <img src="assets/logo_karya_raja.png" alt="Karya Raja logo" />
+        <img
+          src="assets/logo_karya_raja.png"
+          alt="Karya Raja logo"
+          width="1600"
+          height="552"
+          decoding="async"
+          fetchpriority="high"
+        />
       </a><button
         class="nav-toggle"
         id="toggle"
@@ -1475,10 +1525,17 @@
         <a href="#contact" class="nav-cta">Start a Project</a>
       </div>
     </nav>
-    <main>
+    <main id="main">
       <section class="hero" id="home">
         <div class="hero-visual">
-          <video autoplay muted loop playsinline>
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Karya Raja creative production showreel"
+          >
             <source src="assets/hero_video.mp4" type="video/mp4" />
           </video>
         </div>
@@ -1546,7 +1603,14 @@
         <div class="container about-inner">
           <div class="about-img-wrap reveal">
             <div class="about-img">
-              <img src="assets/about_raja.png" alt="Karya Raja Team" />
+              <img
+                src="assets/about_raja.png"
+                alt="Tim kreatif Karya Raja"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
+              />
               <div class="about-label">Karya Raja / Est. 2017</div>
             </div>
           </div>
@@ -1844,6 +1908,9 @@
             muted
             loop
             playsinline
+            preload="metadata"
+            poster="assets/about_raja.png"
+            aria-label="Behind the scenes Karya Raja creative production"
           >
           </video>
         </div>
@@ -1860,8 +1927,10 @@
             Mulai dengan percakapan &mdash; gratis, tanpa obligasi.
           </p>
           <div class="actions">
-            <a href="https://wa.me/628xxxx" class="btn btn-primary"
-              >WhatsApp Kami</a
+            <a
+              href="mailto:halo@rajameliala.id?subject=Konsultasi%20Brand%20Karya%20Raja"
+              class="btn btn-primary"
+              >Mulai Konsultasi</a
             ><a href="mailto:halo@rajameliala.id" class="btn btn-ghost"
               >halo@rajameliala.id</a
             >
@@ -1874,7 +1943,14 @@
         <div class="footer-grid">
           <div>
             <div class="footer-logo">
-              <img src="assets/logo_karya_raja.png" alt="Karya Raja Logo" />
+              <img
+                src="assets/logo_karya_raja.png"
+                alt="Karya Raja Logo"
+                width="1600"
+                height="552"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <p class="tagline">
               Studio kreatif &amp; brand strategy untuk bisnis Indonesia yang
@@ -1897,7 +1973,7 @@
             <h4>Contact</h4>
             <a href="#contact">Medan, Indonesia</a
             ><a href="mailto:halo@rajameliala.id">halo@rajameliala.id</a
-            ><a href="https://wa.me/628xxxx">WhatsApp</a>
+            ><a href="mailto:halo@rajameliala.id?subject=Project%20Inquiry%20Karya%20Raja">Project Inquiry</a>
           </div>
         </div>
         <div class="footer-bottom">
