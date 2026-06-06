@@ -125,6 +125,25 @@
       id: "Branding Media Sosial · 2025",
       en: "Social Media Branding · 2025",
     },
+    "Meet.": { id: "Bertemu.", en: "Meet." },
+    "Connect.": { id: "Terhubung.", en: "Connect." },
+    "Create.": { id: "Berkarya.", en: "Create." },
+    "Your Brand Belongs Here.": {
+      id: "Brand Anda Punya Tempat di Sini.",
+      en: "Your Brand Belongs Here.",
+    },
+    "Strategic creative work built around the people your brand needs to reach.": {
+      id: "Karya kreatif strategis yang dibangun untuk menjangkau orang-orang yang dibutuhkan brand Anda.",
+      en: "Strategic creative work built around the people your brand needs to reach.",
+    },
+    "Ideas Made Visible.": {
+      id: "Ide yang Menjadi Nyata.",
+      en: "Ideas Made Visible.",
+    },
+    "Placeholder portraits can be replaced with final client photography without changing the layout.": {
+      id: "Portrait placeholder dapat diganti dengan foto klien final tanpa mengubah layout.",
+      en: "Placeholder portraits can be replaced with final client photography without changing the layout.",
+    },
     "Social Media": { id: "Media Sosial", en: "Social Media" },
     "Let's Build Something": {
       id: "Mari Membangun Sesuatu",
@@ -406,6 +425,18 @@
     "Behind the scenes Karya Raja creative production": {
       id: "Di balik layar produksi kreatif Karya Raja",
       en: "Behind the scenes of Karya Raja creative production",
+    },
+    "AI placeholder portrait for Nusantara Heritage client persona": {
+      id: "Portrait placeholder AI untuk persona klien Nusantara Heritage",
+      en: "AI placeholder portrait for Nusantara Heritage client persona",
+    },
+    "AI placeholder portrait for Archipelago Spirits client persona": {
+      id: "Portrait placeholder AI untuk persona klien Archipelago Spirits",
+      en: "AI placeholder portrait for Archipelago Spirits client persona",
+    },
+    "AI placeholder portrait for Batik Modernist client persona": {
+      id: "Portrait placeholder AI untuk persona klien Batik Modernist",
+      en: "AI placeholder portrait for Batik Modernist client persona",
     },
   };
 

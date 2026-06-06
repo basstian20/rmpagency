@@ -584,6 +584,26 @@
       footer {
         background: var(--surface);
       }
+      .work {
+        background: var(--dark);
+        color: var(--white);
+      }
+      .work .label {
+        color: rgba(254, 254, 250, 0.62);
+      }
+      .work .title {
+        color: var(--white);
+        font-family: "TBJNaron", Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+      }
+      .work .title em {
+        color: var(--gold);
+        font-style: normal;
+      }
+      .work .text-link {
+        color: var(--white);
+      }
       .process,
       .cta {
         background: var(--bg);
@@ -600,7 +620,7 @@
         margin-bottom: clamp(2.2rem, 6vw, 4rem);
       }
       .count {
-        color: rgba(43, 35, 30, 0.08);
+        color: rgba(254, 254, 250, 0.12);
         font-family: var(--display);
         font-size: clamp(3rem, 8vw, 5rem);
         line-height: 1;
@@ -618,27 +638,38 @@
       }
       .work-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(1rem, 2vw, 1.5rem);
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(15rem, 22vw));
+        gap: clamp(0.65rem, 1.2vw, 1rem);
       }
       .work-item {
         position: relative;
-        min-height: 20rem;
         overflow: hidden;
-        background: var(--white);
+        border-radius: 1.15rem;
+        background: var(--surface);
       }
-      .work-item.large {
-        grid-row: span 2;
+      .project-one {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
       }
-      .work-item:not(.large) {
-        aspect-ratio: 16/10;
+      .project-two {
+        grid-column: 4 / 6;
+        grid-row: 1;
+      }
+      .project-three {
+        grid-column: 5;
+        grid-row: 2;
       }
       .work-img {
         position: absolute;
         inset: 0;
         overflow: hidden;
-        background: var(--project);
         transition: transform 0.7s;
+      }
+      .work-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .work-img::after {
         content: "";
@@ -646,21 +677,12 @@
         inset: 0;
         background: linear-gradient(
           to top,
-          rgba(43, 35, 30, 0.58),
-          transparent 62%
+          rgba(43, 35, 30, 0.82),
+          transparent 68%
         );
       }
       .work-item:hover .work-img {
         transform: scale(1.04);
-      }
-      .img1 {
-        --project: linear-gradient(135deg, #fed953, #fefefa 45%, #ebf0ee);
-      }
-      .img2 {
-        --project: linear-gradient(135deg, #c8f7ea, #fefefa 48%, #dfdfe3);
-      }
-      .img3 {
-        --project: linear-gradient(135deg, #dfdfe3, #fefefa 48%, #fed953);
       }
       .tag {
         position: absolute;
@@ -702,7 +724,7 @@
       }
       .work-sub {
         margin-top: 0.35rem;
-        color: rgba(43, 35, 30, 0.62);
+        color: rgba(254, 254, 250, 0.68);
         font-family: var(--heading);
         font-size: 0.56rem;
         font-weight: 700;
@@ -717,6 +739,73 @@
         border: 1px solid rgba(196, 163, 85, 0.32);
         color: var(--dark);
         flex: 0 0 auto;
+      }
+      .project-tile {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 1.15rem;
+        padding: clamp(1.2rem, 2.5vw, 2rem);
+        color: var(--dark);
+      }
+      .project-tile h3 {
+        max-width: 8ch;
+        font-family: "TBJNaron", Arial, sans-serif;
+        font-size: clamp(1.65rem, 3vw, 3.2rem);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+      }
+      .project-tile p {
+        max-width: 20rem;
+        color: rgba(43, 35, 30, 0.62);
+        font-size: 0.78rem;
+      }
+      .tile-dot {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--white);
+      }
+      .project-message-one {
+        grid-column: 3;
+        grid-row: 1;
+        background: var(--mint);
+      }
+      .project-message-two {
+        grid-column: 6;
+        grid-row: 1 / 3;
+        background: var(--gold);
+      }
+      .project-message-three {
+        grid-column: 3 / 5;
+        grid-row: 2;
+        background: var(--surface2);
+      }
+      .project-message-three h3 {
+        max-width: 12ch;
+      }
+      .project-tile-link {
+        display: inline-flex;
+        width: 3rem;
+        height: 3rem;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+        border-radius: 50%;
+        background: var(--dark);
+        color: var(--white);
+        font-size: 1.2rem;
+        transition: transform 0.25s ease;
+      }
+      .project-tile-link:hover {
+        transform: rotate(-12deg);
+      }
+      .work-info .arrow {
+        border-color: rgba(254, 254, 250, 0.4);
+        color: var(--white);
       }
       .about-inner {
         display: grid;
@@ -1514,12 +1603,39 @@
           align-items: flex-start;
           flex-direction: column;
         }
-        .work-grid,
         .about-inner,
         .process-grid,
         .transform-grid,
         .footer-grid {
           grid-template-columns: 1fr;
+        }
+        .work-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-rows: repeat(4, minmax(18rem, auto));
+        }
+        .project-one {
+          grid-column: 1;
+          grid-row: 1 / 3;
+        }
+        .project-message-one {
+          grid-column: 2;
+          grid-row: 1;
+        }
+        .project-two {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        .project-message-three {
+          grid-column: 1 / 3;
+          grid-row: 3;
+        }
+        .project-three {
+          grid-column: 1;
+          grid-row: 4;
+        }
+        .project-message-two {
+          grid-column: 2;
+          grid-row: 4;
         }
         .services-head {
           grid-template-columns: 1fr;
@@ -1544,13 +1660,8 @@
         .services-grid::-webkit-scrollbar {
           display: none;
         }
-        .work-item,
-        .work-item:not(.large) {
-          min-height: 24rem;
-          aspect-ratio: auto;
-        }
-        .work-item.large {
-          grid-row: auto;
+        .work-item {
+          min-height: 22rem;
         }
         .service {
           min-height: 30rem;
@@ -1624,9 +1735,24 @@
         .hero-media {
           min-height: 15rem;
         }
-        .work-item,
-        .work-item:not(.large) {
-          min-height: 21rem;
+        .work-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: none;
+        }
+        .project-one,
+        .project-two,
+        .project-three,
+        .project-message-one,
+        .project-message-two,
+        .project-message-three {
+          grid-column: 1;
+          grid-row: auto;
+        }
+        .work-item {
+          min-height: 27rem;
+        }
+        .project-tile {
+          min-height: 18rem;
         }
         .work-info {
           align-items: flex-start;
@@ -1932,8 +2058,17 @@
             </div>
           </div>
           <div class="work-grid reveal-stagger">
-            <article class="work-item large">
-              <div class="work-img img1"></div>
+            <article class="work-item project-one">
+              <div class="work-img">
+                <img
+                  src="assets/project-persona-placeholder-01.png"
+                  alt="AI placeholder portrait for Nusantara Heritage client persona"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <span class="tag">Brand Identity</span>
               <div class="work-info">
                 <div>
@@ -1944,8 +2079,21 @@
                 <div class="arrow">&rarr;</div>
               </div>
             </article>
-            <article class="work-item">
-              <div class="work-img img2"></div>
+            <article class="project-tile project-message-one">
+              <h3>Meet.<br />Connect.<br />Create.</h3>
+              <div class="tile-dot" aria-hidden="true"></div>
+            </article>
+            <article class="work-item project-two">
+              <div class="work-img">
+                <img
+                  src="assets/project-persona-placeholder-02.png"
+                  alt="AI placeholder portrait for Archipelago Spirits client persona"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <span class="tag">Campaign</span>
               <div class="work-info">
                 <div>
@@ -1958,8 +2106,36 @@
                 <div class="arrow">&rarr;</div>
               </div>
             </article>
-            <article class="work-item">
-              <div class="work-img img3"></div>
+            <article class="project-tile project-message-two">
+              <div>
+                <h3>Your Brand Belongs Here.</h3>
+                <p>
+                  Strategic creative work built around the people your brand
+                  needs to reach.
+                </p>
+              </div>
+              <a class="project-tile-link" href="#contact" aria-label="Start a Project"
+                >&nearr;</a
+              >
+            </article>
+            <article class="project-tile project-message-three">
+              <h3>Ideas Made Visible.</h3>
+              <p>
+                Placeholder portraits can be replaced with final client
+                photography without changing the layout.
+              </p>
+            </article>
+            <article class="work-item project-three">
+              <div class="work-img">
+                <img
+                  src="assets/project-persona-placeholder-03.png"
+                  alt="AI placeholder portrait for Batik Modernist client persona"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <span class="tag">Social Media</span>
               <div class="work-info">
                 <div>
