@@ -140,9 +140,9 @@
       id: "Ide yang Menjadi Nyata.",
       en: "Ideas Made Visible.",
     },
-    "Placeholder portraits can be replaced with final client photography without changing the layout.": {
-      id: "Portrait placeholder dapat diganti dengan foto klien final tanpa mengubah layout.",
-      en: "Placeholder portraits can be replaced with final client photography without changing the layout.",
+    "We turn clear thinking into purposeful visuals, so your audience understands your value, trusts your brand, and remembers it.": {
+      id: "Kami mengubah pemikiran yang jelas menjadi visual yang bermakna, agar audiens memahami nilai Anda, mempercayai brand Anda, dan terus mengingatnya.",
+      en: "We turn clear thinking into purposeful visuals, so your audience understands your value, trusts your brand, and remembers it.",
     },
     "Social Media": { id: "Media Sosial", en: "Social Media" },
     "2025 – Present": { id: "2025 – Sekarang", en: "2025 – Present" },
