@@ -102,6 +102,11 @@
       en: "Responsive, fast websites designed to support business goals.",
     },
     Explore: { id: "Pelajari", en: "Explore" },
+    "Our Projects": { id: "Proyek Kami", en: "Our Projects" },
+    "Strategic projects shaped through thoughtful ideas, purposeful visuals, and consistent execution to build brands people recognize and trust.": {
+      id: "Proyek strategis yang dibentuk melalui ide yang matang, visual yang terarah, dan eksekusi yang konsisten untuk membangun brand yang dikenal dan dipercaya.",
+      en: "Strategic projects shaped through thoughtful ideas, purposeful visuals, and consistent execution to build brands people recognize and trust.",
+    },
     "Our Project": { id: "Proyek Kami", en: "Our Projects" },
     "Projects That": { id: "Proyek yang", en: "Projects That" },
     "Define Brands": { id: "Membentuk Brand", en: "Define Brands" },
