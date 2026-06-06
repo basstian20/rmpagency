@@ -877,41 +877,40 @@ footer {
   min-height: 17.5rem;
   overflow: hidden;
   margin-top: auto;
-  background:
-    radial-gradient(circle at 72% 28%, rgba(254, 254, 250, 0.9) 0 9%, transparent 10%),
-    radial-gradient(circle at 28% 68%, rgba(43, 35, 30, 0.15) 0 16%, transparent 17%),
-    linear-gradient(145deg, rgba(43, 35, 30, 0.08), transparent 48%),
-    linear-gradient(135deg, var(--service-accent), var(--white));
+  background: var(--service-accent);
 }
-.service-visual::before,
+.service-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.service-image-personal {
+  object-position: 50% 39%;
+}
+.service-image-social {
+  object-position: 50% 48%;
+}
+.service-image-design {
+  object-position: 50% 50%;
+}
+.service-image-web {
+  object-position: 50% 34%;
+}
 .service-visual::after {
   content: "";
   position: absolute;
-  border-radius: 50%;
-}
-.service-visual::before {
-  width: 11rem;
-  height: 11rem;
-  right: -2.5rem;
-  bottom: -2rem;
-  border: 1px solid rgba(43, 35, 30, 0.18);
-  box-shadow:
-    -3rem -2rem 0 rgba(254, 254, 250, 0.42),
-    -6rem 1rem 0 rgba(43, 35, 30, 0.06);
-}
-.service-visual::after {
-  width: 5rem;
-  height: 5rem;
-  top: 2rem;
-  left: 2rem;
-  background: rgba(254, 254, 250, 0.54);
-  box-shadow: 3.5rem 4.5rem 0 rgba(43, 35, 30, 0.08);
+  inset: 0;
+  background: linear-gradient(180deg, transparent 56%, rgba(20, 16, 13, 0.18));
+  pointer-events: none;
 }
 .service-action {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -948,6 +947,9 @@ footer {
 .service:hover {
   transform: translateY(-0.45rem);
   box-shadow: 0 1.4rem 2.8rem rgba(43, 35, 30, 0.12);
+}
+.service:hover .service-image {
+  transform: scale(1.035);
 }
 .process-head {
   max-width: 44rem;
