@@ -26,6 +26,7 @@
       id: "Branding Media Sosial",
       en: "Social Media Branding",
     },
+    "Graphic Design": { id: "Desain Grafis", en: "Graphic Design" },
     "Web Development": { id: "Pengembangan Web", en: "Web Development" },
     "Creative Direction": { id: "Arahan Kreatif", en: "Creative Direction" },
     "Photography & Film": { id: "Fotografi & Film", en: "Photography & Film" },
@@ -57,7 +58,8 @@
     "What We Do": { id: "Yang Kami Kerjakan", en: "What We Do" },
     Strategic: { id: "Keahlian", en: "Strategic" },
     Creative: { id: "Kreatif", en: "Creative" },
-    Expertise: { id: "Strategis", en: "Expertise" },
+    Expertise: { id: "Keahlian", en: "Expertise" },
+    "Our Services": { id: "Layanan Kami", en: "Our Services" },
     "Kami bukan sekadar vendor visual. Kami adalah partner strategis yang membantu brand membangun persepsi yang konsisten dan berulang.": {
       id: "Kami bukan sekadar vendor visual. Kami adalah mitra strategis yang membantu brand membangun persepsi yang konsisten dan berkelanjutan.",
       en: "We are more than a visual vendor. We are a strategic partner helping brands build consistent, lasting perception.",
@@ -77,6 +79,7 @@
     Personal: { id: "Personal", en: "Personal" },
     Management: { id: "Manajemen", en: "Management" },
     Social: { id: "Sosial", en: "Social" },
+    Design: { id: "Desain", en: "Design" },
     Digital: { id: "Digital", en: "Digital" },
     "Positioning, identitas personal, dan strategi membangun authority": {
       id: "Positioning, identitas personal, dan strategi untuk membangun otoritas.",
@@ -89,6 +92,10 @@
     "Template, content pillars, & visual language untuk platform": {
       id: "Template, pilar konten, dan bahasa visual untuk setiap platform.",
       en: "Templates, content pillars, and a visual language built for each platform.",
+    },
+    "Identitas visual, materi promosi, dan desain komunikasi yang konsisten": {
+      id: "Identitas visual, materi promosi, dan desain komunikasi yang konsisten.",
+      en: "Visual identities, promotional materials, and consistent communication design.",
     },
     "Website responsif, cepat, dan dirancang untuk mendukung tujuan bisnis": {
       id: "Website responsif, cepat, dan dirancang untuk mendukung tujuan bisnis.",
@@ -338,6 +345,10 @@
     "Feed direction, content pillars, carousel templates, campaign visuals, and platform ready assets.": {
       id: "Arah feed, pilar konten, template carousel, visual kampanye, dan aset siap platform.",
       en: "Feed direction, content pillars, carousel templates, campaign visuals, and platform-ready assets.",
+    },
+    "Visual identities, promotional materials, campaign assets, and consistent communication design.": {
+      id: "Identitas visual, materi promosi, aset kampanye, dan desain komunikasi yang konsisten.",
+      en: "Visual identities, promotional materials, campaign assets, and consistent communication design.",
     },
     "Photography, video concepts, shooting direction, product visuals, and campaign production support.": {
       id: "Fotografi, konsep video, arahan pengambilan gambar, visual produk, dan dukungan produksi kampanye.",
