@@ -668,6 +668,11 @@ footer {
   height: 100%;
   object-fit: cover;
 }
+.project-one .work-img img {
+  object-position: 50% 62%;
+  transform: scale(1.24);
+  transform-origin: 50% 62%;
+}
 .work-img::after {
   content: "";
   position: absolute;
