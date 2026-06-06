@@ -588,39 +588,30 @@ footer {
 }
 .work-head-title h2 {
   color: var(--dark);
-  font-family: var(--display);
-  font-size: clamp(4.2rem, 9.5vw, 9rem);
-  font-weight: 300;
-  letter-spacing: -0.055em;
-  line-height: 0.78;
+  font-family: "TBJNaron", Arial, sans-serif;
+  font-size: clamp(2.3rem, 4.2vw, 4.4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   white-space: nowrap;
+}
+.work-head-title h2 em {
+  color: var(--gold);
+  font-style: italic;
 }
 .work-intro {
   display: flex;
   min-height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
   padding-block: 0.25rem;
 }
 .work-intro > p {
-  max-width: 34rem;
+  width: 100%;
+  max-width: none;
   color: rgba(43, 35, 30, 0.68);
   font-family: var(--body);
   font-size: clamp(0.95rem, 1.25vw, 1.15rem);
   line-height: 1.65;
-}
-.work-meta {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-.count {
-  color: rgba(254, 254, 250, 0.12);
-  font-family: var(--display);
-  font-size: clamp(3rem, 8vw, 5rem);
-  line-height: 1;
 }
 .text-link {
   display: inline-block;
@@ -1606,12 +1597,13 @@ footer {
     gap: 1.75rem;
   }
   .work-head-title h2 {
-    font-size: clamp(3.8rem, 15vw, 7rem);
-    line-height: 0.84;
+    font-size: clamp(2.3rem, 10vw, 4.4rem);
+    line-height: 1.05;
     white-space: normal;
   }
   .work-intro {
-    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 0;
   }
   .about-inner,
   .process-grid,
