@@ -60,6 +60,8 @@
     Creative: { id: "Kreatif", en: "Creative" },
     Expertise: { id: "Keahlian", en: "Expertise" },
     "Our Services": { id: "Layanan Kami", en: "Our Services" },
+    "services-title-prefix": { id: "Layanan", en: "Our" },
+    "services-title-accent": { id: "Kami", en: "Services" },
     "Kami bukan sekadar vendor visual. Kami adalah partner strategis yang membantu brand membangun persepsi yang konsisten dan berulang.": {
       id: "Kami bukan sekadar vendor visual. Kami adalah mitra strategis yang membantu brand membangun persepsi yang konsisten dan berkelanjutan.",
       en: "We are more than a visual vendor. We are a strategic partner helping brands build consistent, lasting perception.",
@@ -480,7 +482,7 @@
 
   while ((node = walker.nextNode())) {
     const parent = node.parentElement;
-    const source = normalize(node.nodeValue);
+    const source = parent?.dataset.i18nKey || normalize(node.nodeValue);
     if (
       source &&
       parent &&

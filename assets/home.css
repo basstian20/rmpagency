@@ -815,7 +815,7 @@ footer {
   align-items: end;
 }
 .services-head .title {
-  max-width: 9ch;
+  max-width: none;
   margin-top: 0;
   color: var(--dark);
   font-family: "TBJNaron", Arial, sans-serif;
@@ -823,6 +823,11 @@ footer {
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.05;
+  white-space: nowrap;
+}
+.services-head .title em {
+  color: var(--gold);
+  font-style: italic;
 }
 .services-intro {
   max-width: 32rem;
