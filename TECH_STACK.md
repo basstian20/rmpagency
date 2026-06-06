@@ -4,6 +4,15 @@
 
 Project ini saat ini paling cocok tetap sebagai static website: HTML, CSS, dan JavaScript ringan yang dideploy ke Vercel. Untuk landing page agency dengan dua halaman, pendekatan ini cepat, murah, dan minim maintenance.
 
+Website bilingual menggunakan satu modul shared `assets/i18n.js`. Modul ini:
+
+- Menyediakan pilihan Bahasa Indonesia dan English di semua halaman.
+- Menyimpan pilihan pengguna di `localStorage`.
+- Mengikuti bahasa browser pada kunjungan pertama.
+- Memperbarui copy, atribut aksesibilitas, title, dan meta description.
+
+Untuk dua halaman saat ini, pendekatan tersebut lebih sederhana daripada menambahkan framework dan routing i18n.
+
 ## Recommended next stack
 
 Kalau website mulai bertambah halaman, studi kasus, blog, atau butuh komponen yang dipakai ulang, migrasi bertahap yang paling masuk akal adalah:
@@ -14,6 +23,13 @@ Kalau website mulai bertambah halaman, studi kasus, blog, atau butuh komponen ya
 - Vercel untuk deployment, tetap menggunakan clean URLs.
 - Sharp atau pipeline image Astro untuk optimasi gambar.
 - FFmpeg untuk membuat versi video WebM/MP4 yang lebih kecil.
+
+Pertimbangkan migrasi ke Astro ketika salah satu kondisi berikut mulai terjadi:
+
+- Jumlah halaman bertambah dan navbar, footer, atau section sering diduplikasi.
+- Terjemahan berkembang cukup besar sehingga perlu file locale terpisah per halaman.
+- Project showcase membutuhkan halaman detail dan data terstruktur.
+- Tim membutuhkan CMS untuk mengubah copy dan proyek tanpa mengedit HTML.
 
 ## When to choose another stack
 

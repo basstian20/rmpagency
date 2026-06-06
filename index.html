@@ -286,7 +286,7 @@
         justify-self: end;
         display: flex;
         align-items: center;
-        gap: clamp(1rem, 2.5vw, 2.5rem);
+        gap: clamp(0.65rem, 1.5vw, 1.4rem);
       }
       .nav-links a {
         color: rgba(43, 35, 30, 0.62);
@@ -298,6 +298,31 @@
       }
       .nav-links a:hover {
         color: var(--dark);
+      }
+      .language-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2rem;
+        border: 1px solid rgba(43, 35, 30, 0.14);
+        border-radius: 999px;
+        padding: 0.2rem;
+      }
+      .language-switch button {
+        min-width: 2.15rem;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: rgba(43, 35, 30, 0.52);
+        padding: 0.42rem 0.55rem;
+        font-family: var(--heading);
+        font-size: 0.58rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+      }
+      .language-switch button.active {
+        background: var(--dark);
+        color: var(--white);
       }
       .nav-cta {
         border: 1px solid rgba(43, 35, 30, 0.16);
@@ -730,7 +755,7 @@
       }
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: clamp(0.75rem, 1.4vw, 1.15rem);
       }
       .service {
@@ -862,9 +887,6 @@
       }
       .service:nth-child(4) {
         --service-accent: #e6e3df;
-      }
-      .service:nth-child(5) {
-        --service-accent: #dfe9ee;
       }
       .service:hover {
         transform: translateY(-0.45rem);
@@ -1440,6 +1462,16 @@
           color: var(--white) !important;
           justify-content: center;
         }
+        .language-switch {
+          justify-content: center;
+          margin-top: 0.2rem;
+          padding: 0.3rem;
+          background: var(--surface);
+        }
+        .language-switch button {
+          flex: 1;
+          min-height: 2.5rem;
+        }
         .hero {
           min-height: 100svh;
           padding-top: 6rem;
@@ -1669,6 +1701,10 @@
         ><a href="#work">Project</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="nav-cta">Start a Project</a>
+        <div class="language-switch" aria-label="Language selection">
+          <button type="button" data-lang="id" aria-pressed="false">ID</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
       </div>
     </nav>
     <main id="main">
@@ -1714,29 +1750,25 @@
       <div class="ticker">
         <div class="ticker-track">
           <span class="ticker-item"
-            >Brand Strategy<span class="dot"></span></span
+            >Personal Branding<span class="dot"></span></span
           ><span class="ticker-item"
-            >Visual Identity<span class="dot"></span></span
+            >Social Media Management<span class="dot"></span></span
           ><span class="ticker-item"
             >Social Media Branding<span class="dot"></span></span
           ><span class="ticker-item"
-            >Campaign Production<span class="dot"></span></span
-          ><span class="ticker-item"
-            >Content Creation<span class="dot"></span></span
+            >Web Development<span class="dot"></span></span
           ><span class="ticker-item"
             >Creative Direction<span class="dot"></span></span
           ><span class="ticker-item"
             >Photography &amp; Film<span class="dot"></span></span
           ><span class="ticker-item"
-            >Brand Strategy<span class="dot"></span></span
+            >Personal Branding<span class="dot"></span></span
           ><span class="ticker-item"
-            >Visual Identity<span class="dot"></span></span
+            >Social Media Management<span class="dot"></span></span
           ><span class="ticker-item"
             >Social Media Branding<span class="dot"></span></span
           ><span class="ticker-item"
-            >Campaign Production<span class="dot"></span></span
-          ><span class="ticker-item"
-            >Content Creation<span class="dot"></span></span
+            >Web Development<span class="dot"></span></span
           ><span class="ticker-item"
             >Creative Direction<span class="dot"></span></span
           ><span class="ticker-item"
@@ -1820,11 +1852,11 @@
             <article class="service">
               <div class="service-top">
                 <div class="service-meta">
-                  <div class="num">01 / 05</div>
-                  <div class="service-type">Strategy</div>
+                  <div class="num">01 / 04</div>
+                  <div class="service-type">Personal</div>
                 </div>
-                <h3>Brand Strategy &amp; Positioning</h3>
-                <p>Riset kompetitor, brand voice, &amp; market positioning</p>
+                <h3>Personal Branding</h3>
+                <p>Positioning, identitas personal, dan strategi membangun authority</p>
               </div>
               <div class="service-visual">
                 <a class="service-action" href="#contact">
@@ -1835,11 +1867,11 @@
             <article class="service">
               <div class="service-top">
                 <div class="service-meta">
-                  <div class="num">02 / 05</div>
-                  <div class="service-type">Identity</div>
+                  <div class="num">02 / 04</div>
+                  <div class="service-type">Management</div>
                 </div>
-                <h3>Visual Identity Design</h3>
-                <p>Logo, color system, tipografi, &amp; brand guidelines</p>
+                <h3>Social Media Management</h3>
+                <p>Perencanaan, publikasi, community management, dan evaluasi performa</p>
               </div>
               <div class="service-visual">
                 <a class="service-action" href="#contact">
@@ -1850,7 +1882,7 @@
             <article class="service">
               <div class="service-top">
                 <div class="service-meta">
-                  <div class="num">03 / 05</div>
+                  <div class="num">03 / 04</div>
                   <div class="service-type">Social</div>
                 </div>
                 <h3>Social Media Branding</h3>
@@ -1868,26 +1900,11 @@
             <article class="service">
               <div class="service-top">
                 <div class="service-meta">
-                  <div class="num">04 / 05</div>
-                  <div class="service-type">Campaign</div>
+                  <div class="num">04 / 04</div>
+                  <div class="service-type">Digital</div>
                 </div>
-                <h3>Campaign Production</h3>
-                <p>Konsep, shooting, &amp; produksi konten kampanye</p>
-              </div>
-              <div class="service-visual">
-                <a class="service-action" href="#contact">
-                  Explore <span class="arrow">&rarr;</span>
-                </a>
-              </div>
-            </article>
-            <article class="service">
-              <div class="service-top">
-                <div class="service-meta">
-                  <div class="num">05 / 05</div>
-                  <div class="service-type">Content</div>
-                </div>
-                <h3>Content Creation</h3>
-                <p>Foto produk, video sinematik, &amp; copywriting</p>
+                <h3>Web Development</h3>
+                <p>Website responsif, cepat, dan dirancang untuk mendukung tujuan bisnis</p>
               </div>
               <div class="service-visual">
                 <a class="service-action" href="#contact">
@@ -2000,10 +2017,10 @@
           </div>
           <div class="footer-col">
             <h4>Services</h4>
-            <a href="#services">Brand Strategy</a
-            ><a href="#services">Visual Identity</a
-            ><a href="#services">Social Media</a
-            ><a href="#services">Campaign Production</a>
+            <a href="#services">Personal Branding</a
+            ><a href="#services">Social Media Management</a
+            ><a href="#services">Social Media Branding</a
+            ><a href="#services">Web Development</a>
           </div>
           <div class="footer-col">
             <h4>Studio</h4>
@@ -2028,6 +2045,7 @@
         </div>
       </div>
     </footer>
+    <script src="assets/i18n.js"></script>
     <script>
       const nav = document.getElementById("nav"),
         toggle = document.getElementById("toggle"),
@@ -2037,7 +2055,11 @@
         nav.classList.toggle("opened", open);
         links.classList.toggle("open", open);
         toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        toggle.setAttribute(
+          "aria-label",
+          window.KaryaI18n?.t(open ? "Close menu" : "Open menu") ||
+            (open ? "Close menu" : "Open menu"),
+        );
       }
       toggle.addEventListener("click", () =>
         menu(toggle.getAttribute("aria-expanded") !== "true"),

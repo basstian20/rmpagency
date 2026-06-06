@@ -306,7 +306,7 @@
         justify-self: end;
         display: flex;
         align-items: center;
-        gap: clamp(1rem, 2.5vw, 2.5rem);
+        gap: clamp(0.65rem, 1.5vw, 1.4rem);
       }
 
       .nav-links a {
@@ -322,6 +322,31 @@
       .nav-links a:hover,
       .nav-links a.active {
         color: var(--dark);
+      }
+      .language-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2rem;
+        border: 1px solid rgba(43, 35, 30, 0.14);
+        border-radius: 999px;
+        padding: 0.2rem;
+      }
+      .language-switch button {
+        min-width: 2.15rem;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: rgba(43, 35, 30, 0.52);
+        padding: 0.42rem 0.55rem;
+        font-family: var(--heading);
+        font-size: 0.58rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+      }
+      .language-switch button.active {
+        background: var(--dark);
+        color: var(--white);
       }
 
       .nav-cta {
@@ -831,7 +856,7 @@
 
       .capability-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
       }
 
@@ -1099,6 +1124,16 @@
           justify-content: center;
           background: var(--dark);
           color: var(--white) !important;
+        }
+        .language-switch {
+          justify-content: center;
+          margin-top: 0.2rem;
+          padding: 0.3rem;
+          background: var(--surface);
+        }
+        .language-switch button {
+          flex: 1;
+          min-height: 2.5rem;
         }
 
         .about-hero {
@@ -1455,6 +1490,10 @@
         <a href="/#work">Project</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="nav-cta">Start a Project</a>
+        <div class="language-switch" aria-label="Language selection">
+          <button type="button" data-lang="id" aria-pressed="false">ID</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
       </div>
     </nav>
 
@@ -1771,25 +1810,25 @@
 
           <div class="capability-grid reveal-stagger">
             <article class="capability-card">
-              <span class="capability-tag">Strategy</span>
-              <h3>Brand Strategy</h3>
+              <span class="capability-tag">Personal</span>
+              <h3>Personal Branding</h3>
               <p>
-                Positioning, audience clarity, competitive angle, brand voice,
-                content direction, and campaign foundation.
+                Positioning, content identity, authority building, visual tone,
+                and professional digital presence.
               </p>
             </article>
 
             <article class="capability-card">
-              <span class="capability-tag">Identity</span>
-              <h3>Visual Identity</h3>
+              <span class="capability-tag">Management</span>
+              <h3>Social Media Management</h3>
               <p>
-                Logo system, color direction, typography, layout rules, brand
-                guidelines, and visual consistency.
+                Content planning, publishing, community management, reporting,
+                and continuous performance improvement.
               </p>
             </article>
 
             <article class="capability-card">
-              <span class="capability-tag">Content</span>
+              <span class="capability-tag">Social</span>
               <h3>Social Media Branding</h3>
               <p>
                 Feed direction, content pillars, carousel templates, campaign
@@ -1798,29 +1837,11 @@
             </article>
 
             <article class="capability-card">
-              <span class="capability-tag">Production</span>
-              <h3>Creative Production</h3>
+              <span class="capability-tag">Digital</span>
+              <h3>Web Development</h3>
               <p>
-                Photography, video concepts, shooting direction, product
-                visuals, and campaign production support.
-              </p>
-            </article>
-
-            <article class="capability-card">
-              <span class="capability-tag">Campaign</span>
-              <h3>Launch Campaigns</h3>
-              <p>
-                Creative concept, campaign message, key visuals, content
-                sequence, and launch material direction.
-              </p>
-            </article>
-
-            <article class="capability-card">
-              <span class="capability-tag">Personal Brand</span>
-              <h3>Personal Branding</h3>
-              <p>
-                Positioning, content identity, authority building, visual tone,
-                and professional digital presence.
+                Responsive websites, clear user journeys, fast performance,
+                and digital experiences aligned with business goals.
               </p>
             </article>
           </div>
@@ -1876,10 +1897,10 @@
 
           <div class="footer-col">
             <h4>Services</h4>
-            <a href="#capabilities">Brand Strategy</a>
-            <a href="#capabilities">Visual Identity</a>
+            <a href="#capabilities">Personal Branding</a>
+            <a href="#capabilities">Social Media Management</a>
             <a href="#capabilities">Social Media Branding</a>
-            <a href="#capabilities">Creative Production</a>
+            <a href="#capabilities">Web Development</a>
           </div>
 
           <div class="footer-col">
@@ -1912,6 +1933,7 @@
       </div>
     </footer>
 
+    <script src="assets/i18n.js"></script>
     <script>
       const nav = document.getElementById("nav");
       const toggle = document.getElementById("toggle");
@@ -1922,7 +1944,11 @@
         nav.classList.toggle("opened", open);
         links.classList.toggle("open", open);
         toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        toggle.setAttribute(
+          "aria-label",
+          window.KaryaI18n?.t(open ? "Close menu" : "Open menu") ||
+            (open ? "Close menu" : "Open menu")
+        );
       }
 
       toggle.addEventListener("click", () => {
