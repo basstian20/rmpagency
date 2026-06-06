@@ -22,6 +22,22 @@ links.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => setMenu(false));
 });
 
+const whatsappNumber = ["62", "811", "619", "1513"].join("");
+const whatsappMessage =
+  "Halo Karya Raja, saya tertarik untuk berkonsultasi dan memulai proyek bersama Karya Raja. Saya ingin berdiskusi mengenai brand serta kebutuhan proyek saya. Mohon informasi untuk langkah selanjutnya. Terima kasih.";
+
+document.querySelectorAll("[data-whatsapp-cta]").forEach((cta) => {
+  cta.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage,
+    )}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  });
+});
+
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMenu(false);
 });
