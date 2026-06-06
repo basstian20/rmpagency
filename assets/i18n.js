@@ -145,6 +145,8 @@
       en: "Placeholder portraits can be replaced with final client photography without changing the layout.",
     },
     "Social Media": { id: "Media Sosial", en: "Social Media" },
+    "2025 – Present": { id: "2025 – Sekarang", en: "2025 – Present" },
+    "2020 – Present": { id: "2020 – Sekarang", en: "2020 – Present" },
     "Let's Build Something": {
       id: "Mari Membangun Sesuatu",
       en: "Let's Build Something",
@@ -426,17 +428,17 @@
       id: "Di balik layar produksi kreatif Karya Raja",
       en: "Behind the scenes of Karya Raja creative production",
     },
-    "AI placeholder portrait for Nusantara Heritage client persona": {
-      id: "Portrait placeholder AI untuk persona klien Nusantara Heritage",
-      en: "AI placeholder portrait for Nusantara Heritage client persona",
+    "AI placeholder portrait for dr. Rizky Ais, Sp. Jp.": {
+      id: "Portrait placeholder AI untuk dr. Rizky Ais, Sp. Jp.",
+      en: "AI placeholder portrait for dr. Rizky Ais, Sp. Jp.",
     },
-    "AI placeholder portrait for Archipelago Spirits client persona": {
-      id: "Portrait placeholder AI untuk persona klien Archipelago Spirits",
-      en: "AI placeholder portrait for Archipelago Spirits client persona",
+    "AI placeholder portrait for SAGA Creative Hub": {
+      id: "Portrait placeholder AI untuk SAGA Creative Hub",
+      en: "AI placeholder portrait for SAGA Creative Hub",
     },
-    "AI placeholder portrait for Batik Modernist client persona": {
-      id: "Portrait placeholder AI untuk persona klien Batik Modernist",
-      en: "AI placeholder portrait for Batik Modernist client persona",
+    "AI placeholder portrait for Mauliate Coffee": {
+      id: "Portrait placeholder AI untuk Mauliate Coffee",
+      en: "AI placeholder portrait for Mauliate Coffee",
     },
   };
 
