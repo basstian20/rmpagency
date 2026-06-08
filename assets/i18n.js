@@ -337,10 +337,45 @@
       id: "Proses sederhana dari insight awal hingga aset brand yang siap digunakan.",
       en: "A simple process from raw insight to finished brand assets.",
     },
+    "Ngonten dimana aja, kapan aja, tapi tetap punya arah.": {
+      id: "Ngonten dimana aja, kapan aja, tapi tetap punya arah.",
+      en: "Create content anywhere, anytime, while still moving with direction.",
+    },
+    "Framework kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.": {
+      id: "Framework kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.",
+      en: "Our framework keeps the creative process strategic, practical, and flexible around each brand's needs.",
+    },
     Discover: { id: "Temukan", en: "Discover" },
     Define: { id: "Tentukan", en: "Define" },
     Design: { id: "Rancang", en: "Design" },
     Deliver: { id: "Wujudkan", en: "Deliver" },
+    Adaptif: { id: "Adaptif", en: "Adaptive" },
+    Kreatif: { id: "Kreatif", en: "Creative" },
+    Fleksibel: { id: "Fleksibel", en: "Flexible" },
+    "Setiap brand berbeda, begitu juga pendekatan yang kami gunakan.": {
+      id: "Setiap brand berbeda, begitu juga pendekatan yang kami gunakan.",
+      en: "Every brand is different, and so is the approach we use.",
+    },
+    "Kami mulai dengan memahami karakter brand, tujuan bisnis, audiens, dan kondisi yang sedang dihadapi. Dari situ, pendekatan kreatif disesuaikan agar tidak terasa generik.": {
+      id: "Kami mulai dengan memahami karakter brand, tujuan bisnis, audiens, dan kondisi yang sedang dihadapi. Dari situ, pendekatan kreatif disesuaikan agar tidak terasa generik.",
+      en: "We start by understanding the brand character, business goals, audience, and current context. From there, the creative approach is tailored so it never feels generic.",
+    },
+    "Ide yang kuat selalu menjadi fondasi setiap karya yang kami ciptakan.": {
+      id: "Ide yang kuat selalu menjadi fondasi setiap karya yang kami ciptakan.",
+      en: "Strong ideas are always the foundation of every piece of work we create.",
+    },
+    "Setelah arahnya jelas, kami mengembangkan ide, konsep visual, storytelling, dan format konten yang kuat agar brand punya pesan yang mudah dipahami dan diingat.": {
+      id: "Setelah arahnya jelas, kami mengembangkan ide, konsep visual, storytelling, dan format konten yang kuat agar brand punya pesan yang mudah dipahami dan diingat.",
+      en: "Once the direction is clear, we develop ideas, visual concepts, storytelling, and strong content formats so the brand has a message people can understand and remember.",
+    },
+    "Ngonten dimana aja, kapan aja. Menyesuaikan kebutuhan dan ritme bisnis klien.": {
+      id: "Ngonten dimana aja, kapan aja. Menyesuaikan kebutuhan dan ritme bisnis klien.",
+      en: "Create content anywhere, anytime. Adjusting to each client's business needs and rhythm.",
+    },
+    "Kami menyesuaikan proses produksi dengan kebutuhan dan ritme bisnis klien, dari campaign terencana sampai kebutuhan konten yang harus bergerak cepat.": {
+      id: "Kami menyesuaikan proses produksi dengan kebutuhan dan ritme bisnis klien, dari campaign terencana sampai kebutuhan konten yang harus bergerak cepat.",
+      en: "We adapt the production process to each client's business needs and rhythm, from planned campaigns to content needs that have to move fast.",
+    },
     "We study the business, audience, competitors, current brand perception, and communication gaps.": {
       id: "Kami mempelajari bisnis, audiens, kompetitor, persepsi brand saat ini, dan kesenjangan komunikasi.",
       en: "We study the business, audience, competitors, current brand perception, and communication gaps.",

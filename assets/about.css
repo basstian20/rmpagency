@@ -895,14 +895,14 @@ nav.opened {
 
 .framework-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .framework-card {
   position: relative;
   overflow: hidden;
-  min-height: 19rem;
+  min-height: 20rem;
 }
 
 .framework-card::after {
