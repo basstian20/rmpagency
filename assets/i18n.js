@@ -259,6 +259,14 @@
       id: "Tumbuh melalui pengalaman kreatif dan pekerjaan brand selama bertahun-tahun.",
       en: "Built through years of creative practice and brand work.",
     },
+    "More Than Content Creation": {
+      id: "Bukan Sekadar Membuat Konten",
+      en: "More Than Content Creation",
+    },
+    "We help clients go beyond content production. From brand strategy, personal branding development, and visual identity to creative campaigns designed around each brand's goals and character.": {
+      id: "Kami membantu klien lebih dari sekadar produksi konten. Mulai dari strategi branding, pengembangan personal branding, visual identity, hingga campaign kreatif yang dirancang sesuai tujuan dan karakter setiap brand.",
+      en: "We help clients go beyond content production. From brand strategy, personal branding development, and visual identity to creative campaigns designed around each brand's goals and character.",
+    },
     "The creative foundation": { id: "Fondasi kreatif", en: "The creative foundation" },
     "The early phase focused on visual production, content needs, and understanding how local brands show up in the market.": {
       id: "Fase awal berfokus pada produksi visual, kebutuhan konten, dan pemahaman tentang cara brand lokal hadir di pasar.",
