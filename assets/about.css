@@ -564,7 +564,7 @@ nav.opened {
 
 .story-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
   gap: clamp(2.5rem, 7vw, 6rem);
   align-items: center;
 }
@@ -578,34 +578,145 @@ nav.opened {
   margin-top: 1rem;
 }
 
-.quote-card {
+.story-illustration {
   position: relative;
-  border: 1px solid var(--line);
+  min-height: clamp(24rem, 42vw, 34rem);
+}
+
+.story-visual-frame {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: inherit;
+  border: 1px solid rgba(43, 35, 30, 0.14);
   border-radius: 1.5rem;
-  background: rgba(254, 254, 250, 0.66);
-  padding: clamp(1.8rem, 4vw, 3.2rem);
+  background:
+    linear-gradient(135deg, rgba(254, 254, 250, 0.92), rgba(254, 217, 83, 0.42)),
+    radial-gradient(circle at 20% 20%, rgba(200, 247, 234, 0.9), transparent 36%),
+    var(--bg);
+  box-shadow:
+    0 2rem 4.5rem rgba(43, 35, 30, 0.12),
+    inset 0 0 0 1px rgba(254, 254, 250, 0.5);
 }
 
-.quote-mark {
-  color: var(--yellow);
-  font-family: var(--serif);
-  font-size: clamp(4rem, 10vw, 7rem);
-  line-height: 0.7;
+.story-visual-frame::before {
+  content: "Karya Raja";
+  position: absolute;
+  right: clamp(1.2rem, 4vw, 2.6rem);
+  bottom: clamp(4.5rem, 8vw, 6.4rem);
+  color: rgba(43, 35, 30, 0.08);
+  font-family: var(--naron);
+  font-size: clamp(4.2rem, 11vw, 8.2rem);
+  line-height: 0.85;
+  transform: rotate(-8deg);
 }
 
-.quote-card blockquote {
-  margin-top: 1rem;
-  font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.035em;
+.story-sun {
+  position: absolute;
+  top: clamp(1.4rem, 4vw, 2.6rem);
+  right: clamp(1.4rem, 4vw, 2.8rem);
+  width: clamp(4.7rem, 10vw, 7.4rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 1rem 2.5rem rgba(254, 217, 83, 0.35);
 }
 
-.quote-card p {
-  margin-top: 1.5rem;
-  color: var(--muted);
-  max-width: 32rem;
+.story-paper {
+  position: absolute;
+  display: grid;
+  gap: 0.7rem;
+  border: 1px solid rgba(43, 35, 30, 0.12);
+  border-radius: 1rem;
+  background: rgba(254, 254, 250, 0.82);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  box-shadow: 0 1.2rem 2.4rem rgba(43, 35, 30, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.story-paper span {
+  display: block;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(43, 35, 30, 0.18);
+}
+
+.story-paper span:first-child {
+  background: var(--dark);
+}
+
+.story-paper-large {
+  left: clamp(1.4rem, 5vw, 3.5rem);
+  top: clamp(3.5rem, 8vw, 6rem);
+  width: min(54%, 19rem);
+  transform: rotate(-5deg);
+}
+
+.story-paper-large span:nth-child(2) {
+  width: 74%;
+}
+
+.story-paper-large span:nth-child(3) {
+  width: 46%;
+}
+
+.story-paper-small {
+  right: clamp(1.2rem, 5vw, 3.1rem);
+  bottom: clamp(5rem, 10vw, 7.2rem);
+  width: min(42%, 13rem);
+  transform: rotate(6deg);
+}
+
+.story-paper-small span:nth-child(2) {
+  width: 62%;
+}
+
+.story-lens {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(2.6rem, 6vw, 4rem);
+  display: grid;
+  width: clamp(7rem, 17vw, 11rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 0.7rem solid var(--dark);
+  border-radius: 50%;
+  background: rgba(200, 247, 234, 0.52);
+  transform: translateX(-50%);
+}
+
+.story-lens::after {
+  content: "";
+  position: absolute;
+  right: -2.2rem;
+  bottom: 0.7rem;
+  width: 3.6rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: var(--dark);
+  transform: rotate(42deg);
+}
+
+.story-lens span {
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.story-caption {
+  position: absolute;
+  left: clamp(1.2rem, 4vw, 2.2rem);
+  right: clamp(1.2rem, 4vw, 2.2rem);
+  bottom: clamp(1rem, 3vw, 1.5rem);
+  border-top: 1px solid rgba(43, 35, 30, 0.15);
+  padding-top: 0.95rem;
+  color: rgba(43, 35, 30, 0.54);
+  font-family: var(--heading);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .journey {
