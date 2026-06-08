@@ -197,6 +197,34 @@
       id: "Strategi, arahan visual, produksi konten, dan kehadiran brand dari satu tim yang terintegrasi.",
       en: "Strategy, visual direction, content production, and brand presence from one connected team.",
     },
+    "Cerita di Balik Karya Raja": {
+      id: "Cerita di Balik Karya Raja",
+      en: "The Story Behind Karya Raja",
+    },
+    "Setiap brand punya cerita yang": {
+      id: "Setiap brand punya cerita yang",
+      en: "Every brand has a story",
+    },
+    "layak untuk dikenal.": {
+      id: "layak untuk dikenal.",
+      en: "worth being known.",
+    },
+    "Karya Raja lahir dari satu keyakinan sederhana: setiap brand punya cerita yang layak untuk dikenal.": {
+      id: "Karya Raja lahir dari satu keyakinan sederhana: setiap brand punya cerita yang layak untuk dikenal.",
+      en: "Karya Raja was born from one simple belief: every brand has a story worth being known.",
+    },
+    "Kami percaya konten bukan sekadar visual yang menarik, tetapi alat untuk membangun hubungan, kepercayaan, dan persepsi yang kuat di benak audiens.": {
+      id: "Kami percaya konten bukan sekadar visual yang menarik, tetapi alat untuk membangun hubungan, kepercayaan, dan persepsi yang kuat di benak audiens.",
+      en: "We believe content is more than attractive visuals. It is a tool for building relationships, trust, and strong perception in the audience's mind.",
+    },
+    "Placeholder ilustrasi cerita Karya Raja": {
+      id: "Placeholder ilustrasi cerita Karya Raja",
+      en: "Karya Raja story illustration placeholder",
+    },
+    "Cerita Karya Raja": {
+      id: "Cerita Karya Raja",
+      en: "Karya Raja Story",
+    },
     "Studio Story": { id: "Cerita Studio", en: "Studio Story" },
     "More than making things look good.": {
       id: "Lebih dari sekadar membuat sesuatu terlihat menarik.",
