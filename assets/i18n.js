@@ -341,6 +341,10 @@
       id: "Ngonten dimana aja, kapan aja, tapi tetap punya arah.",
       en: "Create content anywhere, anytime, while still moving with direction.",
     },
+    "Ngonten di mana saja, kapan saja, tetapi tetap punya arah.": {
+      id: "Ngonten di mana saja, kapan saja, tetapi tetap punya arah.",
+      en: "Create content anywhere, anytime, while still moving with direction.",
+    },
     "Framework kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.": {
       id: "Framework kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.",
       en: "Our framework keeps the creative process strategic, practical, and flexible around each brand's needs.",
@@ -512,6 +516,78 @@
       id: "Visual editorial studio kreatif Karya Raja",
       en: "Editorial visual of Karya Raja creative studio",
     },
+    "Logo Karya Raja": {
+      id: "Logo Karya Raja",
+      en: "Karya Raja logo",
+    },
+    "Karya Raja adalah agensi brand dan studio produksi kreatif yang membantu bisnis, profesional, dan brand yang sedang berkembang membentuk cara mereka dilihat, diingat, dan dipilih.": {
+      id: "Karya Raja adalah agensi brand dan studio produksi kreatif yang membantu bisnis, profesional, dan brand yang sedang berkembang membentuk cara mereka dilihat, diingat, dan dipilih.",
+      en: "Karya Raja is a brand agency and creative production studio helping businesses, professionals, and growing brands shape how they are seen, remembered, and chosen.",
+    },
+    "Area ilustrasi cerita Karya Raja": {
+      id: "Area ilustrasi cerita Karya Raja",
+      en: "Karya Raja story illustration area",
+    },
+    "Area Ilustrasi": {
+      id: "Area Ilustrasi",
+      en: "Illustration Area",
+    },
+    "Kami membantu klien lebih dari sekadar produksi konten. Mulai dari strategi branding, pengembangan personal branding, identitas visual, hingga kampanye kreatif yang dirancang sesuai tujuan dan karakter setiap brand.": {
+      id: "Kami membantu klien lebih dari sekadar produksi konten. Mulai dari strategi branding, pengembangan personal branding, identitas visual, hingga kampanye kreatif yang dirancang sesuai tujuan dan karakter setiap brand.",
+      en: "We help clients go beyond content production, from brand strategy, personal branding development, and visual identity to creative campaigns designed around each brand's goals and character.",
+    },
+    "Area foto atau video": {
+      id: "Area foto atau video",
+      en: "Photo or video area",
+    },
+    "Area Foto / Video": {
+      id: "Area Foto / Video",
+      en: "Photo / Video Area",
+    },
+    "Brand yang indah tidak akan bekerja jika orang tidak memahami makna, posisi, dan alasan brand itu penting.": {
+      id: "Brand yang indah tidak akan bekerja jika orang tidak memahami makna, posisi, dan alasan brand itu penting.",
+      en: "A beautiful brand will not work if people cannot understand its meaning, position, and why it matters.",
+    },
+    "Desain dan konten tidak hanya harus mengesankan. Keduanya perlu mendukung pengenalan, konversi, dan pertumbuhan jangka panjang.": {
+      id: "Desain dan konten tidak hanya harus mengesankan. Keduanya perlu mendukung pengenalan, konversi, dan pertumbuhan jangka panjang.",
+      en: "Design and content should not only impress. They should support recognition, conversion, and long-term growth.",
+    },
+    "Kerangka kerja kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.": {
+      id: "Kerangka kerja kami menjaga proses kreatif tetap strategis, praktis, dan fleksibel mengikuti kebutuhan tiap brand.",
+      en: "Our framework keeps the creative process strategic, practical, and flexible around each brand's needs.",
+    },
+    "Setelah arahnya jelas, kami mengembangkan ide, konsep visual, narasi, dan format konten yang kuat agar brand punya pesan yang mudah dipahami dan diingat.": {
+      id: "Setelah arahnya jelas, kami mengembangkan ide, konsep visual, narasi, dan format konten yang kuat agar brand punya pesan yang mudah dipahami dan diingat.",
+      en: "Once the direction is clear, we develop ideas, visual concepts, narratives, and strong content formats so the brand has a message people can understand and remember.",
+    },
+    "Kami menyesuaikan proses produksi dengan kebutuhan dan ritme bisnis klien, dari kampanye terencana sampai kebutuhan konten yang harus bergerak cepat.": {
+      id: "Kami menyesuaikan proses produksi dengan kebutuhan dan ritme bisnis klien, dari kampanye terencana sampai kebutuhan konten yang harus bergerak cepat.",
+      en: "We adapt the production process to each client's business needs and rhythm, from planned campaigns to content needs that have to move fast.",
+    },
+    "Karena brand premium membutuhkan lebih dari konten tanpa arah.": {
+      id: "Karena brand premium membutuhkan lebih dari konten tanpa arah.",
+      en: "Because a premium brand needs more than directionless content.",
+    },
+    "Mari Bangun Brand yang Layak Diingat": {
+      id: "Mari Bangun Brand yang Layak Diingat",
+      en: "Let's Build a Brand Worth Remembering",
+    },
+    "Siap membawa brand Anda ke": {
+      id: "Siap membawa brand Anda ke",
+      en: "Ready to take your brand to the",
+    },
+    "level berikutnya?": {
+      id: "level berikutnya?",
+      en: "next level?",
+    },
+    "Kami percaya bahwa brand yang kuat bukan hanya yang sering terlihat, tetapi yang mampu meninggalkan kesan dan membangun kepercayaan.": {
+      id: "Kami percaya bahwa brand yang kuat bukan hanya yang sering terlihat, tetapi yang mampu meninggalkan kesan dan membangun kepercayaan.",
+      en: "We believe a strong brand is not only seen often, but also leaves a lasting impression and builds trust.",
+    },
+    "Agensi brand dan studio produksi kreatif dari Medan yang membantu brand menjadi lebih relevan, profesional, dan tepercaya.": {
+      id: "Agensi brand dan studio produksi kreatif dari Medan yang membantu brand menjadi lebih relevan, profesional, dan tepercaya.",
+      en: "A brand agency and creative production studio from Medan, helping brands become more relevant, professional, and trusted.",
+    },
     "Tim kreatif Karya Raja": {
       id: "Tim kreatif Karya Raja",
       en: "Karya Raja creative team",
@@ -549,9 +625,9 @@
     },
     about: {
       id: {
-        title: "Tentang Karya Raja | Brand Agency di Medan",
+        title: "Tentang Karya Raja | Agensi Brand di Medan",
         description:
-          "Kenali Karya Raja, brand agency dan studio produksi kreatif dari Medan yang membangun brand relevan, profesional, dan tepercaya.",
+          "Kenali Karya Raja, agensi brand dan studio produksi kreatif dari Medan yang membangun brand relevan, profesional, dan tepercaya.",
       },
       en: {
         title: "About Karya Raja | Brand Agency in Medan",
@@ -560,6 +636,12 @@
       },
     },
   };
+
+  const reverseTranslations = {};
+  Object.values(translations).forEach((entry) => {
+    if (entry.id) reverseTranslations[entry.id] = entry;
+    if (entry.en) reverseTranslations[entry.en] = entry;
+  });
 
   const textNodes = [];
   const attributeNodes = [];
@@ -588,7 +670,7 @@
   });
 
   function valueFor(source, language) {
-    return translations[source]?.[language] || source;
+    return translations[source]?.[language] || reverseTranslations[source]?.[language] || source;
   }
 
   function translateTextNode(item, language) {
