@@ -267,6 +267,22 @@
       id: "Kami membantu klien lebih dari sekadar produksi konten. Mulai dari strategi branding, pengembangan personal branding, visual identity, hingga campaign kreatif yang dirancang sesuai tujuan dan karakter setiap brand.",
       en: "We help clients go beyond content production. From brand strategy, personal branding development, and visual identity to creative campaigns designed around each brand's goals and character.",
     },
+    "Photo or video placeholder": {
+      id: "Placeholder foto atau video",
+      en: "Photo or video placeholder",
+    },
+    "Media slot 01": { id: "Slot media 01", en: "Media slot 01" },
+    "Media slot 02": { id: "Slot media 02", en: "Media slot 02" },
+    "Media slot 03": { id: "Slot media 03", en: "Media slot 03" },
+    "Media slot 04": { id: "Slot media 04", en: "Media slot 04" },
+    "Photo / Video Placeholder": {
+      id: "Placeholder Foto / Video",
+      en: "Photo / Video Placeholder",
+    },
+    "Replace with project media": {
+      id: "Ganti dengan media proyek",
+      en: "Replace with project media",
+    },
     "The creative foundation": { id: "Fondasi kreatif", en: "The creative foundation" },
     "The early phase focused on visual production, content needs, and understanding how local brands show up in the market.": {
       id: "Fase awal berfokus pada produksi visual, kebutuhan konten, dan pemahaman tentang cara brand lokal hadir di pasar.",

@@ -736,6 +736,7 @@ nav.opened {
   border-radius: 1.5rem;
   background: rgba(254, 254, 250, 0.76);
   padding: clamp(1.35rem, 2.5vw, 2rem);
+  overflow: hidden;
   transition: 0.25s ease;
 }
 
@@ -775,6 +776,61 @@ nav.opened {
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 300;
+}
+
+.media-placeholder-card {
+  display: flex;
+  min-height: auto;
+  padding: 0.65rem;
+}
+
+.media-placeholder-card::before {
+  display: none;
+}
+
+.media-placeholder {
+  display: grid;
+  width: 100%;
+  min-height: clamp(15rem, 23vw, 17.5rem);
+  place-items: center;
+  align-content: center;
+  gap: 0.75rem;
+  border: 1px dashed rgba(43, 35, 30, 0.24);
+  border-radius: 1.05rem;
+  background:
+    linear-gradient(135deg, rgba(254, 217, 83, 0.18), transparent 36%),
+    linear-gradient(315deg, rgba(43, 35, 30, 0.06), transparent 42%),
+    rgba(254, 254, 250, 0.82);
+  color: var(--dark);
+  text-align: center;
+}
+
+.media-placeholder::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(43, 35, 30, 0.18);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 38%, rgba(43, 35, 30, 0.22) 38% 45%, transparent 45%),
+    linear-gradient(0deg, transparent 38%, rgba(43, 35, 30, 0.22) 38% 45%, transparent 45%);
+}
+
+.media-placeholder strong {
+  max-width: 10rem;
+  font-family: var(--heading);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.media-placeholder small,
+.media-slot {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .beliefs {
