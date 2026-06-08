@@ -22,7 +22,7 @@ links.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => setMenu(false));
 });
 
-const whatsappNumber = ["62", "811", "619", "1513"].join("");
+const whatsappNumber = "6285760707000";
 const whatsappMessage =
   "Halo Karya Raja, saya tertarik untuk berkonsultasi dan memulai proyek bersama Karya Raja. Saya ingin berdiskusi mengenai brand serta kebutuhan proyek saya. Mohon informasi untuk langkah selanjutnya. Terima kasih.";
 
