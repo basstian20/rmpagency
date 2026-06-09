@@ -19,7 +19,9 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
 
-const ticker = document.querySelector(".home-ticker-track");
+const ticker = document.querySelector(
+  ".home-ticker-track, .signature-ticker-track"
+);
 
 if (ticker && "IntersectionObserver" in window) {
   const tickerObserver = new IntersectionObserver(([entry]) => {

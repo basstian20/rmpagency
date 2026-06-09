@@ -40,6 +40,19 @@
   z-index: 1;
 }
 
+.editorial-hero::before {
+  content: "KARYA RAJA";
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.18em;
+  color: rgba(43, 35, 30, 0.045);
+  font-family: var(--naron);
+  font-size: clamp(7rem, 19vw, 18rem);
+  line-height: 0.8;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 .editorial-hero-grid,
 .services-hero-layout {
   display: grid;
@@ -96,6 +109,8 @@
   border: 1px solid var(--line);
   background: rgba(254, 254, 250, 0.82);
   backdrop-filter: blur(12px);
+  box-shadow: 0 18px 50px rgba(43, 35, 30, 0.08);
+  transform: rotate(1deg);
 }
 
 .signature-line {
@@ -218,17 +233,22 @@
 
 .principle-grid article,
 .service-card-grid section {
+  position: relative;
   min-height: 310px;
   padding: clamp(1.3rem, 2.5vw, 2rem);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  transition: background-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease-out,
+    color 180ms ease-out,
+    transform 180ms ease-out;
 }
 
 .principle-grid article:hover,
 .service-card-grid section:hover {
   background: var(--dark);
   color: var(--bg);
+  transform: translateY(-4px);
 }
 
 .principle-grid span,
@@ -271,10 +291,24 @@
 }
 
 .framework-grid article {
+  position: relative;
   min-height: 300px;
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border-right: 1px solid rgba(43, 35, 30, 0.35);
   border-bottom: 1px solid rgba(43, 35, 30, 0.35);
+}
+
+.framework-grid article::after,
+.editorial-process li::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 24px;
+  height: 24px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.3;
 }
 
 .framework-grid strong {
@@ -362,6 +396,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 200ms ease-out;
+}
+
+.featured-media:hover img,
+.management-panel:hover img {
+  transform: scale(1.025);
 }
 
 .featured-media span {
@@ -475,6 +515,7 @@
 }
 
 .editorial-process li {
+  position: relative;
   min-height: 230px;
   padding: clamp(1.2rem, 3vw, 2rem);
   border-right: 1px solid var(--line);
@@ -521,6 +562,18 @@
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
+  transition: color 160ms ease-out, transform 160ms ease-out;
+}
+
+.faq-list summary:hover,
+.faq-list summary:focus-visible {
+  color: rgba(43, 35, 30, 0.68);
+  transform: translateX(4px);
+}
+
+.faq-list summary:focus-visible {
+  outline: 3px solid var(--dark);
+  outline-offset: 4px;
 }
 
 .faq-list details p {
@@ -595,6 +648,7 @@
   .hero-proof,
   .service-map {
     max-width: 620px;
+    transform: none;
   }
 
   .principle-grid,
@@ -610,7 +664,7 @@
 
 @media (max-width: 650px) {
   .editorial-hero {
-    padding-top: 4.5rem;
+    padding: 4rem 0 4.5rem;
   }
 
   .editorial-hero h1,
@@ -620,6 +674,7 @@
 
   .page-actions {
     display: grid;
+    gap: 0.75rem;
   }
 
   .text-action {
@@ -652,6 +707,18 @@
 
   .management-panel {
     min-height: 480px;
+  }
+
+  .editorial-section,
+  .featured-service,
+  .management-service,
+  .editorial-cta {
+    padding: 4.25rem 0;
+  }
+
+  .hero-proof,
+  .service-map {
+    padding: 1.25rem;
   }
 }
 

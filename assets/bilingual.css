@@ -17,6 +17,7 @@
   --display: "Cormorant Garamond", Georgia, serif;
   --naron: "TBJNaron", Arial, sans-serif;
   --container: 1180px;
+  --header-height: 82px;
 }
 
 * {
@@ -33,6 +34,7 @@ body {
   background: var(--bg);
   font-family: var(--body);
   line-height: 1.6;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -42,6 +44,19 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  height: 3px;
+  background: var(--yellow);
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 .skip-link {
@@ -66,6 +81,19 @@ img {
   border-bottom: 1px solid var(--line);
   background: rgba(254, 254, 250, 0.94);
   backdrop-filter: blur(16px);
+}
+
+.site-header,
+.nav-links,
+.button,
+.nav-cta,
+.text-action,
+.footer-links a {
+  transition:
+    color 160ms ease-out,
+    background-color 160ms ease-out,
+    border-color 160ms ease-out,
+    transform 160ms ease-out;
 }
 
 .nav-shell,
@@ -118,11 +146,35 @@ img {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
+}
+
+.nav-links > a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.35rem;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 160ms ease-out;
+}
+
+.nav-links > a:not(.nav-cta):hover::after,
+.nav-links > a:not(.nav-cta):focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left center;
 }
 
 .nav-links a[aria-current="page"] {
   border-bottom: 2px solid var(--dark);
+}
+
+.nav-links a[aria-current="page"]::after {
+  display: none;
 }
 
 .nav-cta,
@@ -148,6 +200,24 @@ img {
 .button:hover {
   background: var(--yellow);
   color: var(--dark);
+  transform: translateY(-2px);
+}
+
+.button:active,
+.nav-cta:active {
+  transform: translateY(0);
+}
+
+.button:focus-visible,
+.nav-cta:focus-visible,
+.nav-toggle:focus-visible,
+.text-action:focus-visible,
+.footer-links a:focus-visible,
+.project-card:focus-visible,
+.project-summary:focus-visible,
+.support-grid a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
 }
 
 .language-switch {
@@ -326,6 +396,11 @@ h3 {
   color: var(--bg);
 }
 
+.site-footer .footer-links a:hover {
+  color: var(--yellow);
+  transform: translateX(3px);
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
@@ -359,6 +434,93 @@ h3 {
   font-size: 0.85rem;
 }
 
+.signature-ticker {
+  overflow: hidden;
+  border-top: 1px solid rgba(43, 35, 30, 0.24);
+  border-bottom: 1px solid rgba(43, 35, 30, 0.24);
+  background: var(--yellow);
+}
+
+.signature-ticker-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0;
+  padding: 0.9rem 0;
+  animation: signature-ticker 32s linear infinite;
+  font-family: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.signature-ticker-track b,
+.home-ticker-track b {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.signature-ticker-track i {
+  font-style: normal;
+}
+
+@keyframes signature-ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.mobile-whatsapp {
+  position: fixed;
+  right: 0.75rem;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  left: 0.75rem;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 58px;
+  padding: 0.7rem 0.8rem 0.7rem 1rem;
+  border: 1px solid rgba(254, 254, 250, 0.22);
+  border-radius: 999px;
+  background: var(--dark);
+  color: var(--bg);
+  box-shadow: 0 14px 34px rgba(43, 35, 30, 0.22);
+  text-decoration: none;
+}
+
+.mobile-whatsapp span {
+  font-family: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mobile-whatsapp strong {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--dark);
+  font-size: 1rem;
+}
+
 @media (max-width: 900px) {
   .nav-toggle {
     display: block;
@@ -377,6 +539,8 @@ h3 {
 
   .nav-links.open {
     display: grid;
+    max-height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
   }
 
   .language-switch {
@@ -397,6 +561,28 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+  }
+
+  .nav-shell,
+  .container {
+    width: min(calc(100% - 1.25rem), var(--container));
+  }
+
+  .logo img {
+    width: 132px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .mobile-whatsapp {
+    display: flex;
+  }
+
   .grid,
   .stats,
   .cta-panel {
@@ -405,5 +591,24 @@ h3 {
 
   .section-heading {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .signature-ticker-track {
+    animation: none;
   }
 }

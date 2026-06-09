@@ -13,6 +13,13 @@ if (menuToggle && menu) {
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !menu.classList.contains("open")) return;
+    menu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.focus();
+  });
 }
 
 const whatsappNumber = "6285760707000";
@@ -27,8 +34,82 @@ Apakah butuh bantuan social media management juga? Ya/Tidak
 
 Boleh dibantu arahan langkah berikutnya?`;
 
-document.querySelectorAll("[data-whatsapp]").forEach((link) => {
-  link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const setupWhatsappLink = (link) => {
+  link.href = whatsappUrl;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-});
+};
+
+document.querySelectorAll("[data-whatsapp]").forEach(setupWhatsappLink);
+
+const progress = document.createElement("div");
+progress.className = "scroll-progress";
+progress.setAttribute("aria-hidden", "true");
+document.body.prepend(progress);
+
+let progressFrame;
+const updateProgress = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+  progress.style.transform = `scaleX(${ratio})`;
+  progressFrame = undefined;
+};
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (progressFrame) return;
+    progressFrame = window.requestAnimationFrame(updateProgress);
+  },
+  { passive: true }
+);
+updateProgress();
+
+const tickerItems = [
+  "Ngonten dimana aja kapan aja",
+  "Personal Branding",
+  "Content Strategy",
+  "Social Media Management",
+  "Creative Production",
+  "Build Trust",
+  "Stay Relevant",
+];
+
+const tickerSequence = tickerItems
+  .map((item) => {
+    const tag = item === tickerItems[0] ? "b" : "span";
+    return `<${tag}>${item}</${tag}><i>+</i>`;
+  })
+  .join("");
+const tickerMarkup = `<div class="ticker-group">${tickerSequence}</div><div class="ticker-group">${tickerSequence}</div>`;
+
+const existingTicker = document.querySelector(".home-ticker-track");
+if (existingTicker) existingTicker.innerHTML = tickerMarkup;
+
+const main = document.querySelector("main");
+if (main && !existingTicker) {
+  const ticker = document.createElement("div");
+  ticker.className = "signature-ticker";
+  ticker.setAttribute("aria-hidden", "true");
+  ticker.innerHTML = `<div class="signature-ticker-track">${tickerMarkup}</div>`;
+  main.querySelector(".editorial-hero")?.insertAdjacentElement("afterend", ticker);
+}
+
+const mobileWhatsapp = document.createElement("a");
+mobileWhatsapp.className = "mobile-whatsapp";
+mobileWhatsapp.setAttribute("data-whatsapp", "");
+mobileWhatsapp.setAttribute(
+  "aria-label",
+  document.documentElement.lang === "en"
+    ? "Start a WhatsApp consultation"
+    : "Mulai konsultasi WhatsApp"
+);
+mobileWhatsapp.innerHTML = `<span>${
+  document.documentElement.lang === "en"
+    ? "Consult on WhatsApp"
+    : "Konsultasi via WhatsApp"
+}</span><strong aria-hidden="true">WA</strong>`;
+setupWhatsappLink(mobileWhatsapp);
+document.body.append(mobileWhatsapp);
