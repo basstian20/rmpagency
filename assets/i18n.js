@@ -624,26 +624,45 @@
       en: "Book a Consultation",
     },
     "Lihat Layanan": { id: "Lihat Layanan", en: "View Services" },
-    "Pilih Layanan": { id: "Pilih Layanan", en: "Choose a Service" },
     "Bangun Kepercayaan Sebelum Orang Menjadi Klien Anda": {
       id: "Bangun Kepercayaan Sebelum Orang Menjadi Klien Anda",
       en: "Build Trust Before People Become Your Clients",
+    },
+    "Kami membantu menemukan positioning, karakter, dan narasi yang paling autentik agar keahlian Anda tampil lebih jelas, dipercaya, dan relevan bagi audiens yang tepat.": {
+      id: "Kami membantu menemukan positioning, karakter, dan narasi yang paling autentik agar keahlian Anda tampil lebih jelas, dipercaya, dan relevan bagi audiens yang tepat.",
+      en: "We uncover your most authentic positioning, character, and narrative so your expertise is clear, credible, and relevant to the right audience.",
     },
     "Kelola Media Sosial dengan Strategi yang Tepat": {
       id: "Kelola Media Sosial dengan Strategi yang Tepat",
       en: "Manage Social Media with the Right Strategy",
     },
+    "Dari perencanaan hingga evaluasi, kami mengelola ritme konten yang konsisten agar brand tetap hadir, membangun percakapan, dan tumbuh bersama komunitasnya.": {
+      id: "Dari perencanaan hingga evaluasi, kami mengelola ritme konten yang konsisten agar brand tetap hadir, membangun percakapan, dan tumbuh bersama komunitasnya.",
+      en: "From planning to evaluation, we manage a consistent content rhythm that keeps your brand present, starts conversations, and grows with its community.",
+    },
     "Visual yang Konsisten Membuat Brand Lebih Mudah Diingat": {
       id: "Visual yang Konsisten Membuat Brand Lebih Mudah Diingat",
       en: "Consistent Visuals Make Your Brand Easier to Remember",
+    },
+    "Kami menerjemahkan pesan brand menjadi sistem grafis yang rapi dan konsisten, sehingga setiap materi komunikasi terasa satu identitas dan lebih mudah dikenali.": {
+      id: "Kami menerjemahkan pesan brand menjadi sistem grafis yang rapi dan konsisten, sehingga setiap materi komunikasi terasa satu identitas dan lebih mudah dikenali.",
+      en: "We translate your brand message into a refined, consistent graphic system so every communication feels unified and instantly recognizable.",
     },
     "Website yang Tidak Hanya Indah, Tapi Juga Bekerja untuk Bisnis Anda": {
       id: "Website yang Tidak Hanya Indah, Tapi Juga Bekerja untuk Bisnis Anda",
       en: "A Website That Looks Great and Works for Your Business",
     },
+    "Kami merancang website yang memadukan pengalaman pengguna, cerita brand, dan tujuan bisnis agar pengunjung mudah memahami nilai Anda lalu mengambil tindakan.": {
+      id: "Kami merancang website yang memadukan pengalaman pengguna, cerita brand, dan tujuan bisnis agar pengunjung mudah memahami nilai Anda lalu mengambil tindakan.",
+      en: "We design websites that bring together user experience, brand storytelling, and business goals, helping visitors understand your value and take action.",
+    },
     "Mengubah Ide Menjadi Visual yang Berkesan": {
       id: "Mengubah Ide Menjadi Visual yang Berkesan",
       en: "Turning Ideas into Memorable Visuals",
+    },
+    "Melalui foto, video, dan arahan kreatif, kami membangun visual yang menangkap karakter brand dan membuat setiap kampanye terasa lebih hidup serta berkesan.": {
+      id: "Melalui foto, video, dan arahan kreatif, kami membangun visual yang menangkap karakter brand dan membuat setiap kampanye terasa lebih hidup serta berkesan.",
+      en: "Through photography, video, and creative direction, we create visuals that capture your brand character and make every campaign feel vivid and memorable.",
     },
     "Pelajari Lebih Lanjut": {
       id: "Pelajari Lebih Lanjut",

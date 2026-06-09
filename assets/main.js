@@ -109,6 +109,58 @@ document.querySelectorAll("main section[id]").forEach((section) => {
   activeSectionObserver.observe(section);
 });
 
+const serviceIndex = document.querySelector(".service-index");
+const serviceCards = [...document.querySelectorAll(".service-detail[id]")];
+
+if (serviceIndex && serviceCards.length) {
+  const serviceLinks = [...serviceIndex.querySelectorAll('a[href^="#"]')];
+
+  const setActiveService = (serviceId) => {
+    serviceLinks.forEach((link) => {
+      const active = link.getAttribute("href") === `#${serviceId}`;
+      link.classList.toggle("is-active", active);
+      link.toggleAttribute("aria-current", active);
+
+      if (active) {
+        link.scrollIntoView({
+          behavior: reduceMotion.matches ? "auto" : "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    });
+  };
+
+  let activeServiceId = "";
+  let serviceFrame;
+
+  const syncActiveService = () => {
+    const activationLine = Math.min(window.innerHeight * 0.34, 260);
+    const activeCard =
+      serviceCards
+        .filter((card) => card.getBoundingClientRect().top <= activationLine)
+        .at(-1) || serviceCards[0];
+
+    if (activeCard.id !== activeServiceId) {
+      activeServiceId = activeCard.id;
+      setActiveService(activeServiceId);
+    }
+  };
+
+  const requestServiceSync = () => {
+    if (serviceFrame) return;
+
+    serviceFrame = requestAnimationFrame(() => {
+      syncActiveService();
+      serviceFrame = null;
+    });
+  };
+
+  window.addEventListener("scroll", requestServiceSync, { passive: true });
+  window.addEventListener("resize", requestServiceSync);
+  syncActiveService();
+}
+
 if (!reduceMotion.matches && matchMedia("(hover:hover) and (pointer:fine)").matches) {
   document
     .querySelectorAll(
