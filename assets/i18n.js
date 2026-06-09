@@ -608,6 +608,110 @@
       id: "Portrait placeholder AI untuk Mauliate Coffee",
       en: "AI placeholder portrait for Mauliate Coffee",
     },
+    "Visual Design": { id: "Desain Visual", en: "Visual Design" },
+    "Layanan Kami": { id: "Layanan Kami", en: "Our Services" },
+    "Solusi Kreatif yang Dirancang untuk Membantu": {
+      id: "Solusi Kreatif yang Dirancang untuk Membantu",
+      en: "Creative Solutions Designed to Help",
+    },
+    "Brand Anda Tumbuh": { id: "Brand Anda Tumbuh", en: "Your Brand Grow" },
+    "Mulai dari personal branding, pengelolaan media sosial, hingga pengembangan website, kami membantu bisnis dan profesional membangun kehadiran digital yang lebih kuat, relevan, dan berdampak.": {
+      id: "Mulai dari personal branding, pengelolaan media sosial, hingga pengembangan website, kami membantu bisnis dan profesional membangun kehadiran digital yang lebih kuat, relevan, dan berdampak.",
+      en: "From personal branding and social media management to website development, we help businesses and professionals build a stronger, more relevant, and impactful digital presence.",
+    },
+    "Konsultasi Sekarang": {
+      id: "Konsultasi Sekarang",
+      en: "Book a Consultation",
+    },
+    "Lihat Layanan": { id: "Lihat Layanan", en: "View Services" },
+    "Pilih Layanan": { id: "Pilih Layanan", en: "Choose a Service" },
+    "Bangun Kepercayaan Sebelum Orang Menjadi Klien Anda": {
+      id: "Bangun Kepercayaan Sebelum Orang Menjadi Klien Anda",
+      en: "Build Trust Before People Become Your Clients",
+    },
+    "Kelola Media Sosial dengan Strategi yang Tepat": {
+      id: "Kelola Media Sosial dengan Strategi yang Tepat",
+      en: "Manage Social Media with the Right Strategy",
+    },
+    "Visual yang Konsisten Membuat Brand Lebih Mudah Diingat": {
+      id: "Visual yang Konsisten Membuat Brand Lebih Mudah Diingat",
+      en: "Consistent Visuals Make Your Brand Easier to Remember",
+    },
+    "Website yang Tidak Hanya Indah, Tapi Juga Bekerja untuk Bisnis Anda": {
+      id: "Website yang Tidak Hanya Indah, Tapi Juga Bekerja untuk Bisnis Anda",
+      en: "A Website That Looks Great and Works for Your Business",
+    },
+    "Mengubah Ide Menjadi Visual yang Berkesan": {
+      id: "Mengubah Ide Menjadi Visual yang Berkesan",
+      en: "Turning Ideas into Memorable Visuals",
+    },
+    "Pelajari Lebih Lanjut": {
+      id: "Pelajari Lebih Lanjut",
+      en: "Learn More",
+    },
+    "Diskusikan Kebutuhan": {
+      id: "Diskusikan Kebutuhan",
+      en: "Discuss Your Needs",
+    },
+    "Diskusikan Website": {
+      id: "Diskusikan Website",
+      en: "Discuss Your Website",
+    },
+    "Diskusikan Produksi": {
+      id: "Diskusikan Produksi",
+      en: "Discuss Production",
+    },
+    "Proses Kami": { id: "Proses Kami", en: "Our Process" },
+    "Bagaimana Kami Bekerja": {
+      id: "Bagaimana Kami Bekerja",
+      en: "How We Work",
+    },
+    "Proses kerja kami dibuat sederhana, fleksibel, dan tetap strategis agar setiap output punya arah yang jelas.": {
+      id: "Proses kerja kami dibuat sederhana, fleksibel, dan tetap strategis agar setiap output punya arah yang jelas.",
+      en: "Our process is simple, flexible, and strategic, giving every output a clear direction.",
+    },
+    "Memahami kebutuhan dan tujuan brand.": {
+      id: "Memahami kebutuhan dan tujuan brand.",
+      en: "Understanding your brand's needs and goals.",
+    },
+    "Menyusun konsep dan arah kreatif.": {
+      id: "Menyusun konsep dan arah kreatif.",
+      en: "Developing the concept and creative direction.",
+    },
+    "Eksekusi produksi secara fleksibel dan profesional.": {
+      id: "Eksekusi produksi secara fleksibel dan profesional.",
+      en: "Executing production flexibly and professionally.",
+    },
+    "Konten siap digunakan untuk mendukung pertumbuhan brand.": {
+      id: "Konten siap digunakan untuk mendukung pertumbuhan brand.",
+      en: "Delivering content ready to support brand growth.",
+    },
+    "Mulai Percakapan": {
+      id: "Mulai Percakapan",
+      en: "Start a Conversation",
+    },
+    "Siap Mengembangkan": {
+      id: "Siap Mengembangkan",
+      en: "Ready to Grow",
+    },
+    "Brand Anda?": { id: "Brand Anda?", en: "Your Brand?" },
+    "Setiap brand memiliki kebutuhan yang berbeda. Mari diskusikan solusi kreatif yang paling sesuai untuk bisnis atau personal branding Anda.": {
+      id: "Setiap brand memiliki kebutuhan yang berbeda. Mari diskusikan solusi kreatif yang paling sesuai untuk bisnis atau personal branding Anda.",
+      en: "Every brand has different needs. Let us discuss the creative solution that best fits your business or personal brand.",
+    },
+    "Tentang Kami": { id: "Tentang Kami", en: "About Us" },
+    "Selected Work": { id: "Karya Pilihan", en: "Selected Work" },
+    Proses: { id: "Proses", en: "Process" },
+    Layanan: { id: "Layanan", en: "Services" },
+    Kontak: { id: "Kontak", en: "Contact" },
+    Beranda: { id: "Beranda", en: "Home" },
+    Tentang: { id: "Tentang", en: "About" },
+    Proyek: { id: "Proyek", en: "Projects" },
+    "Mulai Proyek": { id: "Mulai Proyek", en: "Start a Project" },
+    "Hak cipta dilindungi.": {
+      id: "Hak cipta dilindungi.",
+      en: "All rights reserved.",
+    },
   };
 
   const pageMeta = {
@@ -633,6 +737,18 @@
         title: "About Karya Raja | Brand Agency in Medan",
         description:
           "Meet Karya Raja, a brand agency and creative production studio from Medan building relevant, professional, and trusted brands.",
+      },
+    },
+    services: {
+      id: {
+        title: "Layanan Karya Raja | Solusi Kreatif untuk Brand",
+        description:
+          "Layanan personal branding, manajemen media sosial, desain grafis, pengembangan website, dan produksi visual dari Karya Raja di Medan.",
+      },
+      en: {
+        title: "Karya Raja Services | Creative Solutions for Brands",
+        description:
+          "Personal branding, social media management, graphic design, web development, and visual production services from Karya Raja in Medan.",
       },
     },
   };
@@ -696,7 +812,11 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    const page = location.pathname.includes("about") ? "about" : "home";
+    const page = location.pathname.includes("services")
+      ? "services"
+      : location.pathname.includes("about")
+        ? "about"
+        : "home";
     const meta = pageMeta[page][nextLanguage];
     document.title = meta.title;
     document
