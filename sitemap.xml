@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Confirm the production domain before deployment. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://karyaraja.agency/id/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/en/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/id/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/about.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/about.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/id/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/services.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/services.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/id/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/projects.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/en/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/projects.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/id/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/contact.html"/>
+  </url>
+  <url>
+    <loc>https://karyaraja.agency/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://karyaraja.agency/id/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://karyaraja.agency/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://karyaraja.agency/id/contact.html"/>
+  </url>
+</urlset>

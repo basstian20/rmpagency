@@ -1,8 +1,12 @@
 const revealTargets = document.querySelectorAll(
   "[data-reveal], [data-reveal-group]"
 );
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-if ("IntersectionObserver" in window) {
+if (reducedMotion.matches) {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+  document.querySelectorAll("video[autoplay]").forEach((video) => video.pause());
+} else if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {

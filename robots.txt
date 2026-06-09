@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Confirm the production domain before deployment.
+Sitemap: https://karyaraja.agency/sitemap.xml
