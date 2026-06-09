@@ -1449,8 +1449,12 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(16rem, 1.5fr) repeat(3, minmax(8rem, 1fr));
-  gap: clamp(2rem, 5vw, 3.5rem);
+  grid-template-columns: minmax(16rem, 1.6fr) repeat(3, minmax(9rem, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+.footer-grid > * {
+  min-width: 0;
 }
 .footer-logo {
   display: inline-flex;
@@ -1481,6 +1485,8 @@ footer {
   margin-bottom: 0.55rem;
   color: rgba(43, 35, 30, 0.56);
   font-size: 0.88rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 .footer-bottom {
   display: flex;
@@ -1590,6 +1596,9 @@ footer {
   .transform-grid,
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid > :first-child {
+    grid-column: 1 / -1;
   }
   .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1726,6 +1735,17 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+  .footer-grid {
+    gap: 0;
+  }
+  .footer-grid > :first-child {
+    grid-column: auto;
+    padding-bottom: 2rem;
+  }
+  .footer-col {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--lineL);
+  }
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(4, minmax(18rem, auto));
@@ -1793,6 +1813,7 @@ footer {
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 0.5rem;
   }
   .logo img {
     width: 8rem;
