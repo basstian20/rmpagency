@@ -220,6 +220,40 @@ img {
   outline-offset: 4px;
 }
 
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.cta-stack .button {
+  margin-top: 0;
+}
+
+.page-actions .cta-stack,
+.hero-actions .cta-stack {
+  margin-top: 0;
+}
+
+.cta-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.editorial-cta .cta-stack,
+.home-final-cta .cta-stack {
+  align-items: center;
+}
+
+.editorial-cta .cta-note,
+.home-final-cta .cta-note {
+  margin: 0;
+  color: rgba(254, 254, 250, 0.72);
+}
+
 .language-switch {
   padding-left: 1rem;
   border-left: 1px solid var(--line);
@@ -500,6 +534,16 @@ h3 {
   color: var(--bg);
   box-shadow: 0 14px 34px rgba(43, 35, 30, 0.22);
   text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(100% + 1.5rem));
+  transition: opacity 180ms ease-out, transform 180ms ease-out;
+}
+
+.mobile-whatsapp.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mobile-whatsapp span {
@@ -577,6 +621,10 @@ h3 {
   .button {
     width: 100%;
     min-height: 50px;
+  }
+
+  .cta-stack {
+    width: 100%;
   }
 
   .mobile-whatsapp {

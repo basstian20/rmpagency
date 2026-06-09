@@ -605,6 +605,10 @@
   color: rgba(254, 254, 250, 0.68);
 }
 
+.editorial-cta .cta-stack .cta-note {
+  margin: 0;
+}
+
 .editorial-page .button-light {
   border-color: var(--bg);
   background: var(--bg);

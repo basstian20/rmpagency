@@ -23,7 +23,8 @@ if (menuToggle && menu) {
 }
 
 const whatsappNumber = "6285760707000";
-const whatsappMessage = `Halo Karya Raja, saya tertarik untuk konsultasi personal branding.
+const whatsappMessages = {
+  id: `Halo Karya Raja, saya tertarik untuk konsultasi personal branding.
 
 Nama:
 Profesi/Bisnis:
@@ -32,8 +33,21 @@ Tujuan personal branding:
 Tantangan saat ini:
 Apakah butuh bantuan social media management juga? Ya/Tidak
 
-Boleh dibantu arahan langkah berikutnya?`;
+Boleh dibantu arahan langkah berikutnya?`,
+  en: `Hello Karya Raja, I am interested in a personal branding consultation.
 
+Name:
+Profession/Business:
+Instagram/TikTok account:
+Personal branding goal:
+Current challenge:
+Do you also need social media management support? Yes/No
+
+Could you help me with the next step?`,
+};
+
+const pageLanguage = document.documentElement.lang === "en" ? "en" : "id";
+const whatsappMessage = whatsappMessages[pageLanguage];
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 const setupWhatsappLink = (link) => {
@@ -102,14 +116,22 @@ mobileWhatsapp.className = "mobile-whatsapp";
 mobileWhatsapp.setAttribute("data-whatsapp", "");
 mobileWhatsapp.setAttribute(
   "aria-label",
-  document.documentElement.lang === "en"
+  pageLanguage === "en"
     ? "Start a WhatsApp consultation"
     : "Mulai konsultasi WhatsApp"
 );
 mobileWhatsapp.innerHTML = `<span>${
-  document.documentElement.lang === "en"
+  pageLanguage === "en"
     ? "Consult on WhatsApp"
     : "Konsultasi via WhatsApp"
 }</span><strong aria-hidden="true">WA</strong>`;
 setupWhatsappLink(mobileWhatsapp);
 document.body.append(mobileWhatsapp);
+
+const updateMobileWhatsapp = () => {
+  mobileWhatsapp.classList.toggle("is-visible", window.scrollY > 180);
+};
+
+window.addEventListener("scroll", updateMobileWhatsapp, { passive: true });
+window.addEventListener("load", updateMobileWhatsapp);
+updateMobileWhatsapp();

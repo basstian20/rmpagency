@@ -593,6 +593,11 @@
   font-size: 1.1rem;
 }
 
+.home-final-cta .cta-stack .cta-note {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
 [data-reveal],
 [data-reveal-group] > * {
   opacity: 0;
