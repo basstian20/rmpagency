@@ -92,6 +92,10 @@ body {
   background: var(--project-color);
 }
 
+.project-card-featured .project-card-visual {
+  aspect-ratio: 3.03 / 1;
+}
+
 .project-card-visual img {
   grid-area: 1 / 1;
   width: 100%;
@@ -101,7 +105,7 @@ body {
 }
 
 .project-card-featured .project-card-visual img {
-  object-position: center 64%;
+  object-position: center 24%;
 }
 
 .project-card:nth-child(3) .project-card-visual img {
