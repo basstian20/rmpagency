@@ -87,7 +87,6 @@ body {
 .project-card-visual {
   position: relative;
   display: grid;
-  place-items: center;
   overflow: hidden;
   aspect-ratio: 1.5 / 1;
   background: var(--project-color);
@@ -106,7 +105,7 @@ body {
 }
 
 .project-card-featured .project-card-visual img {
-  object-position: center 52%;
+  object-position: center 64%;
 }
 
 .project-card:nth-child(3) .project-card-visual img {
@@ -115,18 +114,20 @@ body {
 
 .project-hover-copy {
   grid-area: 1 / 1;
+  align-self: start;
+  justify-self: start;
   z-index: 1;
   width: 100%;
-  padding-inline: clamp(1.25rem, 4vw, 4rem);
+  padding: clamp(1.25rem, 2.5vw, 2.5rem);
   color: var(--project-hover-text);
   font-family: var(--heading);
   font-size: clamp(0.7rem, 1.05vw, 1.05rem);
   font-weight: 600;
   line-height: 1.25;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(0.5rem);
+  transform: translateY(-0.35rem);
   transition:
     opacity 0.2s ease-in-out,
     transform 0.2s ease-in-out;
