@@ -121,10 +121,11 @@ body {
   width: 100%;
   padding: clamp(1.25rem, 2.5vw, 2.5rem);
   color: var(--project-hover-text);
-  font-family: var(--heading);
-  font-size: clamp(0.7rem, 1.05vw, 1.05rem);
-  font-weight: 600;
-  line-height: 1.25;
+  font-family: var(--naron);
+  font-size: clamp(1.15rem, 1.55vw, 1.65rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
   text-align: left;
   white-space: nowrap;
   opacity: 0;
@@ -132,6 +133,10 @@ body {
   transition:
     opacity 0.2s ease-in-out,
     transform 0.2s ease-in-out;
+}
+
+.project-card-featured .project-hover-copy {
+  font-size: clamp(1.45rem, 2.2vw, 2.35rem);
 }
 
 .project-card-copy {
