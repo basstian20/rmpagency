@@ -92,10 +92,6 @@ body {
   background: var(--project-color);
 }
 
-.project-card-featured .project-card-visual {
-  aspect-ratio: 2 / 1;
-}
-
 .project-card-visual img {
   grid-area: 1 / 1;
   width: 100%;
