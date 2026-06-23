@@ -84,6 +84,102 @@ document.querySelectorAll(".reveal, .reveal-stagger").forEach((item) => {
   observer.observe(item);
 });
 
+function initLazyVideos() {
+  const lazyVideos = [...document.querySelectorAll("video[data-lazy-video]")];
+
+  if (!lazyVideos.length) return;
+
+  const shouldReduceMotion = () => reduceMotion.matches;
+
+  const loadVideo = (video) => {
+    if (video.dataset.loaded === "true") return;
+
+    const source = video.dataset.src;
+    if (!source) return;
+
+    video.src = source;
+    video.load();
+    video.dataset.loaded = "true";
+  };
+
+  const playVideo = (video) => {
+    if (
+      shouldReduceMotion() ||
+      video.dataset.loaded !== "true" ||
+      !video.paused
+    ) {
+      return;
+    }
+
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const pauseVideo = (video) => {
+    if (!video.paused) video.pause();
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    lazyVideos.forEach((video) => {
+      loadVideo(video);
+      if (shouldReduceMotion()) {
+        pauseVideo(video);
+        return;
+      }
+
+      playVideo(video);
+    });
+    return;
+  }
+
+  const loadObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        loadVideo(entry.target);
+        if (entry.target.dataset.lazyVisible === "true") {
+          playVideo(entry.target);
+        }
+        loadObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "300px 0px", threshold: 0 },
+  );
+
+  const playbackObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+          entry.target.dataset.lazyVisible = "true";
+          playVideo(entry.target);
+        } else {
+          entry.target.dataset.lazyVisible = "false";
+          pauseVideo(entry.target);
+        }
+      });
+    },
+    { threshold: [0, 0.35] },
+  );
+
+  lazyVideos.forEach((video) => {
+    loadObserver.observe(video);
+    playbackObserver.observe(video);
+  });
+
+  if (typeof reduceMotion.addEventListener === "function") {
+    reduceMotion.addEventListener("change", () => {
+      if (shouldReduceMotion()) {
+        lazyVideos.forEach(pauseVideo);
+      }
+    });
+  }
+}
+
+initLazyVideos();
+
 const activeSectionObserver = new IntersectionObserver(
   (entries) => {
     const visible = entries
