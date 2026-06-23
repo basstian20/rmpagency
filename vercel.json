@@ -1,14 +1,23 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/id", "destination": "/", "permanent": true },
     { "source": "/id/", "destination": "/", "permanent": true },
     { "source": "/id/index.html", "destination": "/", "permanent": true },
-    { "source": "/id/about.html", "destination": "/about.html", "permanent": true },
-    { "source": "/id/services.html", "destination": "/services.html", "permanent": true },
-    { "source": "/id/project.html", "destination": "/project.html", "permanent": true },
-    { "source": "/id/projects.html", "destination": "/project.html", "permanent": true },
-    { "source": "/id/contact.html", "destination": "/contact.html", "permanent": true },
-    { "source": "/en/projects.html", "destination": "/en/project.html", "permanent": true }
+    { "source": "/id/about", "destination": "/about", "permanent": true },
+    { "source": "/id/about.html", "destination": "/about", "permanent": true },
+    { "source": "/id/services", "destination": "/services", "permanent": true },
+    { "source": "/id/services.html", "destination": "/services", "permanent": true },
+    { "source": "/id/project", "destination": "/project", "permanent": true },
+    { "source": "/id/project.html", "destination": "/project", "permanent": true },
+    { "source": "/id/projects", "destination": "/project", "permanent": true },
+    { "source": "/id/projects.html", "destination": "/project", "permanent": true },
+    { "source": "/id/contact", "destination": "/contact", "permanent": true },
+    { "source": "/id/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/projects", "destination": "/project", "permanent": true },
+    { "source": "/projects.html", "destination": "/project", "permanent": true },
+    { "source": "/en/projects", "destination": "/en/project", "permanent": true },
+    { "source": "/en/projects.html", "destination": "/en/project", "permanent": true }
   ]
 }
