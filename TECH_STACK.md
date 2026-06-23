@@ -2,16 +2,16 @@
 
 ## Current fit
 
-Project ini saat ini paling cocok tetap sebagai static website: HTML, CSS, dan JavaScript ringan yang dideploy ke Vercel. Untuk landing page agency dengan dua halaman, pendekatan ini cepat, murah, dan minim maintenance.
+Project ini saat ini paling cocok tetap sebagai static website: HTML, CSS, dan JavaScript ringan yang dideploy ke Vercel. Untuk landing page agency dengan beberapa halaman statis, pendekatan ini cepat, murah, dan minim maintenance.
 
-Website bilingual menggunakan satu modul shared `assets/i18n.js`. Modul ini:
+Website bilingual memakai halaman HTML terlokalisasi secara statis:
 
-- Menyediakan pilihan Bahasa Indonesia dan English di semua halaman.
-- Menyimpan pilihan pengguna di `localStorage`.
-- Mengikuti bahasa browser pada kunjungan pertama.
-- Memperbarui copy, atribut aksesibilitas, title, dan meta description.
+- Root berisi halaman Bahasa Indonesia.
+- Folder `/en/` berisi halaman English.
+- Pemilih bahasa adalah link biasa ke halaman ekuivalen.
+- Metadata, atribut aksesibilitas, dan copy utama ditulis langsung di tiap dokumen.
 
-Untuk dua halaman saat ini, pendekatan tersebut lebih sederhana daripada menambahkan framework dan routing i18n.
+Pendekatan ini menjaga progressive enhancement, SEO, dan performa tanpa runtime translation di browser.
 
 ## Recommended next stack
 

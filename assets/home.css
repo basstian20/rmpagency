@@ -313,7 +313,7 @@ nav.opened {
   border-radius: 999px;
   padding: 0.2rem;
 }
-.language-switch button {
+.language-switch a {
   min-width: 2.15rem;
   border: 0;
   border-radius: 999px;
@@ -324,9 +324,9 @@ nav.opened {
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  cursor: pointer;
+  text-align: center;
 }
-.language-switch button.active {
+.language-switch a[aria-current="page"] {
   background: var(--dark);
   color: var(--white);
 }
@@ -1674,7 +1674,7 @@ footer {
     padding: 0.3rem;
     background: var(--surface);
   }
-  .language-switch button {
+  .language-switch a {
     flex: 1;
     min-height: 2.5rem;
   }

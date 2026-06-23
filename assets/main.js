@@ -28,15 +28,14 @@ function shouldUseSimplifiedEffects() {
 }
 
 function setMenu(open) {
+  const openLabel = toggle.dataset.openLabel || "Open menu";
+  const closeLabel = toggle.dataset.closeLabel || "Close menu";
+
   document.body.classList.toggle("nav-open", open);
   nav.classList.toggle("opened", open);
   links.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute(
-    "aria-label",
-    window.KaryaI18n?.t(open ? "Close menu" : "Open menu") ||
-      (open ? "Close menu" : "Open menu"),
-  );
+  toggle.setAttribute("aria-label", open ? closeLabel : openLabel);
 }
 
 toggle.addEventListener("click", () => {
@@ -48,12 +47,13 @@ links.querySelectorAll("a").forEach((link) => {
 });
 
 const whatsappNumber = "6285760707000";
-const whatsappMessage =
+const defaultWhatsappMessage =
   "Halo Karya Raja, saya tertarik untuk berkonsultasi dan memulai proyek bersama Karya Raja. Saya ingin berdiskusi mengenai brand serta kebutuhan proyek saya. Mohon informasi untuk langkah selanjutnya. Terima kasih.";
 
 document.querySelectorAll("[data-whatsapp-cta]").forEach((cta) => {
   cta.addEventListener("click", (event) => {
     event.preventDefault();
+    const whatsappMessage = cta.dataset.message || defaultWhatsappMessage;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage,

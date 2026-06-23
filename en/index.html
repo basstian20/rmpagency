@@ -1,31 +1,531 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karya Raja | Personal Branding Agency</title>
-  <meta name="description" content="Karya Raja helps professionals, founders, business owners, creators, and public figures build a trusted digital reputation.">
-  <link rel="alternate" hreflang="id" href="../id/index.html"><link rel="alternate" hreflang="en" href="../en/index.html">
-  <link rel="icon" href="../assets/logo_karya_raja.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karya Raja | Brand Agency & Creative Production</title>
+    <meta name="description" content="Karya Raja is a brand agency and creative production studio in Medan for brand strategy, social media branding, campaign production, and content creation." />
+    <meta name="theme-color" content="#fefefa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Karya Raja | Brand Agency & Creative Production" />
+    <meta property="og:description" content="Karya Raja is a brand agency and creative production studio in Medan for brand strategy, social media branding, campaign production, and content creation." />
+    <meta property="og:image" content="../assets/logo_karya_raja.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Karya Raja | Brand Agency & Creative Production" />
+    <meta name="twitter:description" content="Karya Raja is a brand agency and creative production studio in Medan for brand strategy, social media branding, campaign production, and content creation." />
+    <link rel="canonical" href="index.html" />
+    <link rel="alternate" hreflang="id" href="../index.html" />
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="alternate" hreflang="x-default" href="../index.html" />
+    <link rel="icon" href="../assets/logo_karya_raja.png" type="image/png" />
   <link rel="preload" href="../assets/fonts/TBJNaron-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/dm-sans-latin-400-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/fonts.css" />
-  <link rel="stylesheet" href="../assets/bilingual.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav-shell" aria-label="Main navigation">
-    <a class="logo" href="index.html" aria-label="Karya Raja Home"><img src="../assets/logo_karya_raja.png" alt="Karya Raja logo" width="1600" height="552"></a>
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu" data-menu-toggle></button>
-    <div class="nav-links" id="main-menu" data-menu><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="project.html">Projects</a><a href="contact.html">Contact</a><a class="nav-cta" href="https://wa.me/6285760707000" data-whatsapp>Consult</a><span class="language-switch" aria-label="Choose language"><a href="../id/index.html" lang="id">ID</a><a href="index.html" aria-current="true">EN</a></span></div>
-  </nav></header>
-  <main id="main">
-    <section class="hero"><div class="container hero-grid"><div><p class="eyebrow">Personal Branding Agency</p><h1>A digital reputation people trust.</h1><p class="lead">Karya Raja helps professionals, founders, business owners, creators, and public figures build a trusted digital reputation through branding strategy, content, and consistent social media management.</p><a class="button" href="https://wa.me/6285760707000" data-whatsapp>Personal Branding Consultation</a></div><p class="signature">Ngonten dimana aja kapan aja</p></div></section>
-    <section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">What We Build</p><h2>A personal brand that is clear, active, and relevant.</h2></div><p class="lead">Personal Branding is the core strategy. Social Media Management is the execution system.</p></div><div class="grid"><article class="card"><h3>Personal Brand Strategy</h3><p>Positioning, narrative, audience, and communication direction that shape reputation.</p></article><article class="card"><h3>Content System</h3><p>Content pillars and formats that make expertise easier to understand and remember.</p></article><article class="card"><h3>Social Media Management</h3><p>Consistent execution that keeps the personal brand active, relevant, and measurable.</p></article></div></div></section>
-    <section class="section section-accent"><div class="container"><div class="stats"><div class="stat"><strong>124+</strong><span>clients handled</span></div><div class="stat"><strong>10+</strong><span>years of experience</span></div><div class="stat"><strong>20+</strong><span>active clients</span></div></div><p class="microcopy">Based on Karya Raja internal records.</p></div></section>
-    <section class="section"><div class="container cta-panel"><h2>Start with the reputation you want to build.</h2><a class="button" href="https://wa.me/6285760707000" data-whatsapp>Consult via WhatsApp</a></div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="footer-logo" href="index.html"><img src="../assets/logo_karya_raja.png" alt="Karya Raja" width="1600" height="552"></a><p>A personal branding agency for trusted digital reputations.</p></div><div class="footer-links"><strong>Navigate</strong><a href="about.html">About</a><a href="services.html">Services</a><a href="project.html">Projects</a><a href="contact.html">Contact</a></div><div class="footer-links"><strong>Start</strong><a href="https://wa.me/6285760707000" data-whatsapp>WhatsApp Consultation</a><a href="../id/index.html" lang="id">Bahasa Indonesia</a></div></div><div class="footer-bottom">© Karya Raja. Ngonten dimana aja kapan aja.</div></div></footer>
-  <script src="../assets/bilingual.js"></script>
-</body>
+  <link rel="stylesheet" href="../assets/home.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+    <nav id="nav">
+      <a class="logo" href="index.html" aria-label="Karya Raja home">
+        <img
+          src="../assets/logo_karya_raja.png"
+          alt="Karya Raja logo"
+          width="1600"
+          height="552"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </a><button
+        class="nav-toggle"
+        id="toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="links"
+        aria-expanded="false"
+        data-open-label="Open menu"
+        data-close-label="Close menu"
+      >
+        <span></span>
+      </button>
+      <div class="nav-links" id="links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a
+        ><a href="project.html">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta" data-whatsapp-cta data-message="Hello Karya Raja, I would like to consult and start a project with Karya Raja. I would like to discuss my brand and project needs. Please share the next steps. Thank you."
+          >Book a Consultation</a
+        >
+        <nav class="language-switch" aria-label="Language selection"><a href="../index.html" lang="id" hreflang="id">ID</a><a href="index.html" lang="en" hreflang="en" aria-current="page">EN</a></nav>
+      </div>
+    </nav>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-visual">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Karya Raja creative production showreel"
+          >
+            <source src="../assets/hero_video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow"> Medan &middot; Indonesia
+            </div>
+            <h1>
+              <strong>Create Content</strong>
+              <em>Anywhere</em><br />
+              <strong>Anytime</strong>
+            </h1>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">124<span>+</span></div>
+                <div class="stat-label">Clients Served</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">10<span>+</span></div>
+                <div class="stat-label">Years of Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">20<span>+</span></div>
+                <div class="stat-label">Active Clients</div>
+              </div>
+           </div>
+          </div>
+        </div>
+      </section>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span class="ticker-item"
+            >Personal Branding<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Social Media Management<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Graphic Design<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Web Development<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Creative Direction<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Photography &amp; Film<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Personal Branding<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Social Media Management<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Graphic Design<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Web Development<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Creative Direction<span class="dot"></span></span
+          ><span class="ticker-item"
+            >Photography &amp; Film<span class="dot"></span
+          ></span>
+        </div>
+      </div>
+      <section class="section light about" id="about">
+        <div class="about-bg">RMP</div>
+        <div class="container about-inner">
+          <div class="about-img-wrap reveal">
+            <div class="about-img">
+              <img
+                src="../assets/about_raja.png"
+                alt="Karya Raja creative team"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="about-label">Karya Raja / Est. 2017</div>
+            </div>
+          </div>
+          <div class="reveal delay">
+            <div class="label">About Karya Raja</div>
+            <h2 class="title">
+              We Make You<br />
+              <em><strong>Relevant and Professional</strong></em> and <em><strong>Trusted</strong></em>
+            </h2>
+            <div class="about-text">
+              <p>
+                Karya Raja helps professionals, business owners,
+                and brands build powerful personal branding through
+                strategic content, creative storytelling and flexible
+                digital solutions &mdash; ensuring your presence stays
+                authentic, impactful and consistently connected with the
+                right audience.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section class="about-video-section">
+        <div class="about-video-wrap reveal">
+          <video
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="../assets/about_raja.png"
+            data-src="../assets/about_video.mp4"
+            data-lazy-video
+            aria-label="Behind the scenes of Karya Raja creative production"
+          >
+          </video>
+        </div>
+      </section>
+      <section class="section light" id="services">
+        <div class="container services-inner">
+          <div class="services-head reveal">
+            <div>
+              <h2 class="title">
+                <span>Our</span>
+                <em>Services</em>
+              </h2>
+            </div>
+            <div class="services-intro">
+              <p class="desc">
+                We are more than a visual vendor. We are a strategic partner helping brands build
+                <strong>consistent and lasting perception</strong>.
+              </p>
+              <p class="desc">
+                Every project begins with research, is executed with precision, and is directed toward measurable results.
+              </p>
+            </div>
+          </div>
+          <div class="services-grid reveal-stagger">
+            <article class="service">
+              <div class="service-top">
+                <div class="service-meta">
+                  <div class="num">01 / 05</div>
+                  <div class="service-type">Personal</div>
+                </div>
+                <h3>Personal Branding</h3>
+                <p>Positioning, personal identity, and strategies for building authority.</p>
+              </div>
+              <div class="service-visual">
+                <img
+                  class="service-image service-image-personal"
+                  src="../assets/service-personal-branding.jpeg"
+                  alt="Personal branding content featuring a hijab-wearing professional"
+                  width="864"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <a class="service-action" href="services.html#personal-branding">
+                  Explore <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-top">
+                <div class="service-meta">
+                  <div class="num">02 / 05</div>
+                  <div class="service-type">Management</div>
+                </div>
+                <h3>Social Media Management</h3>
+                <p>Planning, publishing, community management, and performance evaluation.</p>
+              </div>
+              <div class="service-visual">
+                <img
+                  class="service-image service-image-social"
+                  src="../assets/service-social-media.jpeg"
+                  alt="Food content collage created for social media"
+                  width="1094"
+                  height="1450"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <a
+                  class="service-action"
+                  href="services.html#social-media-management"
+                >
+                  Explore <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-top">
+                <div class="service-meta">
+                  <div class="num">03 / 05</div>
+                  <div class="service-type">Design</div>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>
+                  Visual identities, promotional materials, and consistent communication design.
+                </p>
+              </div>
+              <div class="service-visual">
+                <img
+                  class="service-image service-image-design"
+                  src="../assets/service-graphic-design-medan.jpeg"
+                  alt="Medan city development profile cover design for 2025 to 2026"
+                  width="1210"
+                  height="1506"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <a class="service-action" href="services.html#graphic-design">
+                  Explore <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-top">
+                <div class="service-meta">
+                  <div class="num">04 / 05</div>
+                  <div class="service-type">Digital</div>
+                </div>
+                <h3>Web Development</h3>
+                <p>Responsive, fast websites designed to support business goals.</p>
+              </div>
+              <div class="service-visual">
+                <img
+                  class="service-image service-image-web"
+                  src="../assets/service-web-development.jpeg"
+                  alt="Web development project page featuring a developer in a blue shirt"
+                  width="1088"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <a class="service-action" href="services.html#web-development">
+                  Explore <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-top">
+                <div class="service-meta">
+                  <div class="num">05 / 05</div>
+                  <div class="service-type">Production</div>
+                </div>
+                <h3>Visual Design</h3>
+                <p>
+                  Fotografi, videografi, dan produksi kampanye dengan arahan
+                  kreatif yang kuat
+                </p>
+              </div>
+              <div class="service-visual">
+                <img
+                  class="service-image service-image-visual"
+                  src="../assets/service-graphic-design.jpeg"
+                  alt="Creative visual production by Karya Raja"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <a class="service-action" href="services.html#visual-design">
+                  Explore <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="services-footer reveal">
+            <a class="btn btn-ghost" href="services.html"
+              >View All Services</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section work" id="work">
+        <div class="container">
+          <div class="work-head reveal">
+            <div class="work-head-title">
+              <h2><span>Our</span> <em>Projects</em></h2>
+            </div>
+            <div class="work-intro">
+              <p>
+                Strategic projects shaped through thoughtful ideas, purposeful
+                visuals, and consistent execution to build brands people
+                recognize and trust.
+              </p>
+            </div>
+          </div>
+          <div class="work-grid reveal-stagger">
+            <article class="work-item project-one">
+              <div class="work-img">
+                <img
+                  src="../assets/project-personal-branding.jpeg"
+                  alt="Doctor wearing a white coat for a personal branding project"
+                  width="853"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="tag">Personal Branding</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">01</div>
+                  <h3 class="work-title">dr. Rizky Ais,<br />Sp. Jp.</h3>
+                  <div class="work-sub">2025 &ndash; Present</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+            <article class="project-tile project-message-one">
+              <h3>Meet.<br />Connect.<br />Create.</h3>
+              <div class="tile-dot" aria-hidden="true"></div>
+            </article>
+            <article class="work-item project-two">
+              <div class="work-img">
+                <img
+                  src="../assets/project-graphic-design.jpeg"
+                  alt="City of Medan profile document cover and editorial spread"
+                  width="1600"
+                  height="1131"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="tag">Graphic Design</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">02</div>
+                  <h3 class="work-title">SAGA<br />Creative Hub</h3>
+                  <div class="work-sub">2025 &ndash; Present</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+            <article class="project-tile project-message-two">
+              <div>
+                <h3>Your Brand Belongs Here.</h3>
+                <p>
+                  Strategic creative work built around the people your brand
+                  needs to reach.
+                </p>
+              </div>
+              <a
+                class="project-tile-link"
+                href="#contact"
+                aria-label="Book a Consultation"
+                data-whatsapp-cta data-message="Hello Karya Raja, I would like to consult and start a project with Karya Raja. I would like to discuss my brand and project needs. Please share the next steps. Thank you."
+                >&nearr;</a
+              >
+            </article>
+            <article class="project-tile project-message-three">
+              <h3>Ideas Made Visible.</h3>
+              <p>
+                We turn clear thinking into purposeful visuals, so your
+                audience understands your value, trusts your brand, and
+                remembers it.
+              </p>
+            </article>
+            <article class="work-item project-three">
+              <div class="work-img">
+                <img
+                  src="../assets/project-social-media.jpeg"
+                  alt="Collage of social media content for a medical account"
+                  width="1092"
+                  height="1456"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="tag">Social Media Management</span>
+              <div class="work-info">
+                <div>
+                  <div class="work-num">03</div>
+                  <h3 class="work-title">Mauliate<br />Coffee</h3>
+                  <div class="work-sub">2020 &ndash; Present</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="rm">RM</div>
+          <div class="cta-eyebrow">Let's Build Something</div>
+          <h2 class="cta-title">
+            Your Brand<br /><em>Deserves Better</em><br />Than Average
+          </h2>
+          <p>
+            Make your brand memorable, trusted, and chosen. Start with a free,
+            no-obligation conversation.
+          </p>
+          <div class="actions">
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              data-whatsapp-cta data-message="Hello Karya Raja, I would like to consult and start a project with Karya Raja. I would like to discuss my brand and project needs. Please share the next steps. Thank you."
+              >Book a Consultation</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <img
+                src="../assets/logo_karya_raja.png"
+                alt="Karya Raja Logo"
+                width="1600"
+                height="552"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p class="tagline">
+              A creative and brand strategy studio for Indonesian businesses ready to stand out and grow faster.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html#personal-branding">Personal Branding</a
+            ><a href="services.html#social-media-management"
+              >Social Media Management</a
+            ><a href="services.html#graphic-design">Graphic Design</a
+            ><a href="services.html#web-development">Web Development</a
+            ><a href="services.html#visual-design">Visual Design</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <a href="about.html">About Us</a><a href="project.html">Selected Work</a
+            ><a href="services.html#process">Process</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="#contact">Medan, Indonesia</a>
+            <a href="mailto:halo@rajameliala.id">halo@rajameliala.id</a>
+            <a
+              href="https://wa.me/6285760707000"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copy">
+            &copy; 2026 <span>Karya Raja</span> &mdash; All rights
+            reserved
+          </div>
+          <div class="social">
+            <a href="#">Instagram</a><a href="#">LinkedIn</a
+            ><a href="#">Behance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/main.js"></script>
+    <script src="../assets/home.js"></script>
+  </body>
 </html>

@@ -1,25 +1,332 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Branding Services | Karya Raja</title>
-  <meta name="description" content="Personal branding strategy, content systems, and social media management services from Karya Raja.">
-  <link rel="alternate" hreflang="id" href="../id/services.html"><link rel="alternate" hreflang="en" href="../en/services.html">
-  <link rel="icon" href="../assets/logo_karya_raja.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karya Raja Services | Creative Solutions for Brands</title>
+    <meta name="description" content="Personal branding, social media management, graphic design, web development, and visual production services from Karya Raja in Medan." />
+    <meta name="theme-color" content="#fefefa" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Karya Raja Services | Creative Solutions for Brands" />
+    <meta property="og:description" content="Personal branding, social media management, graphic design, web development, and visual production services from Karya Raja in Medan." />
+    <meta property="og:image" content="../assets/logo_karya_raja.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Karya Raja Services | Creative Solutions for Brands" />
+    <meta name="twitter:description" content="Personal branding, social media management, graphic design, web development, and visual production services from Karya Raja in Medan." />
+    <link rel="canonical" href="services.html" />
+    <link rel="alternate" hreflang="id" href="../services.html" />
+    <link rel="alternate" hreflang="en" href="services.html" />
+    <link rel="alternate" hreflang="x-default" href="../services.html" />
+    <link rel="icon" href="../assets/logo_karya_raja.png" type="image/png" />
   <link rel="preload" href="../assets/fonts/TBJNaron-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/dm-sans-latin-400-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/fonts.css" />
-  <link rel="stylesheet" href="../assets/bilingual.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="logo" href="index.html"><img src="../assets/logo_karya_raja.png" alt="Karya Raja logo" width="1600" height="552"></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu" data-menu-toggle></button><div class="nav-links" id="main-menu" data-menu><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" aria-current="page">Services</a><a href="project.html">Projects</a><a href="contact.html">Contact</a><a class="nav-cta" href="https://wa.me/6285760707000" data-whatsapp>Consult</a><span class="language-switch"><a href="../id/services.html" lang="id">ID</a><a href="services.html" aria-current="true">EN</a></span></div></nav></header>
-  <main id="main">
-    <section class="page-hero"><div class="container"><p class="eyebrow">Services</p><h1>Core strategy. Consistent execution.</h1><p class="lead">Personal Branding provides the foundation. Social Media Management keeps the brand active and relevant.</p></div></section>
-    <section class="section"><div class="container"><div class="grid"><article class="card"><h3>Personal Branding</h3><p>Audit, positioning, brand narrative, audience direction, and communication strategy.</p></article><article class="card"><h3>Content Strategy</h3><p>Pillars, formats, editorial direction, and an idea system aligned with reputation goals.</p></article><article class="card"><h3>Social Media Management</h3><p>Consistent content planning, production, publishing, and evaluation.</p></article></div><p class="microcopy">Packages, deliverables, workflow, and FAQs will be completed in Task 2.</p></div></section>
-    <section class="section section-accent"><div class="container cta-panel"><h2>Find the right system for your current stage.</h2><a class="button" href="https://wa.me/6285760707000" data-whatsapp>Discuss Services</a></div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="footer-logo" href="index.html"><img src="../assets/logo_karya_raja.png" alt="Karya Raja" width="1600" height="552"></a><p>A personal branding agency for trusted digital reputations.</p></div><div class="footer-links"><strong>Navigate</strong><a href="about.html">About</a><a href="services.html">Services</a><a href="project.html">Projects</a><a href="contact.html">Contact</a></div><div class="footer-links"><strong>Start</strong><a href="https://wa.me/6285760707000" data-whatsapp>WhatsApp Consultation</a><a href="../id/services.html" lang="id">Bahasa Indonesia</a></div></div><div class="footer-bottom">© Karya Raja. Ngonten dimana aja kapan aja.</div></div></footer>
-  <script src="../assets/bilingual.js"></script>
-</body>
+  <link rel="stylesheet" href="../assets/about.css" />
+  <link rel="stylesheet" href="../assets/services.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav id="nav">
+      <a class="logo" href="index.html" aria-label="Karya Raja home">
+        <img
+          src="../assets/logo_karya_raja.png"
+          alt="Karya Raja logo"
+          width="1600"
+          height="552"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </a>
+      <button
+        class="nav-toggle"
+        id="toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="links"
+        aria-expanded="false"
+        data-open-label="Open menu"
+        data-close-label="Close menu"
+      >
+        <span></span>
+      </button>
+      <div class="nav-links" id="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="project.html">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta" data-whatsapp-cta data-message="Hello Karya Raja, I would like to consult and start a project with Karya Raja. I would like to discuss my brand and project needs. Please share the next steps. Thank you."
+          >Start a Project</a
+        >
+        <nav class="language-switch" aria-label="Language selection"><a href="../services.html" lang="id" hreflang="id">ID</a><a href="services.html" lang="en" hreflang="en" aria-current="page">EN</a></nav>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="services-hero" id="home">
+        <div class="container services-hero-grid">
+          <div class="services-hero-copy reveal">
+            <div class="eyebrow">Our Services</div>
+            <h1>
+              Creative Solutions Designed to Help
+              <em>Your Brand Grow</em>
+            </h1>
+            <p>
+              From personal branding and social media management to website development, we help businesses and professionals build a stronger, more relevant, and impactful digital presence.
+            </p>
+            <div class="actions">
+              <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+              <a href="#services-list" class="btn btn-ghost">View Services</a>
+            </div>
+          </div>
+
+          <div class="service-visual-panel reveal" aria-hidden="true">
+            <div class="visual-orbit visual-orbit-large"></div>
+            <div class="visual-orbit visual-orbit-small"></div>
+            <div class="visual-card visual-card-main">
+              <span>Creative System</span>
+              <strong>Strategy<br />to Impact</strong>
+              <small>Medan / Indonesia</small>
+            </div>
+            <div class="visual-card visual-card-side">
+              <span>01&mdash;05</span>
+              <p>Brand, social, design, web, and visual production.</p>
+            </div>
+            <div class="visual-tags">
+              <span>Strategy</span>
+              <span>Content</span>
+              <span>Design</span>
+              <span>Digital</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-details" id="services-list">
+        <div class="container">
+          <div class="service-index reveal" aria-label="Daftar layanan">
+            <a href="#personal-branding">01 Personal Branding</a>
+            <a href="#social-media-management">02 Social Media</a>
+            <a href="#graphic-design">03 Graphic Design</a>
+            <a href="#web-development">04 Web Development</a>
+            <a href="#visual-design">05 Visual Design</a>
+          </div>
+
+          <div class="service-detail-list">
+            <article class="service-detail reveal" id="personal-branding">
+              <div class="service-detail-heading">
+                <div class="service-number">01</div>
+                <div>
+                  <div class="service-kicker">Build Authority</div>
+                  <h2>Personal Branding</h2>
+                  <p>Build Trust Before People Become Your Clients</p>
+                  <p class="service-description">
+                    We uncover your most authentic positioning, character, and narrative so your expertise is clear, credible, and relevant to the right audience.
+                  </p>
+                </div>
+              </div>
+              <div class="service-scope">
+                <span>Branding Strategy</span>
+                <span>Content Planning</span>
+                <span>Content Production</span>
+                <span>Personal Branding Consultation</span>
+                <span>Social Media Content</span>
+                <span>Photography &amp; Video Production</span>
+                <a href="#contact" class="service-link"
+                  >Learn More <b>&rarr;</b></a
+                >
+              </div>
+            </article>
+
+            <article
+              class="service-detail service-detail-alt reveal"
+              id="social-media-management"
+            >
+              <div class="service-detail-heading">
+                <div class="service-number">02</div>
+                <div>
+                  <div class="service-kicker">Stay Relevant</div>
+                  <h2>Social Media Management</h2>
+                  <p>Manage Social Media with the Right Strategy</p>
+                  <p class="service-description">
+                    From planning to evaluation, we manage a consistent content rhythm that keeps your brand present, starts conversations, and grows with its community.
+                  </p>
+                </div>
+              </div>
+              <div class="service-scope">
+                <span>Content Calendar</span>
+                <span>Content Strategy</span>
+                <span>Caption Writing</span>
+                <span>Content Publishing</span>
+                <span>Monthly Report</span>
+                <span>Audience Engagement Strategy</span>
+                <a href="#contact" class="service-link"
+                  >Discuss Your Needs <b>&rarr;</b></a
+                >
+              </div>
+            </article>
+
+            <article class="service-detail reveal" id="graphic-design">
+              <div class="service-detail-heading">
+                <div class="service-number">03</div>
+                <div>
+                  <div class="service-kicker">Be Recognized</div>
+                  <h2>Graphic Design</h2>
+                  <p>Consistent Visuals Make Your Brand Easier to Remember</p>
+                  <p class="service-description">
+                    We translate your brand message into a refined, consistent graphic system so every communication feels unified and instantly recognizable.
+                  </p>
+                </div>
+              </div>
+              <div class="service-scope">
+                <span>Social Media Design</span>
+                <span>Marketing Collateral</span>
+                <span>Company Profile</span>
+                <span>Presentation Deck</span>
+                <span>Event &amp; Promotional Design</span>
+                <a href="#contact" class="service-link"
+                  >Discuss Your Needs <b>&rarr;</b></a
+                >
+              </div>
+            </article>
+
+            <article
+              class="service-detail service-detail-dark reveal"
+              id="web-development"
+            >
+              <div class="service-detail-heading">
+                <div class="service-number">04</div>
+                <div>
+                  <div class="service-kicker">Work Better</div>
+                  <h2>Web Development</h2>
+                  <p>
+                    A Website That Looks Great and Works for Your Business
+                  </p>
+                  <p class="service-description">
+                    We design websites that bring together user experience, brand storytelling, and business goals, helping visitors understand your value and take action.
+                  </p>
+                </div>
+              </div>
+              <div class="service-scope">
+                <span>Company Profile Website</span>
+                <span>Landing Page</span>
+                <span>Personal Website</span>
+                <span>Portfolio Website</span>
+                <span>UI/UX Design</span>
+                <span>Website Maintenance</span>
+                <a href="#contact" class="service-link"
+                  >Discuss Your Website <b>&rarr;</b></a
+                >
+              </div>
+            </article>
+
+            <article class="service-detail service-detail-alt reveal" id="visual-design">
+              <div class="service-detail-heading">
+                <div class="service-number">05</div>
+                <div>
+                  <div class="service-kicker">Make It Memorable</div>
+                  <h2>Visual Design</h2>
+                  <p>Turning Ideas into Memorable Visuals</p>
+                  <p class="service-description">
+                    Through photography, video, and creative direction, we create visuals that capture your brand character and make every campaign feel vivid and memorable.
+                  </p>
+                </div>
+              </div>
+              <div class="service-scope">
+                <span>Photography</span>
+                <span>Videography</span>
+                <span>Campaign Production</span>
+                <span>Drone Footage</span>
+                <span>Product Photography</span>
+                <span>Creative Direction</span>
+                <a href="#contact" class="service-link"
+                  >Discuss Production <b>&rarr;</b></a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-closing" id="contact">
+        <div class="container reveal">
+          <div class="label">Start a Conversation</div>
+          <h2>Ready to Grow <em>Your Brand?</em></h2>
+          <p>
+            Every brand has different needs. Let us discuss the creative solution that best fits your business or personal brand.
+          </p>
+          <div class="actions">
+            <a
+              href="https://wa.me/6285760707000"
+              class="btn btn-primary"
+              data-whatsapp-cta data-message="Hello Karya Raja, I would like to consult and start a project with Karya Raja. I would like to discuss my brand and project needs. Please share the next steps. Thank you."
+              >Book a Consultation</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html" class="footer-logo" aria-label="Karya Raja">
+              <img
+                src="../assets/logo_karya_raja.png"
+                alt="Karya Raja logo"
+                width="1600"
+                height="552"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p class="tagline">
+              A brand agency and creative production studio from Medan, helping brands become more relevant, professional, and trusted.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html#personal-branding">Personal Branding</a>
+            <a href="services.html#social-media-management"
+              >Social Media Management</a
+            >
+            <a href="services.html#graphic-design">Graphic Design</a>
+            <a href="services.html#web-development">Web Development</a>
+            <a href="services.html#visual-design">Visual Design</a>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <a href="about.html">About Us</a>
+            <a href="project.html">Selected Work</a>
+            <a href="services.html#process">Process</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="#contact">Medan, Indonesia</a>
+            <a href="mailto:halo@rajameliala.id">halo@rajameliala.id</a>
+            <a
+              href="https://wa.me/6285760707000"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copy">
+            &copy; 2026 <span>Karya Raja</span>. All rights reserved.
+          </div>
+          <div class="social">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/main.js"></script>
+  </body>
 </html>

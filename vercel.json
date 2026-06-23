@@ -1,3 +1,14 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/id", "destination": "/", "permanent": true },
+    { "source": "/id/", "destination": "/", "permanent": true },
+    { "source": "/id/index.html", "destination": "/", "permanent": true },
+    { "source": "/id/about.html", "destination": "/about.html", "permanent": true },
+    { "source": "/id/services.html", "destination": "/services.html", "permanent": true },
+    { "source": "/id/project.html", "destination": "/project.html", "permanent": true },
+    { "source": "/id/projects.html", "destination": "/project.html", "permanent": true },
+    { "source": "/id/contact.html", "destination": "/contact.html", "permanent": true },
+    { "source": "/en/projects.html", "destination": "/en/project.html", "permanent": true }
+  ]
 }
