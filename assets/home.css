@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "TBJNaron";
-  src: url("fonts/TBJNaron-Regular.woff2") format("woff2"),
-    url("fonts/TBJNaron-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
   --bg: #fefefa;
   --surface: #ebf0ee;
@@ -20,9 +12,11 @@
   --mutedD: rgba(43, 35, 30, 0.62);
   --lineL: rgba(43, 35, 30, 0.12);
   --lineD: rgba(43, 35, 30, 0.12);
-  --display: "Cormorant Garamond", Georgia, serif;
-  --heading: "Syne", Arial, sans-serif;
-  --body: "DM Sans", Arial, sans-serif;
+  --font-display: "TBJNaron", Arial, sans-serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+  --display: var(--font-display);
+  --heading: var(--font-body);
+  --body: var(--font-body);
   --container: 1180px;
   --gutter: clamp(1rem, 4vw, 4rem);
   --section: clamp(4.5rem, 8vw, 7.5rem);
@@ -55,6 +49,7 @@ body {
     var(--bg);
   color: var(--dark);
   font-family: var(--body);
+  font-synthesis: none;
   font-size: var(--bodySize);
   line-height: 1.65;
 }
@@ -140,12 +135,12 @@ svg {
   color: var(--dark);
   font-family: var(--display);
   font-size: var(--h2);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.03;
 }
 .title em {
   color: var(--dark);
-  font-style: italic;
+  font-style: normal;
 }
 .light {
   background: var(--light);
@@ -255,7 +250,7 @@ nav.opened {
   max-width: min(25rem, 68vw);
   font-family: var(--heading);
   font-size: clamp(0.62rem, 0.56rem + 0.22vw, 0.76rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.22em;
   line-height: 1.45;
   text-transform: uppercase;
@@ -321,7 +316,7 @@ nav.opened {
   padding: 0.42rem 0.55rem;
   font-family: var(--heading);
   font-size: 0.58rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   cursor: pointer;
 }
@@ -462,18 +457,18 @@ nav.opened {
 .hero h1 em {
   display: inline-block;
   color: var(--gold);
-  font-style: italic;
+  font-style: normal;
 }
 .hero h1 strong {
   display: block;
   color: var(--dark);
-  font-weight: 600;
+  font-weight: 400;
 }
 .hero p {
   max-width: 44rem;
   margin-top: clamp(1.25rem, 3vw, 2rem);
   color: var(--mutedL);
-  font-weight: 300;
+  font-weight: 400;
 }
 .actions {
   display: flex;
@@ -650,7 +645,7 @@ footer {
 }
 .work-head-title h2 em {
   color: var(--gold);
-  font-style: italic;
+  font-style: normal;
 }
 .work-intro {
   display: flex;
@@ -748,7 +743,7 @@ footer {
   padding: 0.35rem 0.75rem;
   font-family: var(--heading);
   font-size: 0.52rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
 }
@@ -910,7 +905,7 @@ footer {
 }
 .services-head .title em {
   color: var(--gold);
-  font-style: italic;
+  font-style: normal;
 }
 .services-intro {
   max-width: 32rem;
@@ -919,7 +914,7 @@ footer {
 .desc,
 .about-text {
   color: var(--mutedD);
-  font-weight: 300;
+  font-weight: 400;
 }
 .desc + .desc {
   margin-top: 1rem;
@@ -954,7 +949,7 @@ footer {
   color: rgba(43, 35, 30, 0.58);
   font-family: var(--heading);
   font-size: 0.58rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.18em;
 }
 .service-top {
@@ -984,14 +979,14 @@ footer {
   margin-top: auto;
   font-family: var(--display);
   font-size: clamp(1.55rem, 2vw, 2rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 0.98;
 }
 .service p {
   margin-top: 0.7rem;
   color: rgba(43, 35, 30, 0.62);
   font-size: 0.78rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
 }
 .service-visual {
@@ -1146,7 +1141,7 @@ footer {
   margin-top: 0.75rem;
   color: rgba(43, 35, 30, 0.58);
   font-size: 0.88rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .transform-grid {
   grid-template-columns: repeat(3, 1fr);
@@ -1173,7 +1168,7 @@ footer {
   padding: 0.3rem 0.7rem;
   font-family: var(--heading);
   font-size: 0.5rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.26em;
 }
 .t1 {
@@ -1192,7 +1187,7 @@ footer {
   color: var(--dark);
   font-family: var(--heading);
   font-size: 0.57rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -1226,7 +1221,7 @@ footer {
   color: rgba(43, 35, 30, 0.44);
   font-family: var(--heading);
   font-size: 0.5rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -1250,7 +1245,7 @@ footer {
   color: rgba(43, 35, 30, 0.5);
   font-family: var(--heading);
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -1277,7 +1272,7 @@ footer {
   color: rgba(20, 18, 18, 0.04);
   font-family: var(--display);
   font-size: clamp(8rem, 24vw, 18rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   transform: translateY(-50%);
 }
@@ -1348,7 +1343,7 @@ footer {
   color: rgba(43, 35, 30, 0.48);
   font-family: var(--heading);
   font-size: 0.55rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   writing-mode: vertical-lr;
@@ -1420,20 +1415,20 @@ footer {
   color: rgba(43, 35, 30, 0.05);
   font-family: var(--display);
   font-size: clamp(5rem, 14vw, 8rem);
-  font-style: italic;
-  font-weight: 600;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1;
 }
 .cta-title {
   margin-top: 1.5rem;
   font-family: var(--display);
   font-size: clamp(2.55rem, 7vw, 6.5rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
 }
 .cta-title em {
   color: var(--dark);
-  font-style: italic;
+  font-style: normal;
 }
 .cta p {
   max-width: 38rem;
@@ -1472,7 +1467,7 @@ footer {
   color: var(--dark);
   font-family: var(--heading);
   font-size: 0.58rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
 }

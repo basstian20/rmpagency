@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "TBJNaron";
-  src: url("fonts/TBJNaron-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
 :root {
   --bg: #fefefa;
   --surface: #ebf0ee;
@@ -12,10 +6,12 @@
   --dark: #2b231e;
   --muted: rgba(43, 35, 30, 0.65);
   --line: rgba(43, 35, 30, 0.14);
-  --body: "DM Sans", Arial, sans-serif;
-  --heading: "Syne", Arial, sans-serif;
-  --display: "Cormorant Garamond", Georgia, serif;
-  --naron: "TBJNaron", Arial, sans-serif;
+  --font-display: "TBJNaron", Arial, sans-serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+  --body: var(--font-body);
+  --heading: var(--font-body);
+  --display: var(--font-display);
+  --naron: var(--font-display);
   --container: 1180px;
 }
 
@@ -32,6 +28,7 @@ body {
   color: var(--dark);
   background: var(--bg);
   font-family: var(--body);
+  font-synthesis: none;
   line-height: 1.6;
 }
 
@@ -236,7 +233,7 @@ h3 {
   margin: 0;
   font-family: var(--display);
   font-size: clamp(2rem, 4vw, 4rem);
-  font-style: italic;
+  font-style: normal;
   line-height: 0.95;
 }
 
