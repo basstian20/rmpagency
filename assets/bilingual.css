@@ -357,6 +357,11 @@ h3 {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    background: rgba(254, 254, 250, 0.97);
+    backdrop-filter: none;
+  }
+
   .nav-toggle {
     display: block;
   }

@@ -1,12 +1,31 @@
 const nav = document.getElementById("nav");
 const toggle = document.getElementById("toggle");
 const links = document.getElementById("links");
+const root = document.documentElement;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 820px)");
+const coarsePointer = window.matchMedia("(pointer: coarse)");
+const desktopBreakpoint = window.matchMedia("(min-width: 821px)");
 
 const progress = document.createElement("div");
 progress.className = "scroll-progress";
 progress.setAttribute("aria-hidden", "true");
 document.body.prepend(progress);
+
+function addMediaChangeListener(query, callback) {
+  if (typeof query.addEventListener === "function") {
+    query.addEventListener("change", callback);
+    return;
+  }
+
+  if (typeof query.addListener === "function") {
+    query.addListener(callback);
+  }
+}
+
+function shouldUseSimplifiedEffects() {
+  return mobileViewport.matches || coarsePointer.matches || reduceMotion.matches;
+}
 
 function setMenu(open) {
   document.body.classList.toggle("nav-open", open);
@@ -48,28 +67,82 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMenu(false);
 });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 820) setMenu(false);
+addMediaChangeListener(desktopBreakpoint, (event) => {
+  if (event.matches) setMenu(false);
 });
 
-function syncScrollState() {
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollRatio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+const heroVisual = document.querySelector(".hero-visual video");
+let scrollFrame = null;
+let navIsScrolled = null;
+let lastProgressRatio = -1;
+let lastHeroScale = "";
 
-  nav.classList.toggle("scrolled", window.scrollY > 60);
-  progress.style.transform = `scaleX(${scrollRatio})`;
-  document.documentElement.style.setProperty(
-    "--scroll-progress",
-    scrollRatio.toFixed(4),
-  );
-  document.documentElement.style.setProperty(
-    "--hero-scale",
-    (1.04 + scrollRatio * 0.05).toFixed(4),
-  );
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
 }
 
-window.addEventListener("scroll", syncScrollState, { passive: true });
-syncScrollState();
+function updateNavState(scrollY) {
+  const nextState = scrollY > 60;
+
+  if (nextState === navIsScrolled) return;
+
+  navIsScrolled = nextState;
+  nav.classList.toggle("scrolled", nextState);
+}
+
+function updateProgress(ratio) {
+  if (Math.abs(ratio - lastProgressRatio) < 0.002) return;
+
+  lastProgressRatio = ratio;
+  progress.style.transform = `scaleX(${ratio.toFixed(4)})`;
+}
+
+function updateHeroScale(scrollY, viewportHeight) {
+  if (!heroVisual || shouldUseSimplifiedEffects()) {
+    if (lastHeroScale) {
+      root.style.removeProperty("--hero-scale");
+      lastHeroScale = "";
+    }
+    return;
+  }
+
+  const heroProgress = clamp(scrollY / viewportHeight, 0, 1);
+  const nextScale = (1.04 + heroProgress * 0.03).toFixed(4);
+
+  if (nextScale === lastHeroScale) return;
+
+  lastHeroScale = nextScale;
+  root.style.setProperty("--hero-scale", nextScale);
+}
+
+function updateScrollState() {
+  const scrollY = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  const maxScroll = root.scrollHeight - viewportHeight;
+  const scrollRatio = clamp(maxScroll > 0 ? scrollY / maxScroll : 0, 0, 1);
+
+  updateNavState(scrollY);
+  updateProgress(scrollRatio);
+  updateHeroScale(scrollY, viewportHeight);
+}
+
+function requestScrollUpdate() {
+  if (scrollFrame !== null) return;
+
+  scrollFrame = window.requestAnimationFrame(() => {
+    scrollFrame = null;
+    updateScrollState();
+  });
+}
+
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+window.addEventListener("resize", requestScrollUpdate, { passive: true });
+
+[mobileViewport, coarsePointer, reduceMotion].forEach((query) => {
+  addMediaChangeListener(query, requestScrollUpdate);
+});
+
+updateScrollState();
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -169,13 +242,11 @@ function initLazyVideos() {
     playbackObserver.observe(video);
   });
 
-  if (typeof reduceMotion.addEventListener === "function") {
-    reduceMotion.addEventListener("change", () => {
-      if (shouldReduceMotion()) {
-        lazyVideos.forEach(pauseVideo);
-      }
-    });
-  }
+  addMediaChangeListener(reduceMotion, () => {
+    if (shouldReduceMotion()) {
+      lazyVideos.forEach(pauseVideo);
+    }
+  });
 }
 
 initLazyVideos();
@@ -228,42 +299,56 @@ if (serviceIndex && serviceCards.length) {
   };
 
   let activeServiceId = "";
-  let serviceFrame;
 
-  const syncActiveService = () => {
-    const activationLine = Math.min(window.innerHeight * 0.34, 260);
-    const activeCard =
-      serviceCards
-        .filter((card) => card.getBoundingClientRect().top <= activationLine)
-        .at(-1) || serviceCards[0];
+  const activateService = (serviceId) => {
+    if (!serviceId || serviceId === activeServiceId) return;
 
-    if (activeCard.id !== activeServiceId) {
-      activeServiceId = activeCard.id;
-      setActiveService(activeServiceId);
-    }
+    activeServiceId = serviceId;
+    setActiveService(activeServiceId);
   };
 
-  const requestServiceSync = () => {
-    if (serviceFrame) return;
+  activateService(serviceCards[0].id);
 
-    serviceFrame = requestAnimationFrame(() => {
-      syncActiveService();
-      serviceFrame = null;
-    });
-  };
+  if ("IntersectionObserver" in window) {
+    const serviceObserver = new IntersectionObserver(
+      (entries) => {
+        const activeEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+          .at(-1);
 
-  window.addEventListener("scroll", requestServiceSync, { passive: true });
-  window.addEventListener("resize", requestServiceSync);
-  syncActiveService();
+        activateService(activeEntry?.target.id);
+      },
+      {
+        rootMargin: "-34% 0px -58% 0px",
+        threshold: [0, 0.01],
+      },
+    );
+
+    serviceCards.forEach((card) => serviceObserver.observe(card));
+  }
 }
 
-if (!reduceMotion.matches && matchMedia("(hover:hover) and (pointer:fine)").matches) {
-  document
+const finePointer = matchMedia("(hover:hover) and (pointer:fine)");
+if (finePointer.matches) {
+  const tiltCards = [
+    ...document
     .querySelectorAll(
       ".service, .work-item, .project-tile, .belief-card, .framework-card, .benefit, .timeline-card, .hero-image",
-    )
-    .forEach((card) => {
+    ),
+  ];
+
+  const resetTilt = (card) => {
+    card.style.setProperty("--tilt-x", "0deg");
+    card.style.setProperty("--tilt-y", "0deg");
+    card.style.setProperty("--pointer-x", "50%");
+    card.style.setProperty("--pointer-y", "50%");
+  };
+
+  tiltCards.forEach((card) => {
       card.addEventListener("mousemove", (event) => {
+        if (shouldUseSimplifiedEffects()) return;
+
         const rect = card.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width - 0.5;
         const y = (event.clientY - rect.top) / rect.height - 0.5;
@@ -275,10 +360,13 @@ if (!reduceMotion.matches && matchMedia("(hover:hover) and (pointer:fine)").matc
       });
 
       card.addEventListener("mouseleave", () => {
-        card.style.setProperty("--tilt-x", "0deg");
-        card.style.setProperty("--tilt-y", "0deg");
-        card.style.setProperty("--pointer-x", "50%");
-        card.style.setProperty("--pointer-y", "50%");
+        resetTilt(card);
       });
     });
+
+  [mobileViewport, coarsePointer, reduceMotion].forEach((query) => {
+    addMediaChangeListener(query, () => {
+      if (shouldUseSimplifiedEffects()) tiltCards.forEach(resetTilt);
+    });
+  });
 }
